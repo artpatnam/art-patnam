@@ -47,7 +47,7 @@ cursor: pointer;
 HOME
 ------------------- */
 .hero {
-height: calc(100vh - 80px); /* altura visible menos header */
+height: calc(100vh - 80px); /* altura visible */
 background: #f2f2f2;
 display: flex;
 flex-direction: column;
@@ -176,6 +176,7 @@ transition: opacity 0.5s ease-in-out; /* animación fade-in */
 display: block;
 opacity: 1;
 }
+
 
 
 
