@@ -1,299 +1,158 @@
 .visually-hidden {
-
-  position: absolute;
-
-  left: -9999px;
-
+position: absolute;
+left: -9999px;
 }
-
-
 
 * {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
-
 
 body {
-
-    font-family: 'Inter', sans-serif;
-
-    color: #1a1a1a;
-
-    background-color: #ffffff;
-
-    line-height: 1.6;
-
+font-family: 'Inter', sans-serif;
+color: #1a1a1a;
+background-color: #ffffff;
+line-height: 1.6;
 }
-
-
 
 header {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 20px 60px;
-
-    position: fixed;
-
-    width: 100%;
-
-    background: rgba(255,255,255,0.95);
-
-    border-bottom: 1px solid #eee;
-
-    z-index: 10;
-
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 60px;
+position: fixed;
+width: 100%;
+background: rgba(255,255,255,0.95);
+border-bottom: 1px solid #eee;
+z-index: 10;
+height: 80px;
 }
-
-
 
 .logo {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 22px;
-
-    letter-spacing: 2px;
-
+font-family: 'Playfair Display', serif;
+font-size: 22px;
+letter-spacing: 2px;
 }
-
-
 
 nav a {
-
-    margin-left: 30px;
-
-    text-decoration: none;
-
-    color: #1a1a1a;
-
-    font-size: 14px;
-
-    cursor: pointer;
-
+margin-left: 30px;
+text-decoration: none;
+color: #1a1a1a;
+font-size: 14px;
+cursor: pointer;
 }
-
-
 
 .hero {
-
-    height: calc(100vh - 80px);
-
-    background: #f2f2f2;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 0 40px;
-
+min-height: 90vh;
+background: #f2f2f2;
+display: flex;
+flex-direction: column;
+justify-content: center; /* centra verticalmente */
+align-items: center; /* centra horizontalmente */
+text-align: center;
+padding: 0 40px;
+margin-top: 80px; /* espacio para header fijo */
 }
-
-
 
 .hero h1 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 56px;
-
-    margin-bottom: 20px;
-
+font-family: 'Playfair Display', serif;
+font-size: 56px;
+margin-bottom: 20px;
 }
-
-
 
 .hero p {
-
-    font-size: 18px;
-
-    max-width: 600px;
-
-    margin: auto;
-
+font-size: 18px;
+max-width: 600px;
+margin: auto;
 }
-
-
 
 .intro {
-
-    padding: 80px 20%;
-
-    text-align: center;
-
-    font-size: 18px;
-
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 30vh;
+text-align: center;
+padding: 0 20%;
+font-size: 18px;
 }
-
-
 
 .section {
-
-    padding: 100px 10%;
-
+padding: 100px 10%;
 }
-
-
 
 .section.alt {
-
-    background-color: #fafafa;
-
+background-color: #fafafa;
 }
-
-
 
 .section h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 42px;
-
-    margin-bottom: 20px;
-
+font-family: 'Playfair Display', serif;
+font-size: 42px;
+margin-bottom: 20px;
 }
-
-
 
 .section-desc {
-
-    max-width: 700px;
-
-    margin-bottom: 50px;
-
+max-width: 700px;
+margin-bottom: 50px;
 }
-
-
 
 .gallery {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 30px;
-
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
 }
-
-
 
 .art-card {
-
-    background: #e6e6e6;
-
-    height: 300px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 18px;
-
-    color: #666;
-
+background: #e6e6e6;
+height: 300px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 18px;
+color: #666;
 }
-
-
 
 .contact {
-
-    padding: 100px 10%;
-
-    text-align: center;
-
+padding: 100px 10%;
+text-align: center;
 }
-
-
 
 form {
-
-    max-width: 500px;
-
-    margin: 40px auto 0;
-
-    display: flex;
-
-    flex-direction: column;
-
+max-width: 500px;
+margin: 40px auto 0;
+display: flex;
+flex-direction: column;
 }
-
-
 
 form input, form textarea {
-
-    margin-bottom: 15px;
-
-    padding: 12px;
-
-    font-size: 14px;
-
+margin-bottom: 15px;
+padding: 12px;
+font-size: 14px;
 }
-
-
 
 form button {
-
-    padding: 14px;
-
-    background: #1a1a1a;
-
-    color: #fff;
-
-    border: none;
-
-    cursor: pointer;
-
+padding: 14px;
+background: #1a1a1a;
+color: #fff;
+border: none;
+cursor: pointer;
 }
-
-
 
 /* Footer oculto */
-
 footer {
-
-    padding: 30px;
-
-    text-align: center;
-
-    font-size: 13px;
-
-    color: #777;
-
+padding: 30px;
+text-align: center;
+font-size: 13px;
+color: #777;
 }
-
-
 
 /* Sistema de pestañas */
-
 .tab-section {
-
-    display: none;
-
+display: none;
 }
 
-
-
 .tab-section.active {
-
-    display: block;
-
+display: block;
 }
 
 
