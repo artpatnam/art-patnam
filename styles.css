@@ -88,7 +88,7 @@ nav a {
 
 .hero {
 
-    height: 90vh;
+    height: calc(100vh - 80px);
 
     background: #f2f2f2;
 
@@ -100,7 +100,7 @@ nav a {
 
     text-align: center;
 
-    padding: 40px;
+    padding: 0 40px;
 
 }
 
@@ -295,5 +295,6 @@ footer {
     display: block;
 
 }
+
 
 
