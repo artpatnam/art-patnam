@@ -14,20 +14,23 @@ font-family: 'Inter', sans-serif;
 color: #1a1a1a;
 background-color: #ffffff;
 line-height: 1.6;
-padding-top: 80px; /* espacio para header fijo */
 }
 
+/* -------------------
+HEADER
+------------------- */
 header {
 display: flex;
-justify-content: space-between;
+justify-content: center; /* centrado horizontal */
 align-items: center;
-padding: 20px 60px;
-position: fixed;
-width: 100%;
-background: rgba(255,255,255,0.95);
+gap: 30px;
+padding: 20px 40px;
+background: #ffffff;
 border-bottom: 1px solid #eee;
+position: relative; /* ya no fijo */
 z-index: 10;
-height: 80px; /* altura del header */
+font-size: 14px;
+font-weight: 500;
 }
 
 .logo {
@@ -36,11 +39,12 @@ font-size: 22px;
 letter-spacing: 2px;
 }
 
+/* -------------------
+PESTAÑAS
+------------------- */
 nav a {
-margin-left: 30px;
 text-decoration: none;
 color: #1a1a1a;
-font-size: 14px;
 cursor: pointer;
 }
 
@@ -51,17 +55,17 @@ HOME
 display: flex;
 flex-direction: column;
 justify-content: center; /* centra verticalmente */
-align-items: center; /* centra horizontalmente */
+align-items: center;
 text-align: center;
-padding: 0 40px;
-min-height: calc(100vh - 80px); /* altura visible menos header */
+padding: 40px;
+min-height: 100vh; /* ocupa toda la pantalla visible */
+position: relative;
+background: #f2f2f2;
 }
 
 .hero-text {
-max-width: 700px; /* ancho máximo del texto */
-position: relative;
-top: 50%; /* mueve al centro de la sección hero */
-transform: translateY(-50%); /* centra exactamente */
+max-width: 700px;
+margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -179,6 +183,7 @@ transition: opacity 0.5s ease-in-out;
 display: block;
 opacity: 1;
 }
+
 
 
 
