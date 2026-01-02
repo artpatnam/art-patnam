@@ -16,21 +16,17 @@ background-color: #ffffff;
 line-height: 1.6;
 }
 
-/* -------------------
-HEADER
-------------------- */
 header {
 display: flex;
-justify-content: center; /* centrado horizontal */
+justify-content: space-between;
 align-items: center;
-gap: 30px;
-padding: 20px 40px;
-background: #ffffff;
+padding: 20px 60px;
+position: fixed;
+width: 100%;
+background: rgba(255,255,255,0.95);
 border-bottom: 1px solid #eee;
-position: relative; /* ya no fijo */
 z-index: 10;
-font-size: 14px;
-font-weight: 500;
+height: 80px;
 }
 
 .logo {
@@ -39,33 +35,24 @@ font-size: 22px;
 letter-spacing: 2px;
 }
 
-/* -------------------
-PESTAÑAS
-------------------- */
 nav a {
+margin-left: 30px;
 text-decoration: none;
 color: #1a1a1a;
+font-size: 14px;
 cursor: pointer;
 }
 
-/* -------------------
-HOME
-------------------- */
 .hero {
+min-height: 90vh;
+background: #f2f2f2;
 display: flex;
 flex-direction: column;
 justify-content: center; /* centra verticalmente */
-align-items: center;
+align-items: center; /* centra horizontalmente */
 text-align: center;
-padding: 40px;
-min-height: 100vh; /* ocupa toda la pantalla visible */
-position: relative;
-background: #f2f2f2;
-}
-
-.hero-text {
-max-width: 700px;
-margin-bottom: 20px;
+padding: 0 40px;
+margin-top: 80px; /* espacio para header fijo */
 }
 
 .hero h1 {
@@ -80,9 +67,6 @@ max-width: 600px;
 margin: auto;
 }
 
-/* -------------------
-INTRO
-------------------- */
 .intro {
 display: flex;
 justify-content: center;
@@ -93,9 +77,6 @@ padding: 0 20%;
 font-size: 18px;
 }
 
-/* -------------------
-SECCIONES FINE/GENERAL ART
-------------------- */
 .section {
 padding: 100px 10%;
 }
@@ -131,9 +112,6 @@ font-size: 18px;
 color: #666;
 }
 
-/* -------------------
-CONTACT
-------------------- */
 .contact {
 padding: 100px 10%;
 text-align: center;
@@ -160,9 +138,7 @@ border: none;
 cursor: pointer;
 }
 
-/* -------------------
-FOOTER
-------------------- */
+/* Footer oculto */
 footer {
 padding: 30px;
 text-align: center;
@@ -170,18 +146,13 @@ font-size: 13px;
 color: #777;
 }
 
-/* -------------------
-PESTAÑAS CON FADE-IN
-------------------- */
+/* Sistema de pestañas */
 .tab-section {
 display: none;
-opacity: 0;
-transition: opacity 0.5s ease-in-out;
 }
 
 .tab-section.active {
 display: block;
-opacity: 1;
 }
 
 
