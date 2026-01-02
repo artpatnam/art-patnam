@@ -43,16 +43,22 @@ font-size: 14px;
 cursor: pointer;
 }
 
+/* -------------------
+HOME
+------------------- */
 .hero {
-min-height: 90vh;
+position: relative;
+height: 100vh; /* toda la pantalla */
 background: #f2f2f2;
 display: flex;
-flex-direction: column;
-justify-content: center; /* centra verticalmente */
-align-items: center; /* centra horizontalmente */
+justify-content: center; /* horizontal */
+align-items: center; /* vertical */
 text-align: center;
 padding: 0 40px;
-margin-top: 80px; /* espacio para header fijo */
+}
+
+.hero-text {
+transform: translateY(-40px); /* ajuste fino hacia arriba, opcional */
 }
 
 .hero h1 {
@@ -67,16 +73,22 @@ max-width: 600px;
 margin: auto;
 }
 
+/* -------------------
+INTRO
+------------------- */
 .intro {
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 30vh;
+min-height: 30vh; /* altura relativa al viewport */
 text-align: center;
 padding: 0 20%;
 font-size: 18px;
 }
 
+/* -------------------
+SECCIONES FINE/GENERAL ART
+------------------- */
 .section {
 padding: 100px 10%;
 }
@@ -112,6 +124,9 @@ font-size: 18px;
 color: #666;
 }
 
+/* -------------------
+CONTACT
+------------------- */
 .contact {
 padding: 100px 10%;
 text-align: center;
@@ -138,7 +153,9 @@ border: none;
 cursor: pointer;
 }
 
-/* Footer oculto */
+/* -------------------
+FOOTER
+------------------- */
 footer {
 padding: 30px;
 text-align: center;
@@ -146,7 +163,9 @@ font-size: 13px;
 color: #777;
 }
 
-/* Sistema de pestañas */
+/* -------------------
+PESTAÑAS
+------------------- */
 .tab-section {
 display: none;
 }
@@ -154,6 +173,7 @@ display: none;
 .tab-section.active {
 display: block;
 }
+
 
 
 
