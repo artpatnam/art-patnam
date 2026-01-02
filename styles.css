@@ -54,12 +54,14 @@ justify-content: center; /* centra verticalmente */
 align-items: center; /* centra horizontalmente */
 text-align: center;
 padding: 0 40px;
-min-height: calc(100vh - 80px); /* ocupa toda la pantalla visible menos header */
-box-sizing: border-box;
+min-height: calc(100vh - 80px); /* altura visible menos header */
 }
 
 .hero-text {
 max-width: 700px; /* ancho máximo del texto */
+position: relative;
+top: 50%; /* mueve al centro de la sección hero */
+transform: translateY(-50%); /* centra exactamente */
 }
 
 .hero h1 {
@@ -177,6 +179,7 @@ transition: opacity 0.5s ease-in-out;
 display: block;
 opacity: 1;
 }
+
 
 
 
