@@ -1,4 +1,4 @@
-visually-hidden {
+.visually-hidden {
 
   position: absolute;
 
@@ -79,6 +79,8 @@ nav a {
     color: #1a1a1a;
 
     font-size: 14px;
+
+    cursor: pointer;
 
 }
 
@@ -262,6 +264,8 @@ form button {
 
 
 
+/* Footer oculto */
+
 footer {
 
     padding: 30px;
@@ -273,4 +277,23 @@ footer {
     color: #777;
 
 }
+
+
+
+/* Sistema de pestañas */
+
+.tab-section {
+
+    display: none;
+
+}
+
+
+
+.tab-section.active {
+
+    display: block;
+
+}
+
 
