@@ -48,11 +48,11 @@ HOME
 ------------------- */
 .hero {
 position: relative;
-height: 100vh; /* ocupa toda la ventana */
+height: calc(100vh - 80px); /* altura total menos header */
 background: #f2f2f2;
 display: flex;
-justify-content: center; /* horizontal */
-align-items: center; /* vertical */
+justify-content: center; /* centra horizontal */
+align-items: center; /* centra vertical */
 text-align: center;
 padding: 0 40px;
 }
@@ -80,7 +80,7 @@ INTRO
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 30vh; /* altura relativa al viewport */
+min-height: 30vh;
 text-align: center;
 padding: 0 20%;
 font-size: 18px;
@@ -173,6 +173,7 @@ display: none;
 .tab-section.active {
 display: block;
 }
+
 
 
 
