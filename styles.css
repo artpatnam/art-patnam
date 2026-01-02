@@ -48,7 +48,7 @@ HOME
 ------------------- */
 .hero {
 position: relative;
-height: 100vh; /* toda la pantalla */
+height: 100vh; /* ocupa toda la ventana */
 background: #f2f2f2;
 display: flex;
 justify-content: center; /* horizontal */
@@ -58,7 +58,7 @@ padding: 0 40px;
 }
 
 .hero-text {
-transform: translateY(-40px); /* ajuste fino hacia arriba, opcional */
+transform: translateY(-50px, -50px); /* centra exacto vertical y horizontal */
 }
 
 .hero h1 {
@@ -173,6 +173,7 @@ display: none;
 .tab-section.active {
 display: block;
 }
+
 
 
 
