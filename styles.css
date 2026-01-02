@@ -14,6 +14,7 @@ font-family: 'Inter', sans-serif;
 color: #1a1a1a;
 background-color: #ffffff;
 line-height: 1.6;
+padding-top: 80px; /* espacio para header fijo */
 }
 
 header {
@@ -53,7 +54,7 @@ justify-content: center; /* centra verticalmente */
 align-items: center; /* centra horizontalmente */
 text-align: center;
 padding: 0 40px;
-min-height: 100vh; /* ocupa toda la pantalla visible */
+min-height: calc(100vh - 80px); /* ocupa toda la pantalla visible menos header */
 box-sizing: border-box;
 }
 
@@ -80,7 +81,7 @@ INTRO
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 30vh; /* altura mínima */
+min-height: 30vh;
 text-align: center;
 padding: 0 20%;
 font-size: 18px;
@@ -169,7 +170,7 @@ PESTAÑAS CON FADE-IN
 .tab-section {
 display: none;
 opacity: 0;
-transition: opacity 0.5s ease-in-out; /* animación fade-in */
+transition: opacity 0.5s ease-in-out;
 }
 
 .tab-section.active {
