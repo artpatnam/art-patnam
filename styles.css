@@ -26,7 +26,7 @@ width: 100%;
 background: rgba(255,255,255,0.95);
 border-bottom: 1px solid #eee;
 z-index: 10;
-height: 80px;
+height: 80px; /* altura del header */
 }
 
 .logo {
@@ -47,18 +47,18 @@ cursor: pointer;
 HOME
 ------------------- */
 .hero {
-position: relative;
-height: calc(100vh - 80px); /* altura total menos header */
+height: calc(100vh - 80px); /* altura visible menos header */
 background: #f2f2f2;
 display: flex;
-justify-content: center; /* centra horizontal */
-align-items: center; /* centra vertical */
+flex-direction: column;
+justify-content: center; /* centra verticalmente */
+align-items: center; /* centra horizontalmente */
 text-align: center;
 padding: 0 40px;
 }
 
 .hero-text {
-transform: translateY(-50px, -50px); /* centra exacto vertical y horizontal */
+max-width: 700px; /* ancho máximo del texto */
 }
 
 .hero h1 {
@@ -80,7 +80,7 @@ INTRO
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 30vh;
+min-height: 30vh; /* altura mínima */
 text-align: center;
 padding: 0 20%;
 font-size: 18px;
@@ -164,15 +164,19 @@ color: #777;
 }
 
 /* -------------------
-PESTAÑAS
+PESTAÑAS CON FADE-IN
 ------------------- */
 .tab-section {
 display: none;
+opacity: 0;
+transition: opacity 0.5s ease-in-out; /* animación fade-in */
 }
 
 .tab-section.active {
 display: block;
+opacity: 1;
 }
+
 
 
 
