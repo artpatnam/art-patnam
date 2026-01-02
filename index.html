@@ -40,7 +40,9 @@
 
 
 
-<section id="home" class="hero">
+<!-- Home -->
+
+<section id="home" class="hero tab-section active">
 
     <div class="hero-text">
 
@@ -54,7 +56,9 @@
 
 
 
-<section class="intro">
+<!-- Intro -->
+
+<section class="intro tab-section active" id="intro">
 
     <p>
 
@@ -70,7 +74,9 @@
 
 
 
-<section id="fineart" class="section">
+<!-- Fine Art -->
+
+<section id="fineart" class="section tab-section">
 
     <h2>Fine Art</h2>
 
@@ -96,7 +102,9 @@
 
 
 
-<section id="generalart" class="section alt">
+<!-- General Art -->
+
+<section id="generalart" class="section alt tab-section">
 
     <h2>General Art</h2>
 
@@ -122,7 +130,9 @@
 
 
 
-<section id="contact" class="contact">
+<!-- Contact -->
+
+<section id="contact" class="contact tab-section">
 
     <h2>Contact</h2>
 
@@ -130,13 +140,15 @@
 
 
 
-    <form>
+    <!-- Formspree form -->
 
-        <input type="text" placeholder="Name" required>
+    <form action="https://formspree.io/f/mnjnvbky" method="POST">
 
-        <input type="email" placeholder="Email" required>
+        <input type="text" name="name" placeholder="Name" required>
 
-        <textarea placeholder="Project details"></textarea>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <textarea name="message" placeholder="Project details" required></textarea>
 
         <button type="submit">Send</button>
 
@@ -148,9 +160,41 @@
 
 <footer>
 
-    © 2026 Art Patnam — Fine Art & General Art
+    <p class="visually-hidden">© 2026 Art Patnam — Fine Art & General Art</p>
 
 </footer>
+
+
+
+<script>
+
+    // Script para cambiar de pestaña
+
+    const menuLinks = document.querySelectorAll('header nav a');
+
+    const sections = document.querySelectorAll('.tab-section');
+
+
+
+    menuLinks.forEach(link => {
+
+        link.addEventListener('click', e => {
+
+            e.preventDefault();
+
+            const targetId = link.getAttribute('href').substring(1);
+
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            const targetSection = document.getElementById(targetId);
+
+            if(targetSection) targetSection.classList.add('active');
+
+        });
+
+    });
+
+</script>
 
 
 
@@ -158,287 +202,4 @@
 
 </html>
 
-
-
-Css 
-
-
-
-.visually-hidden {
-
-  position: absolute;
-
-  left: -9999px;
-
-}
-
-
-
-* {
-
-    margin: 0;
-
-    padding: 0;
-
-    box-sizing: border-box;
-
-}
-
-
-
-body {
-
-    font-family: 'Inter', sans-serif;
-
-    color: #1a1a1a;
-
-    background-color: #ffffff;
-
-    line-height: 1.6;
-
-}
-
-
-
-header {
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 20px 60px;
-
-    position: fixed;
-
-    width: 100%;
-
-    background: rgba(255,255,255,0.95);
-
-    border-bottom: 1px solid #eee;
-
-    z-index: 10;
-
-}
-
-
-
-.logo {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 22px;
-
-    letter-spacing: 2px;
-
-}
-
-
-
-nav a {
-
-    margin-left: 30px;
-
-    text-decoration: none;
-
-    color: #1a1a1a;
-
-    font-size: 14px;
-
-}
-
-
-
-.hero {
-
-    height: 90vh;
-
-    background: #f2f2f2;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    padding: 40px;
-
-}
-
-
-
-.hero h1 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 56px;
-
-    margin-bottom: 20px;
-
-}
-
-
-
-.hero p {
-
-    font-size: 18px;
-
-    max-width: 600px;
-
-    margin: auto;
-
-}
-
-
-
-.intro {
-
-    padding: 80px 20%;
-
-    text-align: center;
-
-    font-size: 18px;
-
-}
-
-
-
-.section {
-
-    padding: 100px 10%;
-
-}
-
-
-
-.section.alt {
-
-    background-color: #fafafa;
-
-}
-
-
-
-.section h2 {
-
-    font-family: 'Playfair Display', serif;
-
-    font-size: 42px;
-
-    margin-bottom: 20px;
-
-}
-
-
-
-.section-desc {
-
-    max-width: 700px;
-
-    margin-bottom: 50px;
-
-}
-
-
-
-.gallery {
-
-    display: grid;
-
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-
-    gap: 30px;
-
-}
-
-
-
-.art-card {
-
-    background: #e6e6e6;
-
-    height: 300px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 18px;
-
-    color: #666;
-
-}
-
-
-
-.contact {
-
-    padding: 100px 10%;
-
-    text-align: center;
-
-}
-
-
-
-form {
-
-    max-width: 500px;
-
-    margin: 40px auto 0;
-
-    display: flex;
-
-    flex-direction: column;
-
-}
-
-
-
-form input, form textarea {
-
-    margin-bottom: 15px;
-
-    padding: 12px;
-
-    font-size: 14px;
-
-}
-
-
-
-form button {
-
-    padding: 14px;
-
-    background: #1a1a1a;
-
-    color: #fff;
-
-    border: none;
-
-    cursor: pointer;
-
-}
-
-
-
-footer {
-
-    padding: 30px;
-
-    text-align: center;
-
-    font-size: 13px;
-
-    color: #777;
-
-}
-
-</html>
 
