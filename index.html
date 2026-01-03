@@ -18,9 +18,14 @@ padding:20px 40px; position:fixed; width:100%; background:rgba(255,255,255,0.95)
 border-bottom:1px solid #eee; z-index:10; height:80px;
 }
 .logo {font-family: 'Playfair Display', serif; font-size:22px; letter-spacing:2px;}
-nav.nav-menu {display:none; flex-direction:column; position:absolute; top:80px; right:20px; background:rgba(255,255,255,0.95); padding:20px; border:1px solid #ddd; border-radius:8px; gap:15px;}
-nav.nav-menu a {font-size:14px;}
 .menu-toggle {display:block; font-size:28px; background:none; border:none; cursor:pointer;}
+nav.nav-menu {
+display:none; flex-direction:column; position:absolute; top:80px; right:20px;
+background:rgba(255,255,255,0.95); padding:20px; border:1px solid #ddd; border-radius:8px; gap:15px;
+}
+
+/* Links menú */
+nav.nav-menu a {font-size:14px;}
 
 /* Desktop menu horizontal */
 @media (min-width:769px){
@@ -64,8 +69,7 @@ footer {padding:30px; text-align:center; font-size:13px; color:#777;}
 </nav>
 </header>
 
-<!-- ---------- SECCIONES ---------- -->
-
+<!-- SECCIONES -->
 <section id="home" class="section active hero">
 <div class="hero-text">
 <h1>Art for Exceptional Spaces</h1>
@@ -81,9 +85,7 @@ Art Patnam creates and curates artwork collections designed to enhance hospitali
 
 <section id="fineart" class="section">
 <h2>Fine Art</h2>
-<p class="section-desc">
-Original artworks created by professional artists. Each piece is unique, expressive and curated for high-end spaces.
-</p>
+<p class="section-desc">Original artworks created by professional artists. Each piece is unique, expressive and curated for high-end spaces.</p>
 <div class="gallery">
 <div class="art-card">Artwork 1</div>
 <div class="art-card">Artwork 2</div>
@@ -93,9 +95,7 @@ Original artworks created by professional artists. Each piece is unique, express
 
 <section id="generalart" class="section alt">
 <h2>General Art</h2>
-<p class="section-desc">
-Decorative art collections designed to complement interiors. Ideal for large-scale projects requiring visual harmony.
-</p>
+<p class="section-desc">Decorative art collections designed to complement interiors. Ideal for large-scale projects requiring visual harmony.</p>
 <div class="gallery">
 <div class="art-card">Artwork A</div>
 <div class="art-card">Artwork B</div>
@@ -119,22 +119,20 @@ Decorative art collections designed to complement interiors. Ideal for large-sca
 </footer>
 
 <script>
-// ----------- MENÚ DESPLEGABLE -----------
+// -------- MENÚ DESPLEGABLE FUNCIONAL --------
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
-menuToggle.addEventListener('click', () => navMenu.classList.toggle('show'));
-document.querySelectorAll('.nav-menu a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('show')));
+menuToggle.addEventListener('click', () => {
+navMenu.style.display = (navMenu.style.display === 'flex') ? 'none' : 'flex';
+});
 
-// ----------- NAVEGACIÓN ENTRE SECCIONES -----------
+// -------- NAVEGACIÓN ENTRE SECCIONES --------
 const sections = document.querySelectorAll('.section');
 document.querySelectorAll('.nav-menu a').forEach(link => {
 link.addEventListener('click', e => {
 const target = e.target.getAttribute('data-section');
-sections.forEach(sec => {
-if(sec.id === target || (target==='home' && sec.id==='intro')) sec.style.display = 'block';
-else sec.style.display = 'none';
-});
-// Scroll al top
+sections.forEach(sec => sec.style.display = (sec.id === target || (target==='home' && sec.id==='intro')) ? 'block' : 'none');
+navMenu.style.display = 'none'; // cerrar menú al seleccionar
 window.scrollTo(0,0);
 });
 });
@@ -142,6 +140,7 @@ window.scrollTo(0,0);
 
 </body>
 </html>
+
 
 
 
