@@ -16,11 +16,14 @@ background-color: #ffffff;
 line-height: 1.6;
 }
 
+/* -------------------
+HEADER
+------------------- */
 header {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 20px 60px;
+padding: 20px 40px;
 position: fixed;
 width: 100%;
 background: rgba(255,255,255,0.95);
@@ -35,24 +38,46 @@ font-size: 22px;
 letter-spacing: 2px;
 }
 
-nav a {
-margin-left: 30px;
+/* Navegación */
+nav.nav-menu {
+display: flex;
+gap: 30px;
+}
+
+nav.nav-menu a {
 text-decoration: none;
 color: #1a1a1a;
 font-size: 14px;
 cursor: pointer;
 }
 
+/* Botón de menú (hamburger) */
+.menu-toggle {
+display: none;
+font-size: 28px;
+background: none;
+border: none;
+cursor: pointer;
+}
+
+/* -------------------
+HERO
+------------------- */
 .hero {
 display: flex;
 flex-direction: column;
-justify-content: center; /* centra verticalmente */
-align-items: center; /* centra horizontalmente */
+justify-content: center;
+align-items: center;
 text-align: center;
-padding: 120px 40px 40px 40px; /* 120 px para dejar espacio para header */
-height: calc(100vh - 80px); /* ocupa toda la ventana menos el header */
+padding: 120px 40px 40px 40px; /* espacio para header */
+height: calc(100vh - 80px);
 background: #f2f2f2;
 box-sizing: border-box;
+}
+
+.hero-text {
+max-width: 700px;
+margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -67,6 +92,9 @@ max-width: 600px;
 margin: auto;
 }
 
+/* -------------------
+INTRO
+------------------- */
 .intro {
 display: flex;
 justify-content: center;
@@ -77,6 +105,9 @@ padding: 0 20%;
 font-size: 18px;
 }
 
+/* -------------------
+SECCIONES FINE/GENERAL ART
+------------------- */
 .section {
 padding: 100px 10%;
 }
@@ -112,6 +143,9 @@ font-size: 18px;
 color: #666;
 }
 
+/* -------------------
+CONTACT
+------------------- */
 .contact {
 padding: 100px 10%;
 text-align: center;
@@ -138,7 +172,9 @@ border: none;
 cursor: pointer;
 }
 
-/* Footer oculto */
+/* -------------------
+FOOTER OCULTO
+------------------- */
 footer {
 padding: 30px;
 text-align: center;
@@ -146,13 +182,41 @@ font-size: 13px;
 color: #777;
 }
 
-/* Sistema de pestañas */
+/* -------------------
+PESTAÑAS CON FADE-IN
+------------------- */
 .tab-section {
 display: none;
 }
 
 .tab-section.active {
 display: block;
+}
+
+/* -------------------
+MENÚ RESPONSIVE (MÓVIL)
+------------------- */
+@media (max-width: 768px) {
+nav.nav-menu {
+display: none;
+flex-direction: column;
+position: absolute;
+top: 80px;
+right: 20px;
+background: rgba(255,255,255,0.95);
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+gap: 15px;
+}
+
+nav.nav-menu.show {
+display: flex;
+}
+
+.menu-toggle {
+display: block;
+}
 }
 
 
