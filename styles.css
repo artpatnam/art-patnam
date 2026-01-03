@@ -40,8 +40,16 @@ letter-spacing: 2px;
 
 /* Navegación */
 nav.nav-menu {
-display: flex;
-gap: 30px;
+display: none; /* oculto por defecto */
+flex-direction: column;
+position: absolute;
+top: 80px;
+right: 20px;
+background: rgba(255,255,255,0.95);
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+gap: 15px;
 }
 
 nav.nav-menu a {
@@ -51,13 +59,29 @@ font-size: 14px;
 cursor: pointer;
 }
 
-/* Botón de menú (hamburger) */
+/* Botón de menú */
 .menu-toggle {
 display: none;
 font-size: 28px;
 background: none;
 border: none;
 cursor: pointer;
+}
+
+/* Mostrar menú en desktop horizontal */
+@media (min-width: 769px) {
+nav.nav-menu {
+display: flex !important;
+flex-direction: row;
+position: static;
+background: none;
+padding: 0;
+gap: 30px;
+border: none;
+}
+.menu-toggle {
+display: none;
+}
 }
 
 /* -------------------
@@ -69,15 +93,10 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-padding: 120px 40px 40px 40px; /* espacio para header */
+padding: 120px 40px 40px 40px;
 height: calc(100vh - 80px);
 background: #f2f2f2;
 box-sizing: border-box;
-}
-
-.hero-text {
-max-width: 700px;
-margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -106,7 +125,7 @@ font-size: 18px;
 }
 
 /* -------------------
-SECCIONES FINE/GENERAL ART
+SECCIONES
 ------------------- */
 .section {
 padding: 100px 10%;
@@ -183,37 +202,9 @@ color: #777;
 }
 
 /* -------------------
-PESTAÑAS CON FADE-IN
-------------------- */
-.tab-section {
-display: none;
-}
-
-.tab-section.active {
-display: block;
-}
-
-/* -------------------
-MENÚ RESPONSIVE (MÓVIL)
+MENÚ RESPONSIVE
 ------------------- */
 @media (max-width: 768px) {
-nav.nav-menu {
-display: none;
-flex-direction: column;
-position: absolute;
-top: 80px;
-right: 20px;
-background: rgba(255,255,255,0.95);
-padding: 20px;
-border: 1px solid #ddd;
-border-radius: 8px;
-gap: 15px;
-}
-
-nav.nav-menu.show {
-display: flex;
-}
-
 .menu-toggle {
 display: block;
 }
