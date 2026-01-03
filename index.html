@@ -1,205 +1,104 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <title>Art Patnam</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8">
+<title>Art Patnam</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-
-
 <header>
+<div class="logo">ART PATNAM</div>
 
-    <div class="logo">ART PATNAM</div>
+<!-- Botón de menú para móvil -->
+<button class="menu-toggle" aria-label="Abrir menú">☰</button>
 
-    <nav>
-
-        <a href="#home">Home</a>
-
-        <a href="#fineart">Fine Art</a>
-
-        <a href="#generalart">General Art</a>
-
-        <a href="#contact">Contact</a>
-
-    </nav>
-
+<nav class="nav-menu">
+<a href="#home">Home</a>
+<a href="#fineart">Fine Art</a>
+<a href="#generalart">General Art</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-
-
-<!-- Home -->
-
-<section id="home" class="hero tab-section active">
-
-    <div class="hero-text">
-
-        <h1>Art for Exceptional Spaces</h1>
-
-        <p>Curated artworks for hotels, restaurants, cruise ships and public spaces.</p>
-
-    </div>
-
+<section id="home" class="hero">
+<div class="hero-text">
+<h1>Art for Exceptional Spaces</h1>
+<p>Curated artworks for hotels, restaurants, cruise ships and public spaces.</p>
+</div>
 </section>
 
-
-
-<!-- Intro -->
-
-<section class="intro tab-section active" id="intro">
-
-    <p>
-
-        Art Patnam creates and curates artwork collections designed to enhance
-
-        hospitality and public environments. From exclusive fine art to refined
-
-        decorative pieces, we help spaces tell a story through art.
-
-    </p>
-
+<section class="intro">
+<p>
+Art Patnam creates and curates artwork collections designed to enhance
+hospitality and public environments. From exclusive fine art to refined
+decorative pieces, we help spaces tell a story through art.
+</p>
 </section>
 
-
-
-<!-- Fine Art -->
-
-<section id="fineart" class="section tab-section">
-
-    <h2>Fine Art</h2>
-
-    <p class="section-desc">
-
-        Original artworks created by professional artists. Each piece is unique,
-
-        expressive and curated for high-end spaces.
-
-    </p>
-
-    <div class="gallery">
-
-        <div class="art-card">Artwork 1</div>
-
-        <div class="art-card">Artwork 2</div>
-
-        <div class="art-card">Artwork 3</div>
-
-    </div>
-
+<section id="fineart" class="section">
+<h2>Fine Art</h2>
+<p class="section-desc">
+Original artworks created by professional artists. Each piece is unique,
+expressive and curated for high-end spaces.
+</p>
+<div class="gallery">
+<div class="art-card">Artwork 1</div>
+<div class="art-card">Artwork 2</div>
+<div class="art-card">Artwork 3</div>
+</div>
 </section>
 
-
-
-<!-- General Art -->
-
-<section id="generalart" class="section alt tab-section">
-
-    <h2>General Art</h2>
-
-    <p class="section-desc">
-
-        Decorative art collections designed to complement interiors.
-
-        Ideal for large-scale projects requiring visual harmony.
-
-    </p>
-
-    <div class="gallery">
-
-        <div class="art-card">Artwork A</div>
-
-        <div class="art-card">Artwork B</div>
-
-        <div class="art-card">Artwork C</div>
-
-    </div>
-
+<section id="generalart" class="section alt">
+<h2>General Art</h2>
+<p class="section-desc">
+Decorative art collections designed to complement interiors.
+Ideal for large-scale projects requiring visual harmony.
+</p>
+<div class="gallery">
+<div class="art-card">Artwork A</div>
+<div class="art-card">Artwork B</div>
+<div class="art-card">Artwork C</div>
+</div>
 </section>
 
+<section id="contact" class="contact">
+<h2>Contact</h2>
+<p>Tell us about your project and space.</p>
 
-
-<!-- Contact -->
-
-<section id="contact" class="contact tab-section">
-
-    <h2>Contact</h2>
-
-    <p>Tell us about your project and space.</p>
-
-
-
-    <!-- Formspree form -->
-
-    <form action="https://formspree.io/f/mnjnvbky" method="POST">
-
-        <input type="text" name="name" placeholder="Name" required>
-
-        <input type="email" name="email" placeholder="Email" required>
-
-        <textarea name="message" placeholder="Project details" required></textarea>
-
-        <button type="submit">Send</button>
-
-    </form>
-
+<form action="https://formspree.io/f/yourformid" method="POST">
+<input type="text" name="name" placeholder="Name" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="message" placeholder="Project details"></textarea>
+<button type="submit">Send</button>
+</form>
 </section>
 
-
-
-<footer>
-
-    <p class="visually-hidden">© 2026 Art Patnam — Fine Art & General Art</p>
-
+<footer class="visually-hidden">
+© 2026 Art Patnam — Fine Art & General Art
 </footer>
 
-
-
 <script>
+// Abrir/Cerrar menú móvil
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-    // Script para cambiar de pestaña
+menuToggle.addEventListener('click', () => {
+navMenu.classList.toggle('show');
+});
 
-    const menuLinks = document.querySelectorAll('header nav a');
-
-    const sections = document.querySelectorAll('.tab-section');
-
-
-
-    menuLinks.forEach(link => {
-
-        link.addEventListener('click', e => {
-
-            e.preventDefault();
-
-            const targetId = link.getAttribute('href').substring(1);
-
-            sections.forEach(sec => sec.classList.remove('active'));
-
-            const targetSection = document.getElementById(targetId);
-
-            if(targetSection) targetSection.classList.add('active');
-
-        });
-
-    });
-
+// Cerrar menú al pulsar un enlace (móvil)
+document.querySelectorAll('.nav-menu a').forEach(link => {
+link.addEventListener('click', () => {
+navMenu.classList.remove('show');
+});
+});
 </script>
 
-
-
 </body>
-
 </html>
+
 
 
