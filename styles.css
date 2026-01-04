@@ -11,15 +11,17 @@ box-sizing: border-box;
 VARIABLES GLOBALES
 ========================= */
 :root {
---dark-main: #1f1f1f;
---dark-secondary: #2a2a2a;
+/* NUEVOS TONOS (más elegantes, menos negros) */
+--dark-main: #2f2f2d;
+--dark-secondary: #3a3a37;
+
 --accent: #c9a24d;
 
 --text-dark: #1a1a1a;
---text-light: #f2f2f2;
---text-muted: #b5b5b5;
+--text-light: #f5f5f3;
+--text-muted: #bdbdb8;
 
---border-soft-dark: rgba(255,255,255,0.06);
+--border-soft-dark: rgba(255,255,255,0.08);
 --border-soft-light: rgba(0,0,0,0.08);
 }
 
@@ -102,12 +104,10 @@ position: relative;
 transition: color 0.3s ease;
 }
 
-/* Hover elegante */
 .nav-menu a:hover {
 color: var(--accent);
 }
 
-/* Subrayado fino */
 .nav-menu a::after {
 content: "";
 position: absolute;
@@ -285,14 +285,14 @@ font-size: 14px;
 
 form button {
 padding: 14px;
-background: #1a1a1a;
+background: #2f2f2d;
 color: #fff;
 border: none;
 cursor: pointer;
 }
 
 /* =========================
-FOOTER GLOBAL (NUEVO)
+FOOTER GLOBAL
 ========================= */
 footer {
 background: linear-gradient(
@@ -316,7 +316,6 @@ color: var(--text-muted);
 
 .footer-content a {
 color: var(--text-light);
-text-decoration: none;
 }
 
 .footer-content a:hover {
@@ -357,6 +356,7 @@ gap: 15px;
 display: flex;
 }
 }
+
 
 
 
