@@ -119,24 +119,30 @@ Decorative art collections designed to complement interiors. Ideal for large-sca
 </footer>
 
 <script>
-// MENU
+// MENU TOGGLE (mobile)
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
 menuToggle.addEventListener('click', () => {
-navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+navMenu.classList.toggle('open');
 });
 
-// NAVIGATION
+// SECTION NAVIGATION (museum style)
 const sections = document.querySelectorAll('.section');
-document.querySelectorAll('.nav-menu a').forEach(link => {
-link.addEventListener('click', e => {
-const target = e.target.getAttribute('data-section');
-sections.forEach(sec => {
-sec.style.display = sec.id === target ? 'block' : 'none';
+const navLinks = document.querySelectorAll('.nav-menu a');
+
+navLinks.forEach(link => {
+link.addEventListener('click', () => {
+const target = link.getAttribute('data-section');
+
+sections.forEach(section => {
+section.classList.remove('active');
+if (section.id === target) {
+section.classList.add('active');
+}
 });
-navMenu.style.display = 'none';
-window.scrollTo(0,0);
+
+navMenu.classList.remove('open');
 });
 });
 
