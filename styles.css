@@ -8,24 +8,6 @@ box-sizing: border-box;
 }
 
 /* =========================
-VARIABLES GLOBALES
-========================= */
-:root {
-/* NUEVOS TONOS (más elegantes, menos negros) */
---dark-main: #2f2f2d;
---dark-secondary: #3a3a37;
-
---accent: #c9a24d;
-
---text-dark: #1a1a1a;
---text-light: #f5f5f3;
---text-muted: #bdbdb8;
-
---border-soft-dark: rgba(255,255,255,0.08);
---border-soft-light: rgba(0,0,0,0.08);
-}
-
-/* =========================
 BLOQUEO SCROLL GLOBAL
 ========================= */
 html, body {
@@ -35,7 +17,7 @@ overflow: hidden;
 
 body {
 font-family: 'Inter', sans-serif;
-color: var(--text-dark);
+color: #1a1a1a;
 background: #ffffff;
 line-height: 1.7;
 }
@@ -46,7 +28,7 @@ left: -9999px;
 }
 
 /* =========================
-HEADER GLOBAL
+HEADER GLOBAL (CLARO Y ELEGANTE)
 ========================= */
 header {
 display: flex;
@@ -61,11 +43,11 @@ padding: 20px 40px;
 
 background: linear-gradient(
 to bottom,
-var(--dark-main) 0%,
-var(--dark-secondary) 100%
+#ededeb 0%,
+#e3e3df 100%
 );
 
-border-bottom: 1px solid var(--border-soft-dark);
+border-bottom: 1px solid rgba(0,0,0,0.08);
 z-index: 10;
 }
 
@@ -74,7 +56,7 @@ z-index: 10;
 font-family: 'Playfair Display', serif;
 font-size: 22px;
 letter-spacing: 2px;
-color: var(--text-light);
+color: #2a2a2a;
 }
 
 /* =========================
@@ -86,7 +68,7 @@ background: none;
 border: none;
 cursor: pointer;
 display: none;
-color: var(--text-light);
+color: #2a2a2a;
 }
 
 .nav-menu {
@@ -98,16 +80,17 @@ gap: 30px;
 font-size: 14px;
 letter-spacing: 0.06em;
 cursor: pointer;
-color: var(--text-light);
+color: #2a2a2a;
 text-decoration: none;
 position: relative;
 transition: color 0.3s ease;
 }
 
 .nav-menu a:hover {
-color: var(--accent);
+color: #c9a24d;
 }
 
+/* Subrayado fino */
 .nav-menu a::after {
 content: "";
 position: absolute;
@@ -115,7 +98,7 @@ left: 0;
 bottom: -6px;
 width: 0%;
 height: 1px;
-background: var(--accent);
+background: #c9a24d;
 transition: width 0.3s ease;
 }
 
@@ -285,22 +268,22 @@ font-size: 14px;
 
 form button {
 padding: 14px;
-background: #2f2f2d;
+background: #2a2a2a;
 color: #fff;
 border: none;
 cursor: pointer;
 }
 
 /* =========================
-FOOTER GLOBAL
+FOOTER GLOBAL (CLARO)
 ========================= */
 footer {
 background: linear-gradient(
 to top,
-var(--dark-main) 0%,
-var(--dark-secondary) 100%
+#ededeb 0%,
+#e3e3df 100%
 );
-border-top: 1px solid var(--border-soft-dark);
+border-top: 1px solid rgba(0,0,0,0.08);
 padding: 40px 8%;
 }
 
@@ -311,15 +294,16 @@ text-align: center;
 .footer-content p {
 font-size: 13px;
 letter-spacing: 0.04em;
-color: var(--text-muted);
+color: #6f6f6f;
 }
 
 .footer-content a {
-color: var(--text-light);
+color: #2a2a2a;
+text-decoration: none;
 }
 
 .footer-content a:hover {
-color: var(--accent);
+color: #c9a24d;
 }
 
 /* =========================
@@ -346,9 +330,9 @@ flex-direction: column;
 position: absolute;
 top: 80px;
 right: 20px;
-background: var(--dark-main);
+background: #ededeb;
 padding: 20px;
-border: 1px solid var(--border-soft-dark);
+border: 1px solid rgba(0,0,0,0.08);
 gap: 15px;
 }
 
