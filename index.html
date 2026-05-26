@@ -5,9 +5,9 @@
   <title>Art Patnam | Art for Business Spaces</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
+  <!-- GOOGLE FONTS (IMPORTANTE: así SÍ funciona) -->
   <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
@@ -31,7 +31,6 @@ HEADER
 ========================= -->
 <header>
   <div class="logo">ART PATNAM</div>
-
   <button class="menu-toggle" aria-label="Menu">☰</button>
 
   <nav class="nav-menu">
@@ -54,21 +53,18 @@ HOME / HERO
       </h1>
 
       <p class="hero-claim"
-         data-en="Improve how your business is perceived from the very first glance."
-         data-es="Mejora la percepción de tu negocio desde el primer vistazo.">
+        data-en="Improve how your business is perceived from the very first glance."
+        data-es="Mejora la percepción de tu negocio desde el primer vistazo.">
       </p>
 
       <ul class="hero-benefits">
-        <li data-en="Attract more customers"
-            data-es="Atrae más clientes"></li>
-        <li data-en="Strengthen your brand image"
-            data-es="Refuerza tu imagen de marca"></li>
-        <li data-en="Increase the value of your space"
-            data-es="Revaloriza tu espacio"></li>
+        <li data-en="Attract more customers" data-es="Atrae más clientes"></li>
+        <li data-en="Strengthen your brand image" data-es="Refuerza tu imagen de marca"></li>
+        <li data-en="Increase the value of your space" data-es="Revaloriza tu espacio"></li>
       </ul>
     </div>
 
-    <!-- HERO SLIDER -->
+    <!-- HERO SLIDER (CORRECTO) -->
     <div class="hero-slider">
       <img src="img/anti-ism.jpg" alt="Anti-ism artwork" class="active">
       <img src="img/silver-eruption.jpg" alt="Silver Eruption artwork">
@@ -85,101 +81,46 @@ FINE ART
 ========================= -->
 <section id="fineart" class="section">
 
-  <h2
-    data-en="Fine Art for Business Spaces"
-    data-es="Arte para espacios comerciales">
-  </h2>
+  <h2 data-en="Fine Art for Business Spaces" data-es="Arte para espacios comerciales"></h2>
 
   <p class="section-desc"
-     data-en="A curated selection of artworks designed to enhance restaurants, offices, clinics and wellness spaces."
-     data-es="Una selección de obras pensadas para mejorar restaurantes, oficinas, clínicas y espacios de bienestar.">
+    data-en="A curated selection of artworks designed to enhance restaurants, offices, clinics and wellness spaces."
+    data-es="Una selección de obras pensadas para mejorar restaurantes, oficinas, clínicas y espacios de bienestar.">
   </p>
 
-  <!-- FILTERS -->
   <div class="filters">
-    <button class="filter active" data-filter="all"
-      data-en="All spaces" data-es="Todos">All</button>
-    <button class="filter" data-filter="restaurant"
-      data-en="Restaurants" data-es="Restaurantes">Restaurants</button>
-    <button class="filter" data-filter="office"
-      data-en="Offices" data-es="Oficinas">Offices</button>
-    <button class="filter" data-filter="clinic"
-      data-en="Clinics" data-es="Clínicas">Clinics</button>
-    <button class="filter" data-filter="wellness"
-      data-en="Wellness & Beauty" data-es="Wellness y Belleza">Wellness</button>
+    <button class="filter active" data-filter="all">All</button>
+    <button class="filter" data-filter="restaurant">Restaurants</button>
+    <button class="filter" data-filter="office">Offices</button>
+    <button class="filter" data-filter="clinic">Clinics</button>
+    <button class="filter" data-filter="wellness">Wellness</button>
   </div>
 
-  <!-- GALLERY -->
   <div class="gallery">
 
     <article class="artwork" data-space="restaurant office">
-      <div class="art-image">
-        <img src="img/anti-ism.jpg" alt="Anti-ism artwork">
-      </div>
+      <div class="art-image"><img src="img/anti-ism.jpg" alt="Anti-ism"></div>
       <h3>Anti-ism</h3>
-      <span class="use"
-        data-en="Restaurants & offices"
-        data-es="Restaurantes y oficinas"></span>
-      <p
-        data-en="A bold piece that adds character and identity."
-        data-es="Una obra con carácter que aporta identidad al espacio.">
-      </p>
     </article>
 
     <article class="artwork" data-space="office wellness">
-      <div class="art-image">
-        <img src="img/silver-eruption.jpg" alt="Silver Eruption artwork">
-      </div>
+      <div class="art-image"><img src="img/silver-eruption.jpg" alt="Silver Eruption"></div>
       <h3>Silver Eruption</h3>
-      <span class="use"
-        data-en="Offices & wellness"
-        data-es="Oficinas y wellness"></span>
-      <p
-        data-en="Elegant and calm, ideal for professional environments."
-        data-es="Elegante y serena, ideal para entornos profesionales.">
-      </p>
     </article>
 
     <article class="artwork" data-space="restaurant office">
-      <div class="art-image">
-        <img src="img/paisaje.jpg" alt="Paisaje artwork">
-      </div>
+      <div class="art-image"><img src="img/paisaje.jpg" alt="Paisaje"></div>
       <h3>Paisaje</h3>
-      <span class="use"
-        data-en="Restaurants & offices"
-        data-es="Restaurantes y oficinas"></span>
-      <p
-        data-en="Warm and welcoming atmosphere."
-        data-es="Crea una atmósfera cálida y acogedora.">
-      </p>
     </article>
 
     <article class="artwork" data-space="clinic office restaurant wellness">
-      <div class="art-image">
-        <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto artwork">
-      </div>
+      <div class="art-image"><img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto"></div>
       <h3>Paisaje abstracto</h3>
-      <span class="use"
-        data-en="All business spaces"
-        data-es="Todos los espacios"></span>
-      <p
-        data-en="Versatile artwork that adapts to any environment."
-        data-es="Obra versátil que se adapta a cualquier entorno.">
-      </p>
     </article>
 
     <article class="artwork" data-space="restaurant office clinic wellness">
-      <div class="art-image">
-        <img src="img/i-journey.jpg" alt="I Journey artwork">
-      </div>
+      <div class="art-image"><img src="img/i-journey.jpg" alt="I Journey"></div>
       <h3>I Journey</h3>
-      <span class="use"
-        data-en="All business spaces"
-        data-es="Todos los espacios"></span>
-      <p
-        data-en="A universal piece that elevates any space."
-        data-es="Una obra universal que eleva cualquier espacio.">
-      </p>
     </article>
 
   </div>
@@ -190,11 +131,7 @@ CONTACT
 ========================= -->
 <section id="contact" class="section contact">
   <h2 data-en="Contact us" data-es="Contacto"></h2>
-
-  <p
-    data-en="Tell us about your space"
-    data-es="Cuéntanos cómo es tu espacio">
-  </p>
+  <p data-en="Tell us about your space" data-es="Cuéntanos cómo es tu espacio"></p>
 
   <form action="https://formspree.io/f/mnjnvbky" method="POST">
     <input type="text" name="name" placeholder="Name" required>
@@ -202,8 +139,7 @@ CONTACT
     <textarea name="message" placeholder="Project details"></textarea>
     <button type="submit"
       data-en="Send message"
-      data-es="Enviar mensaje">
-    </button>
+      data-es="Enviar mensaje"></button>
   </form>
 </section>
 
@@ -215,10 +151,12 @@ SCRIPTS
 <script>
 /* LANGUAGE */
 const modal = document.getElementById('language-modal');
+
 if (localStorage.getItem('lang')) {
   modal.style.display = 'none';
   setLanguage(localStorage.getItem('lang'));
 }
+
 document.querySelectorAll('[data-lang]').forEach(btn => {
   btn.addEventListener('click', () => {
     localStorage.setItem('lang', btn.dataset.lang);
@@ -226,6 +164,7 @@ document.querySelectorAll('[data-lang]').forEach(btn => {
     setLanguage(btn.dataset.lang);
   });
 });
+
 function setLanguage(lang) {
   document.querySelectorAll('[data-en]').forEach(el => {
     el.textContent = el.dataset[lang];
@@ -258,20 +197,20 @@ document.querySelectorAll('.filter').forEach(btn => {
   };
 });
 
-/* HERO SLIDER */
+/* HERO SLIDER (SEGURO) */
 const slides = document.querySelectorAll('.hero-slider img');
-let current = 0;
-
-setInterval(() => {
-  slides[current].classList.remove('active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('active');
-}, 2000);
+if (slides.length > 0) {
+  let current = 0;
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 2000);
+}
 </script>
 
 </body>
 </html>
-
 
 
 
