@@ -2,345 +2,283 @@
 RESET
 ========================= */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* =========================
 BLOQUEO SCROLL GLOBAL
 ========================= */
 html, body {
-height: 100%;
-overflow: hidden;
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
-font-family: 'Inter', sans-serif;
-color: #1a1a1a;
-background: #ffffff;
-line-height: 1.7;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.7;
 }
 
 .visually-hidden {
-position: absolute;
-left: -9999px;
+  position: absolute;
+  left: -9999px;
 }
 
 /* =========================
-HEADER GLOBAL (CLARO Y ELEGANTE)
+HEADER
 ========================= */
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-position: fixed;
-top: 0;
-width: 100%;
-height: 80px;
-padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  padding: 20px 40px;
 
-background: linear-gradient(
-to bottom,
-#ededeb 0%,
-#e3e3df 100%
-);
-
-border-bottom: 1px solid rgba(0,0,0,0.08);
-z-index: 10;
+  background: linear-gradient(to bottom, #ededeb, #e3e3df);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  z-index: 10;
 }
 
-/* Logo */
 .logo {
-font-family: 'Playfair Display', serif;
-font-size: 22px;
-letter-spacing: 2px;
-color: #2a2a2a;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  letter-spacing: 2px;
 }
 
 /* =========================
-NAVEGACIÓN
+NAV
 ========================= */
 .menu-toggle {
-font-size: 28px;
-background: none;
-border: none;
-cursor: pointer;
-display: none;
-color: #2a2a2a;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
 }
 
 .nav-menu {
-display: flex;
-gap: 30px;
+  display: flex;
+  gap: 30px;
 }
 
 .nav-menu a {
-font-size: 14px;
-letter-spacing: 0.06em;
-cursor: pointer;
-color: #2a2a2a;
-text-decoration: none;
-position: relative;
-transition: color 0.3s ease;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  text-decoration: none;
+  color: #2a2a2a;
+  position: relative;
 }
 
 .nav-menu a:hover {
-color: #c9a24d;
+  color: #c9a24d;
 }
 
-/* Subrayado fino */
 .nav-menu a::after {
-content: "";
-position: absolute;
-left: 0;
-bottom: -6px;
-width: 0%;
-height: 1px;
-background: #c9a24d;
-transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: #c9a24d;
+  transition: width 0.3s ease;
 }
 
 .nav-menu a:hover::after {
-width: 100%;
+  width: 100%;
 }
 
 /* =========================
 SECCIONES
 ========================= */
 .section {
-display: none;
-height: calc(100vh - 80px);
-overflow-y: auto;
-padding: 120px 8% 100px;
+  display: none;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+  padding: 120px 8% 100px;
 }
 
 .section.active {
-display: block;
-}
-
-.section.alt {
-background: #fafafa;
+  display: block;
 }
 
 .section h2 {
-font-family: 'Playfair Display', serif;
-font-size: 42px;
-margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
 .section-desc {
-max-width: 700px;
-margin-bottom: 60px;
+  max-width: 700px;
+  margin-bottom: 60px;
+  color: #555;
 }
 
 /* =========================
 HERO
 ========================= */
 .hero {
-background: #f2f2f2;
+  background: #f2f2f2;
 }
 
 .hero-inner {
-display: grid;
-grid-template-columns: 1.1fr 0.9fr;
-gap: 60px;
-align-items: center;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
 }
 
 .hero-text h1 {
-font-family: 'Playfair Display', serif;
-font-size: 56px;
-margin-bottom: 30px;
+  font-size: 56px;
+  margin-bottom: 30px;
 }
 
 .hero-text p {
-font-size: 16px;
-max-width: 620px;
+  max-width: 620px;
+  color: #444;
 }
 
 /* =========================
-IMÁGENES HERO
+HERO IMAGES
 ========================= */
 .hero-images {
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .hero-image {
-height: 280px;
-background: #e0e0e0;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 14px;
-color: #777;
+  height: 280px;
+  background: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
 }
 
 /* =========================
 GALERÍA
 ========================= */
 .gallery {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 40px;
-}
-
-.art-card {
-background: #e6e6e6;
-height: 300px;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #777;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 50px;
 }
 
 /* =========================
 ARTWORK
 ========================= */
 .artwork {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .art-image {
-background: #e6e6e6;
-height: 320px;
-margin-bottom: 15px;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #888;
+  height: 320px;
+  background: #e6e6e6;
+  margin-bottom: 16px;
 }
 
 .art-meta {
-margin-bottom: 10px;
-}
-
-.artist {
-font-size: 14px;
-font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .title {
-font-size: 13px;
-font-style: italic;
-color: #555;
+  display: block;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.artist {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555;
 }
 
 .art-description {
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
 .art-description p {
-font-size: 14px;
-margin-top: 10px;
-color: #444;
+  font-size: 14px;
+  color: #444;
 }
 
 .artwork.active .art-description {
-max-height: 300px;
+  max-height: 260px;
 }
 
 /* =========================
-CONTACTO
+CONTACT
 ========================= */
 .contact {
-text-align: center;
+  text-align: center;
 }
 
 form {
-max-width: 500px;
-margin: 40px auto 0;
-display: flex;
-flex-direction: column;
+  max-width: 500px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
 }
 
 form input,
 form textarea {
-margin-bottom: 15px;
-padding: 12px;
-font-size: 14px;
+  margin-bottom: 15px;
+  padding: 12px;
+  font-size: 14px;
 }
 
 form button {
-padding: 14px;
-background: #2a2a2a;
-color: #fff;
-border: none;
-cursor: pointer;
-}
-
-/* =========================
-FOOTER GLOBAL (CLARO)
-========================= */
-footer {
-background: linear-gradient(
-to top,
-#ededeb 0%,
-#e3e3df 100%
-);
-border-top: 1px solid rgba(0,0,0,0.08);
-padding: 40px 8%;
-}
-
-.footer-content {
-text-align: center;
-}
-
-.footer-content p {
-font-size: 13px;
-letter-spacing: 0.04em;
-color: #6f6f6f;
-}
-
-.footer-content a {
-color: #2a2a2a;
-text-decoration: none;
-}
-
-.footer-content a:hover {
-color: #c9a24d;
+  padding: 14px;
+  background: #2a2a2a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 /* =========================
 RESPONSIVE
 ========================= */
 @media (max-width: 900px) {
-.hero-inner {
-grid-template-columns: 1fr;
-}
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
 
-.hero-text h1 {
-font-size: 42px;
-}
+  .hero-text h1 {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 768px) {
-.menu-toggle {
-display: block;
-}
+  .menu-toggle {
+    display: block;
+  }
 
-.nav-menu {
-display: none;
-flex-direction: column;
-position: absolute;
-top: 80px;
-right: 20px;
-background: #ededeb;
-padding: 20px;
-border: 1px solid rgba(0,0,0,0.08);
-gap: 15px;
-}
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    background: #ededeb;
+    padding: 20px;
+    gap: 15px;
+  }
 
-.nav-menu.open {
-display: flex;
+  .nav-menu.open {
+    display: flex;
+  }
 }
-}
-
 
 
 
