@@ -1,283 +1,140 @@
-/* =========================
-RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
-/* =========================
-BLOQUEO SCROLL GLOBAL
-========================= */
 html, body {
-  height: 100%;
-  overflow: hidden;
+  height:100%;
+  overflow:hidden;
+  font-family:'Inter', sans-serif;
+  color:#1a1a1a;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  color: #1a1a1a;
-  background: #ffffff;
-  line-height: 1.7;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -9999px;
-}
-
-/* =========================
-HEADER
-========================= */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 80px;
-  padding: 20px 40px;
-
-  background: linear-gradient(to bottom, #ededeb, #e3e3df);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  z-index: 10;
+  position:fixed;
+  top:0;
+  width:100%;
+  height:80px;
+  background:#ededeb;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 40px;
+  z-index:10;
 }
 
 .logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  letter-spacing: 2px;
-}
-
-/* =========================
-NAV
-========================= */
-.menu-toggle {
-  font-size: 28px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: none;
+  font-family:'Playfair Display', serif;
+  letter-spacing:2px;
 }
 
 .nav-menu {
-  display: flex;
-  gap: 30px;
+  display:flex;
+  gap:30px;
 }
 
 .nav-menu a {
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  cursor: pointer;
-  text-decoration: none;
-  color: #2a2a2a;
-  position: relative;
+  cursor:pointer;
+  font-size:14px;
+  letter-spacing:0.06em;
 }
 
-.nav-menu a:hover {
-  color: #c9a24d;
-}
-
-.nav-menu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0;
-  height: 1px;
-  background: #c9a24d;
-  transition: width 0.3s ease;
-}
-
-.nav-menu a:hover::after {
-  width: 100%;
-}
-
-/* =========================
-SECCIONES
-========================= */
 .section {
-  display: none;
-  height: calc(100vh - 80px);
-  overflow-y: auto;
-  padding: 120px 8% 100px;
+  display:none;
+  height:calc(100vh - 80px);
+  overflow-y:auto;
+  padding:120px 8%;
 }
 
-.section.active {
-  display: block;
-}
+.section.active { display:block; }
 
-.section h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.section-desc {
-  max-width: 700px;
-  margin-bottom: 60px;
-  color: #555;
-}
-
-/* =========================
-HERO
-========================= */
-.hero {
-  background: #f2f2f2;
-}
+.hero { background:#f2f2f2; }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 60px;
-  align-items: center;
+  display:grid;
+  grid-template-columns:1.1fr 0.9fr;
+  gap:60px;
+  align-items:center;
 }
 
 .hero-text h1 {
-  font-size: 56px;
-  margin-bottom: 30px;
+  font-family:'Playfair Display', serif;
+  font-size:48px;
+  margin-bottom:20px;
 }
 
-.hero-text p {
-  max-width: 620px;
-  color: #444;
-}
-
-/* =========================
-HERO IMAGES
-========================= */
 .hero-images {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
 }
 
 .hero-image {
-  height: 280px;
-  background: #e0e0e0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
+  height:260px;
+  background:#ddd;
 }
 
-/* =========================
-GALERÍA
-========================= */
+.filters {
+  margin:40px 0;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+.filter {
+  padding:8px 18px;
+  border:1px solid #aaa;
+  background:none;
+  cursor:pointer;
+}
+
+.filter.active {
+  background:#1a1a1a;
+  color:#fff;
+}
+
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 50px;
-}
-
-/* =========================
-ARTWORK
-========================= */
-.artwork {
-  cursor: pointer;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:40px;
 }
 
 .art-image {
-  height: 320px;
-  background: #e6e6e6;
-  margin-bottom: 16px;
+  height:280px;
+  background:#e0e0e0;
+  margin-bottom:15px;
 }
 
-.art-meta {
-  margin-bottom: 10px;
+.artwork h3 {
+  font-family:'Playfair Display', serif;
+  font-size:18px;
 }
 
-.title {
-  display: block;
-  font-style: italic;
-  font-size: 14px;
+.use {
+  font-size:13px;
+  color:#777;
 }
 
-.artist {
-  font-size: 14px;
-  font-weight: 500;
-  color: #555;
+.language-modal {
+  position:fixed;
+  inset:0;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:100;
 }
 
-.art-description {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s ease;
+.language-box p {
+  font-family:'Playfair Display', serif;
+  font-size:26px;
+  margin-bottom:30px;
+  text-align:center;
 }
 
-.art-description p {
-  font-size: 14px;
-  color: #444;
-}
-
-.artwork.active .art-description {
-  max-height: 260px;
-}
-
-/* =========================
-CONTACT
-========================= */
-.contact {
-  text-align: center;
-}
-
-form {
-  max-width: 500px;
-  margin: 40px auto 0;
-  display: flex;
-  flex-direction: column;
-}
-
-form input,
-form textarea {
-  margin-bottom: 15px;
-  padding: 12px;
-  font-size: 14px;
-}
-
-form button {
-  padding: 14px;
-  background: #2a2a2a;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-/* =========================
-RESPONSIVE
-========================= */
-@media (max-width: 900px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-text h1 {
-    font-size: 42px;
-  }
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    background: #ededeb;
-    padding: 20px;
-    gap: 15px;
-  }
-
-  .nav-menu.open {
-    display: flex;
-  }
+.language-box button {
+  margin:0 10px;
+  padding:12px 28px;
+  border:1px solid #1a1a1a;
+  background:none;
+  cursor:pointer;
 }
 
 
