@@ -1,76 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Art Patnam | Art for Business Spaces</title>
+  <title>Art Patnam | Arte para negocios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS (IMPORTANTE: así SÍ funciona) -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap">
+  <!-- GOOGLE FONTS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<!-- =========================
-LANGUAGE SELECTOR
-========================= -->
-<div id="language-modal" class="language-modal">
-  <div class="language-box">
-    <p>Select your language</p>
-    <button data-lang="en">English</button>
-    <button data-lang="es">Español</button>
-  </div>
-</div>
-
-<!-- =========================
-HEADER
-========================= -->
 <header>
   <div class="logo">ART PATNAM</div>
-  <button class="menu-toggle" aria-label="Menu">☰</button>
 
   <nav class="nav-menu">
-    <a data-section="home" data-en="Home" data-es="Inicio">Home</a>
-    <a data-section="fineart" data-en="Fine Art" data-es="Arte">Fine Art</a>
-    <a data-section="contact" data-en="Contact" data-es="Contacto">Contact</a>
+    <a data-section="home">Inicio</a>
+    <a data-section="fineart">Arte</a>
+    <a data-section="contact">Contacto</a>
   </nav>
+
+  <!-- LANGUAGE SWITCH -->
+  <div class="lang-switch">
+    <button class="lang active" data-lang="es">ES</button>
+    <button class="lang" data-lang="en">EN</button>
+  </div>
 </header>
 
 <!-- =========================
-HOME / HERO
+HOME
 ========================= -->
-<section id="home" class="section hero active">
+<section id="home" class="section active hero">
+
   <div class="hero-inner">
 
     <div class="hero-text">
       <h1
-        data-en="Transform your business space into an experience"
-        data-es="Convierte tu negocio en una experiencia que atrae y fideliza">
+        data-es="Convierte tu negocio en una experiencia que atrae clientes"
+        data-en="Turn your business into an experience that attracts customers">
       </h1>
 
-      <p class="hero-claim"
-        data-en="Improve how your business is perceived from the very first glance."
-        data-es="Mejora la percepción de tu negocio desde el primer vistazo.">
+      <p
+        data-es="Arte pensado para mejorar la imagen, el ambiente y el valor percibido de tu espacio."
+        data-en="Art designed to improve your image, atmosphere and perceived value.">
       </p>
 
       <ul class="hero-benefits">
-        <li data-en="Attract more customers" data-es="Atrae más clientes"></li>
-        <li data-en="Strengthen your brand image" data-es="Refuerza tu imagen de marca"></li>
-        <li data-en="Increase the value of your space" data-es="Revaloriza tu espacio"></li>
+        <li data-es="Atrae más clientes" data-en="Attract more customers"></li>
+        <li data-es="Refuerza tu imagen de marca" data-en="Strengthen your brand image"></li>
+        <li data-es="Revaloriza tu espacio" data-en="Increase your space value"></li>
       </ul>
     </div>
 
-    <!-- HERO SLIDER (CORRECTO) -->
+    <!-- SLIDER -->
     <div class="hero-slider">
-      <img src="img/anti-ism.jpg" alt="Anti-ism artwork" class="active">
-      <img src="img/silver-eruption.jpg" alt="Silver Eruption artwork">
-      <img src="img/paisaje.jpg" alt="Paisaje artwork">
-      <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto artwork">
-      <img src="img/i-journey.jpg" alt="I Journey artwork">
+      <img src="img/anti-ism.jpg" class="active" alt="">
+      <img src="img/silver-eruption.jpg" alt="">
+      <img src="img/paisaje.jpg" alt="">
+      <img src="img/paisaje-abstracto.jpg" alt="">
+      <img src="img/i-journey.jpg" alt="">
     </div>
 
   </div>
@@ -81,46 +71,56 @@ FINE ART
 ========================= -->
 <section id="fineart" class="section">
 
-  <h2 data-en="Fine Art for Business Spaces" data-es="Arte para espacios comerciales"></h2>
-
-  <p class="section-desc"
-    data-en="A curated selection of artworks designed to enhance restaurants, offices, clinics and wellness spaces."
-    data-es="Una selección de obras pensadas para mejorar restaurantes, oficinas, clínicas y espacios de bienestar.">
-  </p>
-
-  <div class="filters">
-    <button class="filter active" data-filter="all">All</button>
-    <button class="filter" data-filter="restaurant">Restaurants</button>
-    <button class="filter" data-filter="office">Offices</button>
-    <button class="filter" data-filter="clinic">Clinics</button>
-    <button class="filter" data-filter="wellness">Wellness</button>
-  </div>
+  <h2
+    data-es="Arte seleccionado para espacios comerciales"
+    data-en="Curated art for business spaces">
+  </h2>
 
   <div class="gallery">
 
-    <article class="artwork" data-space="restaurant office">
-      <div class="art-image"><img src="img/anti-ism.jpg" alt="Anti-ism"></div>
-      <h3>Anti-ism</h3>
+    <article class="artwork">
+      <img src="img/anti-ism.jpg" alt="">
+      <h3>Anti‑ism</h3>
+      <p
+        data-es="Aporta carácter y personalidad a restaurantes y oficinas"
+        data-en="Adds character and personality to restaurants and offices">
+      </p>
     </article>
 
-    <article class="artwork" data-space="office wellness">
-      <div class="art-image"><img src="img/silver-eruption.jpg" alt="Silver Eruption"></div>
+    <article class="artwork">
+      <img src="img/silver-eruption.jpg" alt="">
       <h3>Silver Eruption</h3>
+      <p
+        data-es="Elegancia serena para oficinas y espacios de bienestar"
+        data-en="Calm elegance for offices and wellness spaces">
+      </p>
     </article>
 
-    <article class="artwork" data-space="restaurant office">
-      <div class="art-image"><img src="img/paisaje.jpg" alt="Paisaje"></div>
+    <article class="artwork">
+      <img src="img/paisaje.jpg" alt="">
       <h3>Paisaje</h3>
+      <p
+        data-es="Crea ambientes cálidos y acogedores para clientes"
+        data-en="Creates warm and welcoming environments for clients">
+      </p>
     </article>
 
-    <article class="artwork" data-space="clinic office restaurant wellness">
-      <div class="art-image"><img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto"></div>
+    <article class="artwork">
+      <img src="img/paisaje-abstracto.jpg" alt="">
       <h3>Paisaje abstracto</h3>
+      <p
+        data-es="Versátil, equilibra y armoniza cualquier espacio profesional"
+        data-en="Versatile piece that balances any professional space">
+      </p>
     </article>
 
-    <article class="artwork" data-space="restaurant office clinic wellness">
-      <div class="art-image"><img src="img/i-journey.jpg" alt="I Journey"></div>
+    <article class="artwork">
+      <img src="img/i-journey.jpg" alt="">
       <h3>I Journey</h3>
+      <p
+        data-es="Obra universal que eleva la percepción del negocio"
+        data-en="Universal artwork that elevates business perception">
+      </p>
     </article>
 
   </div>
@@ -130,83 +130,55 @@ FINE ART
 CONTACT
 ========================= -->
 <section id="contact" class="section contact">
-  <h2 data-en="Contact us" data-es="Contacto"></h2>
-  <p data-en="Tell us about your space" data-es="Cuéntanos cómo es tu espacio"></p>
+
+  <h2 data-es="Contacto" data-en="Contact"></h2>
+
+  <p
+    data-es="Cuéntanos cómo es tu espacio y te asesoramos"
+    data-en="Tell us about your space and we will advise you">
+  </p>
 
   <form action="https://formspree.io/f/mnjnvbky" method="POST">
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Project details"></textarea>
+    <input type="text" name="name" placeholder="Nombre">
+    <input type="email" name="email" placeholder="Email">
+    <textarea name="message" placeholder="Describe tu espacio"></textarea>
     <button type="submit"
-      data-en="Send message"
-      data-es="Enviar mensaje"></button>
+      data-es="Enviar mensaje"
+      data-en="Send message">
+    </button>
   </form>
+
 </section>
 
-<footer class="visually-hidden">© 2026 Art Patnam</footer>
-
-<!-- =========================
-SCRIPTS
-========================= -->
 <script>
-/* LANGUAGE */
-const modal = document.getElementById('language-modal');
-
-if (localStorage.getItem('lang')) {
-  modal.style.display = 'none';
-  setLanguage(localStorage.getItem('lang'));
-}
-
-document.querySelectorAll('[data-lang]').forEach(btn => {
-  btn.addEventListener('click', () => {
-    localStorage.setItem('lang', btn.dataset.lang);
-    modal.style.display = 'none';
-    setLanguage(btn.dataset.lang);
-  });
-});
-
-function setLanguage(lang) {
-  document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = el.dataset[lang];
-  });
-}
-
-/* MENU */
-document.querySelector('.menu-toggle').onclick = () => {
-  document.querySelector('.nav-menu').classList.toggle('open');
-};
-
 /* NAV */
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.onclick = () => {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.getElementById(link.dataset.section).classList.add('active');
-    document.querySelector('.nav-menu').classList.remove('open');
   };
 });
 
-/* FILTERS */
-document.querySelectorAll('.filter').forEach(btn => {
+/* LANGUAGE SWITCH */
+document.querySelectorAll('.lang').forEach(btn => {
   btn.onclick = () => {
-    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.lang').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.dataset.filter;
-    document.querySelectorAll('.artwork').forEach(a => {
-      a.style.display = (f === 'all' || a.dataset.space.includes(f)) ? 'block' : 'none';
+    const lang = btn.dataset.lang;
+    document.querySelectorAll('[data-es]').forEach(el => {
+      el.textContent = el.dataset[lang];
     });
   };
 });
 
-/* HERO SLIDER (SEGURO) */
+/* SLIDER */
 const slides = document.querySelectorAll('.hero-slider img');
-if (slides.length > 0) {
-  let current = 0;
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-  }, 2000);
-}
+let i = 0;
+setInterval(() => {
+  slides[i].classList.remove('active');
+  i = (i + 1) % slides.length;
+  slides[i].classList.add('active');
+}, 2000);
 </script>
 
 </body>
