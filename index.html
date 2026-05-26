@@ -41,21 +41,30 @@ HEADER
 </header>
 
 <!-- =========================
-HOME (SIN IMÁGENES)
+HOME / HERO
 ========================= -->
 <section id="home" class="section hero active">
   <div class="hero-inner">
 
     <div class="hero-text">
       <h1
-        data-en="Art that elevates your business space"
-        data-es="Arte que eleva la imagen de tu negocio">
+        data-en="Transform your business space into an experience"
+        data-es="Convierte tu negocio en una experiencia que atrae y fideliza">
       </h1>
 
       <p
-        data-en="We help restaurants, clinics, offices and wellness businesses create attractive, professional interiors through carefully curated fine art."
-        data-es="Ayudamos a restaurantes, clínicas, oficinas y negocios de bienestar a crear espacios atractivos y profesionales mediante arte cuidadosamente seleccionado.">
+        data-en="Carefully selected art that enhances your brand, improves customer perception and elevates the value of your space."
+        data-es="Arte cuidadosamente seleccionado que refuerza tu marca, mejora la percepción de tus clientes y revaloriza tu espacio.">
       </p>
+    </div>
+
+    <!-- HERO SLIDER -->
+    <div class="hero-slider">
+      <img src="img/anti-ism.jpg" alt="Anti-ism" class="active">
+      <img src="img/silver-eruption.jpg" alt="Silver Eruption">
+      <img src="img/paisaje.jpg" alt="Paisaje">
+      <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto">
+      <img src="img/i-journey.jpg" alt="I Journey">
     </div>
 
   </div>
@@ -79,17 +88,13 @@ FINE ART
   <!-- FILTERS -->
   <div class="filters">
     <button class="filter active" data-filter="all"
-      data-en="All spaces" data-es="Todos">All spaces</button>
-
+      data-en="All spaces" data-es="Todos">All</button>
     <button class="filter" data-filter="restaurant"
       data-en="Restaurants" data-es="Restaurantes">Restaurants</button>
-
     <button class="filter" data-filter="office"
       data-en="Offices" data-es="Oficinas">Offices</button>
-
     <button class="filter" data-filter="clinic"
       data-en="Clinics" data-es="Clínicas">Clinics</button>
-
     <button class="filter" data-filter="wellness"
       data-en="Wellness & Beauty" data-es="Wellness y Belleza">Wellness</button>
   </div>
@@ -97,84 +102,54 @@ FINE ART
   <!-- GALLERY -->
   <div class="gallery">
 
-    <!-- 1. ANTI-ISM -->
     <article class="artwork" data-space="restaurant office">
       <div class="art-image">
-        <img src="img/anti-ism.jpg" alt="Anti-ism artwork">
+        <img src="img/anti-ism.jpg" alt="Anti-ism">
       </div>
       <h3>Anti-ism</h3>
-      <span class="use"
-        data-en="Recommended for restaurants and offices"
-        data-es="Recomendado para restaurantes y oficinas">
-      </span>
-      <p
-        data-en="A contemporary artwork with strong visual presence, ideal for adding character and identity to dining areas and professional workspaces."
-        data-es="Una obra contemporánea con gran presencia visual, ideal para aportar carácter e identidad tanto en espacios de restauración como en entornos profesionales.">
-      </p>
+      <span class="use" data-en="Restaurants & offices" data-es="Restaurantes y oficinas"></span>
+      <p data-en="A bold piece that adds character and identity."
+         data-es="Una obra con carácter que aporta identidad al espacio."></p>
     </article>
 
-    <!-- 2. SILVER ERUPTION -->
     <article class="artwork" data-space="office wellness">
       <div class="art-image">
-        <img src="img/silver-eruption.jpg" alt="Silver Eruption artwork">
+        <img src="img/silver-eruption.jpg" alt="Silver Eruption">
       </div>
       <h3>Silver Eruption</h3>
-      <span class="use"
-        data-en="Ideal for offices, wellness and beauty spaces"
-        data-es="Ideal para oficinas y espacios de wellness y belleza">
-      </span>
-      <p
-        data-en="An elegant and balanced piece that brings calm, sophistication and a modern feel to professional and wellness environments."
-        data-es="Una obra elegante y equilibrada que aporta calma, sofisticación y un aire moderno a entornos profesionales y de bienestar.">
-      </p>
+      <span class="use" data-en="Offices & wellness" data-es="Oficinas y wellness"></span>
+      <p data-en="Elegant and calm, ideal for professional environments."
+         data-es="Elegante y serena, ideal para entornos profesionales."></p>
     </article>
 
-    <!-- 3. PAISAJE -->
     <article class="artwork" data-space="restaurant office">
       <div class="art-image">
-        <img src="img/paisaje.jpg" alt="Paisaje artwork">
+        <img src="img/paisaje.jpg" alt="Paisaje">
       </div>
       <h3>Paisaje</h3>
-      <span class="use"
-        data-en="Recommended for restaurants and offices"
-        data-es="Recomendado para restaurantes y oficinas">
-      </span>
-      <p
-        data-en="A warm and welcoming landscape that helps create a relaxed and pleasant atmosphere in business spaces."
-        data-es="Un paisaje cálido y acogedor que ayuda a crear una atmósfera agradable y relajada en espacios comerciales.">
-      </p>
+      <span class="use" data-en="Restaurants & offices" data-es="Restaurantes y oficinas"></span>
+      <p data-en="Warm and welcoming atmosphere."
+         data-es="Crea una atmósfera cálida y acogedora."></p>
     </article>
 
-    <!-- 4. PAISAJE ABSTRACTO -->
     <article class="artwork" data-space="clinic office restaurant wellness">
       <div class="art-image">
-        <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto artwork">
+        <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto">
       </div>
       <h3>Paisaje abstracto</h3>
-      <span class="use"
-        data-en="Suitable for clinics, offices, restaurants and wellness spaces"
-        data-es="Adecuado para clínicas, oficinas, restaurantes y espacios de bienestar">
-      </span>
-      <p
-        data-en="A versatile abstract artwork that adapts easily to different environments, bringing balance and visual harmony."
-        data-es="Una obra abstracta muy versátil que se adapta fácilmente a distintos entornos, aportando equilibrio y armonía visual.">
-      </p>
+      <span class="use" data-en="All business spaces" data-es="Todos los espacios"></span>
+      <p data-en="Versatile artwork that adapts to any environment."
+         data-es="Obra versátil que se adapta a cualquier entorno."></p>
     </article>
 
-    <!-- 5. I JOURNEY -->
     <article class="artwork" data-space="restaurant office clinic wellness">
       <div class="art-image">
-        <img src="img/i-journey.jpg" alt="I Journey artwork">
+        <img src="img/i-journey.jpg" alt="I Journey">
       </div>
       <h3>I Journey</h3>
-      <span class="use"
-        data-en="Suitable for all types of commercial spaces"
-        data-es="Adecuado para todo tipo de espacios comerciales">
-      </span>
-      <p
-        data-en="A universal artwork designed to work across all business environments, enhancing atmosphere and reinforcing brand identity."
-        data-es="Una obra universal pensada para funcionar en cualquier entorno comercial, mejorando la atmósfera y reforzando la identidad del negocio.">
-      </p>
+      <span class="use" data-en="All business spaces" data-es="Todos los espacios"></span>
+      <p data-en="A universal piece that elevates any space."
+         data-es="Una obra universal que eleva cualquier espacio."></p>
     </article>
 
   </div>
@@ -185,20 +160,14 @@ CONTACT
 ========================= -->
 <section id="contact" class="section contact">
   <h2 data-en="Contact us" data-es="Contacto"></h2>
-
-  <p
-    data-en="Tell us about your space and we will help you choose the right artwork."
-    data-es="Cuéntanos cómo es tu espacio y te ayudaremos a elegir la obra adecuada.">
-  </p>
+  <p data-en="Tell us about your space"
+     data-es="Cuéntanos cómo es tu espacio"></p>
 
   <form action="https://formspree.io/f/mnjnvbky" method="POST">
     <input type="text" name="name" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email" required>
     <textarea name="message" placeholder="Project details"></textarea>
-    <button type="submit"
-      data-en="Send message"
-      data-es="Enviar mensaje">
-    </button>
+    <button type="submit" data-en="Send message" data-es="Enviar mensaje"></button>
   </form>
 </section>
 
@@ -210,20 +179,17 @@ SCRIPTS
 <script>
 /* LANGUAGE */
 const modal = document.getElementById('language-modal');
-
 if (localStorage.getItem('lang')) {
   modal.style.display = 'none';
   setLanguage(localStorage.getItem('lang'));
 }
-
 document.querySelectorAll('[data-lang]').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.onclick = () => {
     localStorage.setItem('lang', btn.dataset.lang);
     modal.style.display = 'none';
     setLanguage(btn.dataset.lang);
-  });
+  };
 });
-
 function setLanguage(lang) {
   document.querySelectorAll('[data-en]').forEach(el => {
     el.textContent = el.dataset[lang];
@@ -231,42 +197,45 @@ function setLanguage(lang) {
 }
 
 /* MENU */
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-menu');
+document.querySelector('.menu-toggle').onclick = () => {
+  document.querySelector('.nav-menu').classList.toggle('open');
+};
 
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('open');
-});
-
-/* NAVIGATION */
+/* NAV */
 document.querySelectorAll('.nav-menu a').forEach(link => {
-  link.addEventListener('click', () => {
+  link.onclick = () => {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.getElementById(link.dataset.section).classList.add('active');
-    navMenu.classList.remove('open');
-  });
+    document.querySelector('.nav-menu').classList.remove('open');
+  };
 });
 
 /* FILTERS */
 document.querySelectorAll('.filter').forEach(btn => {
-  btn.addEventListener('click', () => {
+  btn.onclick = () => {
     document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-
-    const filter = btn.dataset.filter;
-    document.querySelectorAll('.artwork').forEach(art => {
-      art.style.display =
-        filter === 'all' || art.dataset.space.includes(filter)
-        ? 'block'
-        : 'none';
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.artwork').forEach(a => {
+      a.style.display = (f === 'all' || a.dataset.space.includes(f)) ? 'block' : 'none';
     });
-  });
+  };
 });
+
+/* HERO SLIDER */
+const slides = document.querySelectorAll('.hero-slider img');
+let current = 0;
+
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 2000);
 </script>
 
 </body>
 </html>
-``
+
 
 
 
