@@ -66,7 +66,7 @@ SECTIONS
 }
 
 /* =========================
-HERO
+HERO (NO SE TOCA)
 ========================= */
 .hero-inner {
   display: flex;
@@ -100,7 +100,7 @@ HERO
 }
 
 /* =========================
-HERO SLIDER
+HERO SLIDER (NO SE TOCA)
 ========================= */
 .hero-slider {
   position: relative;
@@ -125,7 +125,7 @@ HERO SLIDER
 }
 
 /* =========================
-GALERÍA ARTE
+GALERÍA (MÓVIL – PERFECTA, NO SE TOCA)
 ========================= */
 .gallery {
   display: grid;
@@ -133,17 +133,11 @@ GALERÍA ARTE
   gap: 70px;
 }
 
-/* Cada obra */
-.artwork {
-  max-width: 420px;
-  margin: 0 auto;
-  text-align: left;
-}
-
 .artwork img {
   width: 100%;
-  height: 260px;
+  height: auto;          /* ✅ móvil libre */
   object-fit: cover;
+  display: block;
   margin-bottom: 16px;
 }
 
@@ -166,11 +160,11 @@ CONTACTO
 }
 
 /* =========================
-DESKTOP (SOLUCIÓN DEFINITIVA)
+DESKTOP (ÚNICO CAMBIO REAL)
 ========================= */
 @media (min-width: 900px) {
 
-  /* HERO */
+  /* Texto hero */
   .hero-text h1 {
     font-size: 56px;
   }
@@ -179,20 +173,19 @@ DESKTOP (SOLUCIÓN DEFINITIVA)
     height: 420px;
   }
 
-  /* GALERÍA DESKTOP BIEN ESPACIADA */
+  /* GALERÍA DESKTOP LIMPIA */
   .gallery {
-    max-width: 1300px;          /* CLAVE */
-    margin: 0 auto;             /* CLAVE */
+    max-width: 1300px;
+    margin: 0 auto;
     grid-template-columns: repeat(3, 1fr);
-    gap: 100px 80px;            /* CLAVE */
+    gap: 100px 80px;
   }
 
-  .artwork {
-    max-width: none;
-  }
-
+  /* ✅ FORMATO UNIFICADO SOLO EN DESKTOP */
   .artwork img {
-    height: 320px;              /* Más presencia visual */
+    aspect-ratio: 4 / 5;     /* CLAVE */
+    height: auto;
+    object-fit: cover;
   }
 }
 
