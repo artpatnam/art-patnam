@@ -1,3 +1,6 @@
+/* =========================
+RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,25 +11,30 @@ body {
   font-family: 'Inter', sans-serif;
   color: #1a1a1a;
   line-height: 1.7;
+  background: #ffffff;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   height: 72px;
+  padding: 0 20px;
   background: linear-gradient(to bottom, #f0f0ee, #e6e6e2);
+  border-bottom: 1px solid rgba(0,0,0,0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
   z-index: 20;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.15em;
+  font-size: 18px;
 }
 
 .menu-toggle {
@@ -35,7 +43,9 @@ header {
   border: none;
 }
 
-/* NAV */
+/* =========================
+NAV
+========================= */
 .nav-menu {
   display: none;
   position: absolute;
@@ -47,36 +57,80 @@ header {
   gap: 24px;
   padding: 30px 0;
 }
-.nav-menu.open { display: flex; }
 
-/* SECTIONS */
+.nav-menu.open {
+  display: flex;
+}
+
+/* =========================
+SECTIONS
+========================= */
 .section {
   display: none;
   padding: 110px 7% 90px;
 }
-.section.active { display: block; }
 
-/* HERO */
+.section.active {
+  display: block;
+}
+
+/* =========================
+HERO
+========================= */
 .hero {
   background: #f5f5f5;
 }
+
 .hero-inner {
   display: flex;
   flex-direction: column;
   gap: 40px;
-}
-.hero-text h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  margin-bottom: 20px;
+  align-items: center;
+  text-align: center;
 }
 
-/* HERO SLIDER */
+/* TEXTO HERO */
+.hero-text {
+  max-width: 900px;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-claim {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 24px;
+}
+
+/* BENEFICIOS */
+.hero-benefits {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-benefits li {
+  font-size: 15px;
+  color: #555;
+}
+
+/* =========================
+HERO SLIDER
+========================= */
 .hero-slider {
   position: relative;
-  height: 240px;
+  width: 100%;
+  max-width: 1100px;
+  height: 260px;
   overflow: hidden;
 }
+
 .hero-slider img {
   position: absolute;
   inset: 0;
@@ -86,46 +140,69 @@ header {
   opacity: 0;
   transition: opacity 1s ease;
 }
+
 .hero-slider img.active {
   opacity: 1;
 }
 
-/* FILTERS */
+/* =========================
+FILTROS
+========================= */
 .filters {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 40px;
 }
+
 .filter {
   padding: 9px 18px;
   border: 1px solid #999;
   background: none;
-}
-.filter.active {
-  background: #1a1a1a;
-  color: #fff;
+  cursor: pointer;
 }
 
-/* GALLERY */
+.filter.active {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+/* =========================
+GALERÍA
+========================= */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 50px;
 }
+
 .art-image {
   height: 260px;
   overflow: hidden;
 }
+
 .art-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* DESKTOP */
+/* =========================
+CONTACTO
+========================= */
+.contact {
+  text-align: center;
+}
+
+/* =========================
+DESKTOP
+========================= */
 @media (min-width: 900px) {
-  .menu-toggle { display: none; }
+
+  .menu-toggle {
+    display: none;
+  }
+
   .nav-menu {
     display: flex !important;
     position: static;
@@ -133,20 +210,24 @@ header {
     background: none;
     gap: 30px;
   }
-  .hero-inner {
-    display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 70px;
-    align-items: center;
+
+  .hero-text h1 {
+    font-size: 56px;
   }
+
+  .hero-claim {
+    font-size: 20px;
+  }
+
   .hero-slider {
-    height: 320px;
+    height: 420px;
   }
+
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   }
 }
-``
+
 
 
 
