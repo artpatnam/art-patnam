@@ -28,27 +28,38 @@
   </div>
 </header>
 
+<!-- =========================
+HOME (ÚNICO CAMBIO)
+========================= -->
 <section id="home" class="section active hero">
+
   <div class="hero-inner">
 
-    <div class="hero-text">
+    <div class="hero-text hero-text-elegant">
+
+      <span class="hero-eyebrow"
+        data-es="Arte contemporáneo para espacios profesionales"
+        data-en="Contemporary art for professional spaces">
+      </span>
+
       <h1
-        data-es="Convierte tu negocio en una experiencia que atrae clientes"
-        data-en="Turn your business into an experience that attracts customers">
+        data-es="Convierte tu negocio en una experiencia que se recuerda"
+        data-en="Turn your business into an experience people remember">
       </h1>
 
-      <p
-        data-es="Arte pensado para mejorar la imagen, el ambiente y el valor percibido de tu espacio."
-        data-en="Art designed to improve your image, atmosphere and perceived value.">
+      <p class="hero-lead"
+        data-es="Seleccionamos obras de arte que transforman la percepción de restaurantes, hoteles, clínicas y espacios de bienestar, reforzando la identidad del entorno y el valor de marca."
+        data-en="We curate artworks that transform the perception of restaurants, hotels, clinics and wellness spaces, strengthening identity and brand value.">
       </p>
 
-      <ul class="hero-benefits">
-        <li data-es="Atrae más clientes" data-en="Attract more customers"></li>
-        <li data-es="Refuerza tu imagen de marca" data-en="Strengthen your brand image"></li>
-        <li data-es="Revaloriza tu espacio" data-en="Increase your space value"></li>
-      </ul>
+      <p class="hero-secondary"
+        data-es="Cada pieza está elegida para dialogar con el espacio, generar emociones positivas y mejorar la experiencia de clientes, pacientes y visitantes."
+        data-en="Each piece is selected to dialogue with the space, evoke positive emotions and enhance the experience of clients, patients and visitors.">
+      </p>
+
     </div>
 
+    <!-- SLIDER (SE MANTIENE) -->
     <div class="hero-slider">
       <img src="img/anti-ism.jpg" class="active" alt="">
       <img src="img/silver-eruption.jpg" alt="">
@@ -60,6 +71,9 @@
   </div>
 </section>
 
+<!-- =========================
+FINE ART (IGUAL QUE ANTES)
+========================= -->
 <section id="fineart" class="section">
 
   <h2
@@ -67,7 +81,6 @@
     data-en="Curated art for business spaces">
   </h2>
 
-  <!-- FILTROS -->
   <div class="filters-elegant">
     <span class="filter active" data-filter="all" data-es="Todos los espacios" data-en="All spaces">Todos los espacios</span>
     <span class="filter" data-filter="restaurant" data-es="Restaurantes" data-en="Restaurants">Restaurantes</span>
@@ -127,8 +140,13 @@
   </div>
 </section>
 
+<!-- =========================
+CONTACT (IGUAL)
+========================= -->
 <section id="contact" class="section contact">
+
   <h2 data-es="Contacto" data-en="Contact"></h2>
+
   <p
     data-es="Cuéntanos cómo es tu espacio y te asesoramos"
     data-en="Tell us about your space and we will advise you">
@@ -140,6 +158,7 @@
     <textarea name="message" placeholder="Describe tu espacio"></textarea>
     <button type="submit" data-es="Enviar mensaje" data-en="Send message"></button>
   </form>
+
 </section>
 
 <script>
@@ -151,17 +170,22 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
   };
 });
 
-/* LANGUAGE */
+/* LANGUAGE (FIX DEFINITIVO) */
+function setLanguage(lang) {
+  document.querySelectorAll('[data-es]').forEach(el => {
+    el.textContent = el.dataset[lang];
+  });
+}
+
 document.querySelectorAll('.lang').forEach(btn => {
   btn.onclick = () => {
     document.querySelectorAll('.lang').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const lang = btn.dataset.lang;
-    document.querySelectorAll('[data-es]').forEach(el => {
-      el.textContent = el.dataset[lang];
-    });
+    setLanguage(btn.dataset.lang);
   };
 });
+
+setLanguage('es');
 
 /* SLIDER */
 const slides = document.querySelectorAll('.hero-slider img');
@@ -170,7 +194,7 @@ setInterval(() => {
   slides[i].classList.remove('active');
   i = (i + 1) % slides.length;
   slides[i].classList.add('active');
-}, 2000);
+}, 2500);
 
 /* FILTROS */
 const filters = document.querySelectorAll('.filter');
@@ -183,7 +207,10 @@ filters.forEach(f => {
     const filter = f.dataset.filter;
 
     artworks.forEach(a => {
-      a.style.display = (filter === 'all' || a.dataset.category.includes(filter)) ? 'block' : 'none';
+      a.style.display =
+        (filter === 'all' || a.dataset.category.includes(filter))
+        ? 'block'
+        : 'none';
     });
   };
 });
