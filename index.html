@@ -76,18 +76,28 @@ FINE ART
     data-en="Curated art for business spaces">
   </h2>
 
+  <!-- FILTROS -->
+  <div class="filters">
+    <button class="filter active" data-filter="all" data-es="Todos" data-en="All">Todos</button>
+    <button class="filter" data-filter="restaurant" data-es="Restaurantes" data-en="Restaurants">Restaurantes</button>
+    <button class="filter" data-filter="hotel" data-es="Hoteles" data-en="Hotels">Hoteles</button>
+    <button class="filter" data-filter="wellness" data-es="Wellness" data-en="Wellness">Wellness</button>
+    <button class="filter" data-filter="clinic" data-es="Clínicas" data-en="Clinics">Clínicas</button>
+    <button class="filter" data-filter="healthcare" data-es="Centros de salud" data-en="Healthcare centers">Centros de salud</button>
+  </div>
+
   <div class="gallery">
 
-    <article class="artwork">
+    <article class="artwork" data-category="restaurant hotel">
       <img src="img/anti-ism.jpg" alt="">
       <h3>Anti‑ism</h3>
       <p
-        data-es="Aporta carácter y personalidad a restaurantes y oficinas"
-        data-en="Adds character and personality to restaurants and offices">
+        data-es="Aporta carácter y personalidad a restaurantes y hoteles"
+        data-en="Adds character and personality to restaurants and hotels">
       </p>
     </article>
 
-    <article class="artwork">
+    <article class="artwork" data-category="wellness office">
       <img src="img/silver-eruption.jpg" alt="">
       <h3>Silver Eruption</h3>
       <p
@@ -96,7 +106,7 @@ FINE ART
       </p>
     </article>
 
-    <article class="artwork">
+    <article class="artwork" data-category="hotel healthcare">
       <img src="img/paisaje.jpg" alt="">
       <h3>Paisaje</h3>
       <p
@@ -105,21 +115,21 @@ FINE ART
       </p>
     </article>
 
-    <article class="artwork">
+    <article class="artwork" data-category="clinic healthcare">
       <img src="img/paisaje-abstracto.jpg" alt="">
       <h3>Paisaje abstracto</h3>
       <p
-        data-es="Versátil, equilibra y armoniza cualquier espacio profesional"
-        data-en="Versatile piece that balances any professional space">
+        data-es="Equilibra y armoniza espacios clínicos y profesionales"
+        data-en="Balances clinical and professional spaces">
       </p>
     </article>
 
-    <article class="artwork">
+    <article class="artwork" data-category="hotel wellness">
       <img src="img/i-journey.jpg" alt="">
       <h3>I Journey</h3>
       <p
-        data-es="Obra universal que eleva la percepción del negocio"
-        data-en="Universal artwork that elevates business perception">
+        data-es="Eleva la percepción del negocio en hoteles y espacios premium"
+        data-en="Elevates business perception in hotels and premium spaces">
       </p>
     </article>
 
@@ -142,10 +152,7 @@ CONTACT
     <input type="text" name="name" placeholder="Nombre">
     <input type="email" name="email" placeholder="Email">
     <textarea name="message" placeholder="Describe tu espacio"></textarea>
-    <button type="submit"
-      data-es="Enviar mensaje"
-      data-en="Send message">
-    </button>
+    <button type="submit" data-es="Enviar mensaje" data-en="Send message"></button>
   </form>
 
 </section>
@@ -179,10 +186,32 @@ setInterval(() => {
   i = (i + 1) % slides.length;
   slides[i].classList.add('active');
 }, 2000);
+
+/* FILTROS GALERÍA */
+const filterButtons = document.querySelectorAll('.filter');
+const artworks = document.querySelectorAll('.artwork');
+
+filterButtons.forEach(btn => {
+  btn.onclick = () => {
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const filter = btn.dataset.filter;
+
+    artworks.forEach(art => {
+      if (filter === 'all' || art.dataset.category.includes(filter)) {
+        art.style.display = 'block';
+      } else {
+        art.style.display = 'none';
+      }
+    });
+  };
+});
 </script>
 
 </body>
 </html>
+``
 
 
 
