@@ -1,22 +1,14 @@
-/* =========================
-RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'Inter', sans-serif;
   color: #1a1a1a;
-  background: #ffffff;
+  background: #fff;
   line-height: 1.7;
 }
 
-/* =========================
-HEADER
-========================= */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -26,8 +18,8 @@ header {
   background: #f0f0ee;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   z-index: 10;
 }
 
@@ -42,42 +34,32 @@ header {
 }
 
 .lang-switch button {
-  border: none;
   background: none;
-  margin-left: 8px;
+  border: none;
   cursor: pointer;
-  font-weight: 500;
 }
 
 .lang-switch .active {
   text-decoration: underline;
 }
 
-/* =========================
-SECTIONS
-========================= */
+/* SECTIONS */
 .section {
   display: none;
-  padding: 120px 6% 120px;
+  padding: 120px 6%;
 }
 
 .section.active {
   display: block;
 }
 
-/* =========================
-HERO
-========================= */
+/* HERO */
 .hero-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 40px;
-}
-
-.hero-text {
-  max-width: 900px;
+  text-align: center;
 }
 
 .hero-text h1 {
@@ -86,22 +68,7 @@ HERO
   margin-bottom: 16px;
 }
 
-.hero-text p {
-  font-size: 17px;
-}
-
-.hero-benefits {
-  list-style: none;
-  margin-top: 20px;
-}
-
-.hero-benefits li {
-  margin-bottom: 6px;
-}
-
-/* =========================
-HERO SLIDER
-========================= */
+/* SLIDER */
 .hero-slider {
   position: relative;
   width: 100%;
@@ -117,95 +84,75 @@ HERO SLIDER
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1s;
 }
 
 .hero-slider img.active {
   opacity: 1;
 }
 
-/* =========================
-FILTROS
-========================= */
-.filters {
+/* FILTROS ESTÉTICOS */
+.filters-elegant {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  margin: 40px 0 70px;
+  gap: 18px;
+  margin: 50px 0 80px;
 }
 
-.filters button {
-  border: none;
-  background: #f0f0ee;
-  padding: 8px 16px;
+.filters-elegant .filter {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
   cursor: pointer;
-  font-size: 13px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
 }
 
-.filters .active {
-  background: #1a1a1a;
-  color: white;
+.filters-elegant .filter.active {
+  border-color: #1a1a1a;
 }
 
-/* =========================
-GALERÍA
-========================= */
+/* GALERÍA */
 .gallery {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 70px;
+  gap: 80px;
 }
 
 .artwork img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 16px;
+  max-width: 320px;
+  margin-bottom: 18px;
 }
 
 .artwork h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 18px;
+  font-size: 19px;
   margin-bottom: 6px;
 }
 
 .artwork p {
   font-size: 14px;
-  color: #444;
+  color: #555;
+  max-width: 320px;
 }
 
-/* =========================
-CONTACTO
-========================= */
+/* CONTACTO */
 .contact {
   text-align: center;
 }
 
-/* =========================
-DESKTOP
-========================= */
+/* DESKTOP */
 @media (min-width: 900px) {
 
   .hero-text h1 {
     font-size: 56px;
   }
 
-  .hero-slider {
-    height: 420px;
-  }
-
   .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 110px 90px;
     max-width: 1300px;
     margin: 0 auto;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 100px 80px;
-  }
-
-  .artwork img {
-    aspect-ratio: 4 / 5;
-    height: auto;
-    object-fit: cover;
   }
 }
 
