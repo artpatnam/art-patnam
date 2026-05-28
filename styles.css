@@ -58,7 +58,6 @@ header {
   display: grid;
   grid-template-columns: 1fr;
   gap: 60px;
-  align-items: center;
 }
 
 .hero-eyebrow {
@@ -150,11 +149,12 @@ header {
   max-width: 320px;
 }
 
-/* CONTACTO */
+/* CONTACTO – BASE (MÓVIL) */
 .contact-inner {
   max-width: 1100px;
   margin: 0 auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 60px;
 }
 
@@ -169,6 +169,12 @@ header {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   margin: 20px 0;
+}
+
+.contact-text p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 14px;
 }
 
 .contact-form {
@@ -192,13 +198,15 @@ header {
 .contact-form button {
   padding: 12px 28px;
   background: #1a1a1a;
-  color: white;
+  color: #fff;
   border: none;
   cursor: pointer;
+  align-self: flex-start;
 }
 
-/* DESKTOP */
+/* CONTACTO – DESKTOP (ÚNICO CAMBIO REAL) */
 @media (min-width: 900px) {
+
   .hero-inner {
     grid-template-columns: 1.1fr 1fr;
     gap: 80px;
@@ -220,10 +228,19 @@ header {
   }
 
   .contact-inner {
-    grid-template-columns: 1fr 1.2fr;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 120px;
+  }
+
+  .contact-text {
+    max-width: 420px;
+  }
+
+  .contact-form {
+    max-width: 520px;
   }
 }
-
 
 
 
