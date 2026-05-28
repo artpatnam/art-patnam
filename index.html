@@ -29,7 +29,7 @@
 </header>
 
 <!-- =========================
-HOME (ÚNICO CAMBIO)
+HOME
 ========================= -->
 <section id="home" class="section active hero">
 
@@ -59,7 +59,6 @@ HOME (ÚNICO CAMBIO)
 
     </div>
 
-    <!-- SLIDER (SE MANTIENE) -->
     <div class="hero-slider">
       <img src="img/anti-ism.jpg" class="active" alt="">
       <img src="img/silver-eruption.jpg" alt="">
@@ -72,7 +71,7 @@ HOME (ÚNICO CAMBIO)
 </section>
 
 <!-- =========================
-FINE ART (IGUAL QUE ANTES)
+FINE ART
 ========================= -->
 <section id="fineart" class="section">
 
@@ -95,70 +94,107 @@ FINE ART (IGUAL QUE ANTES)
     <article class="artwork" data-category="restaurant hotel">
       <img src="img/anti-ism.jpg" alt="">
       <h3>Anti‑ism</h3>
-      <p
-        data-es="Aporta carácter y personalidad a restaurantes y hoteles."
-        data-en="Adds character and personality to restaurants and hotels.">
-      </p>
+      <p data-es="Aporta carácter y personalidad a restaurantes y hoteles."
+         data-en="Adds character and personality to restaurants and hotels."></p>
     </article>
 
     <article class="artwork" data-category="wellness office">
       <img src="img/silver-eruption.jpg" alt="">
       <h3>Silver Eruption</h3>
-      <p
-        data-es="Elegancia serena para oficinas y espacios de bienestar."
-        data-en="Calm elegance for offices and wellness spaces.">
-      </p>
+      <p data-es="Elegancia serena para oficinas y espacios de bienestar."
+         data-en="Calm elegance for offices and wellness spaces."></p>
     </article>
 
     <article class="artwork" data-category="hotel healthcare">
       <img src="img/paisaje.jpg" alt="">
       <h3>Paisaje</h3>
-      <p
-        data-es="Crea ambientes cálidos y acogedores para clientes."
-        data-en="Creates warm and welcoming environments for clients.">
-      </p>
+      <p data-es="Crea ambientes cálidos y acogedores para clientes."
+         data-en="Creates warm and welcoming environments for clients."></p>
     </article>
 
     <article class="artwork" data-category="clinic healthcare">
       <img src="img/paisaje-abstracto.jpg" alt="">
       <h3>Paisaje abstracto</h3>
-      <p
-        data-es="Equilibra y armoniza espacios clínicos y profesionales."
-        data-en="Balances clinical and professional spaces.">
-      </p>
+      <p data-es="Equilibra y armoniza espacios clínicos y profesionales."
+         data-en="Balances clinical and professional spaces."></p>
     </article>
 
     <article class="artwork" data-category="hotel wellness">
       <img src="img/i-journey.jpg" alt="">
       <h3>I Journey</h3>
-      <p
-        data-es="Eleva la percepción del negocio en espacios premium."
-        data-en="Elevates business perception in premium spaces.">
-      </p>
+      <p data-es="Eleva la percepción del negocio en espacios premium."
+         data-en="Elevates business perception in premium spaces."></p>
     </article>
 
   </div>
 </section>
 
 <!-- =========================
-CONTACT (IGUAL)
+CONTACTO (ÚNICO CAMBIO)
 ========================= -->
 <section id="contact" class="section contact">
 
-  <h2 data-es="Contacto" data-en="Contact"></h2>
+  <div class="contact-inner">
 
-  <p
-    data-es="Cuéntanos cómo es tu espacio y te asesoramos"
-    data-en="Tell us about your space and we will advise you">
-  </p>
+    <div class="contact-text">
+      <span class="contact-eyebrow"
+        data-es="Contacto profesional"
+        data-en="Professional contact">
+      </span>
 
-  <form action="https://formspree.io/f/mnjnvbky" method="POST">
-    <input type="text" name="name" placeholder="Nombre">
-    <input type="email" name="email" placeholder="Email">
-    <textarea name="message" placeholder="Describe tu espacio"></textarea>
-    <button type="submit" data-es="Enviar mensaje" data-en="Send message"></button>
-  </form>
+      <h2
+        data-es="Cuéntanos tu espacio"
+        data-en="Tell us about your space">
+      </h2>
 
+      <p
+        data-es="Trabajamos cada proyecto de forma personalizada para recomendar obras que encajen con el carácter del espacio, el tipo de negocio y la experiencia que deseas ofrecer."
+        data-en="We approach every project individually to recommend artworks that fit the character of the space, the type of business and the experience you want to offer.">
+      </p>
+
+      <p
+        data-es="Rellena el formulario y nos pondremos en contacto contigo para asesorarte sin compromiso."
+        data-en="Fill in the form and we will contact you to advise you with no obligation.">
+      </p>
+    </div>
+
+    <form class="contact-form"
+      action="https://formspree.io/f/mnjnvbky"
+      method="POST">
+
+      <div class="form-group">
+        <label data-es="Nombre" data-en="Name"></label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label data-es="Email" data-en="Email"></label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label data-es="Teléfono" data-en="Phone"></label>
+        <input type="tel" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label data-es="Describe tu espacio" data-en="Describe your space"></label>
+        <textarea name="space" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label data-es="¿Qué tipo de obras te interesan?" data-en="What type of artworks are you interested in?"></label>
+        <textarea name="art_interest" rows="4"></textarea>
+      </div>
+
+      <button type="submit"
+        data-es="Enviar consulta"
+        data-en="Send enquiry">
+      </button>
+
+    </form>
+
+  </div>
 </section>
 
 <script>
@@ -170,13 +206,12 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
   };
 });
 
-/* LANGUAGE (FIX DEFINITIVO) */
+/* LANGUAGE */
 function setLanguage(lang) {
   document.querySelectorAll('[data-es]').forEach(el => {
     el.textContent = el.dataset[lang];
   });
 }
-
 document.querySelectorAll('.lang').forEach(btn => {
   btn.onclick = () => {
     document.querySelectorAll('.lang').forEach(b => b.classList.remove('active'));
@@ -184,7 +219,6 @@ document.querySelectorAll('.lang').forEach(btn => {
     setLanguage(btn.dataset.lang);
   };
 });
-
 setLanguage('es');
 
 /* SLIDER */
@@ -199,13 +233,11 @@ setInterval(() => {
 /* FILTROS */
 const filters = document.querySelectorAll('.filter');
 const artworks = document.querySelectorAll('.artwork');
-
 filters.forEach(f => {
   f.onclick = () => {
     filters.forEach(b => b.classList.remove('active'));
     f.classList.add('active');
     const filter = f.dataset.filter;
-
     artworks.forEach(a => {
       a.style.display =
         (filter === 'all' || a.dataset.category.includes(filter))
@@ -218,7 +250,6 @@ filters.forEach(f => {
 
 </body>
 </html>
-``
 
 
 
