@@ -2,18 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Art Patnam | Arte para negocios</title>
+  <title>Art Patnam — Arte para espacios profesionales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap">
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
+<header class="site-header">
   <div class="logo">ART PATNAM</div>
 
   <nav class="nav-menu">
@@ -28,57 +28,52 @@
   </div>
 </header>
 
-<!-- =========================
-HOME
-========================= -->
-<section id="home" class="section active hero">
-  <div class="hero-inner">
+<main>
 
-    <div class="hero-text hero-text-elegant">
-      <span class="hero-eyebrow"
-        data-es="Arte contemporáneo para espacios profesionales"
-        data-en="Contemporary art for professional spaces"></span>
+<!-- HERO -->
+<section id="home" class="section active hero">
+  <div class="hero-grid">
+
+    <div class="hero-copy">
+      <span class="eyebrow"
+        data-es="Arte contemporáneo para negocios"
+        data-en="Contemporary art for business spaces"></span>
 
       <h1
-        data-es="Convierte tu negocio en una experiencia que se recuerda"
-        data-en="Turn your business into an experience people remember"></h1>
+        data-es="Arte que transforma espacios profesionales"
+        data-en="Art that transforms professional spaces"></h1>
 
-      <p class="hero-lead"
-        data-es="Seleccionamos obras de arte que transforman la percepción de restaurantes, hoteles, clínicas y espacios de bienestar, reforzando la identidad del entorno y el valor de marca."
-        data-en="We curate artworks that transform the perception of restaurants, hotels, clinics and wellness spaces, strengthening identity and brand value."></p>
+      <p class="lead"
+        data-es="Seleccionamos y alquilamos obras de arte que elevan la identidad de restaurantes, hoteles y espacios de bienestar."
+        data-en="We curate and rent artworks that elevate the identity of restaurants, hotels and wellness spaces."></p>
 
-      <p class="hero-secondary"
-        data-es="Cada pieza está elegida para dialogar con el espacio, generar emociones positivas y mejorar la experiencia de clientes, pacientes y visitantes."
-        data-en="Each piece is selected to dialogue with the space, evoke positive emotions and enhance the experience of clients, patients and visitors."></p>
+      <p class="secondary"
+        data-es="Cada proyecto se diseña para generar emoción, coherencia estética y valor de marca."
+        data-en="Each project is designed to create emotion, aesthetic coherence and brand value."></p>
     </div>
 
-    <div class="hero-slider">
-      <img src="img/anti-ism.jpg" class="active" alt="">
-      <img src="img/silver-eruption.jpg" alt="">
-      <img src="img/paisaje.jpg" alt="">
-      <img src="img/paisaje-abstracto.jpg" alt="">
-      <img src="img/i-journey.jpg" alt="">
+    <div class="hero-image">
+      <img src="img/anti-ism.jpg" alt="">
     </div>
 
   </div>
 </section>
 
-<!-- =========================
-FINE ART
-========================= -->
+<!-- ARTE -->
 <section id="fineart" class="section">
 
-  <h2
-    data-es="Arte seleccionado para espacios comerciales"
-    data-en="Curated art for business spaces"></h2>
+  <header class="section-header">
+    <h2
+      data-es="Obras seleccionadas para cada tipo de espacio"
+      data-en="Curated artworks for every type of space"></h2>
+  </header>
 
-  <div class="filters-elegant">
-    <span class="filter active" data-filter="all" data-es="Todos los espacios" data-en="All spaces">Todos los espacios</span>
-    <span class="filter" data-filter="restaurant" data-es="Restaurantes" data-en="Restaurants">Restaurantes</span>
-    <span class="filter" data-filter="hotel" data-es="Hoteles" data-en="Hotels">Hoteles</span>
-    <span class="filter" data-filter="wellness" data-es="Wellness" data-en="Wellness">Wellness</span>
-    <span class="filter" data-filter="clinic" data-es="Clínicas" data-en="Clinics">Clínicas</span>
-    <span class="filter" data-filter="healthcare" data-es="Centros de salud" data-en="Healthcare centers">Centros de salud</span>
+  <div class="filters">
+    <button class="filter active" data-filter="all" data-es="Todos" data-en="All">Todos</button>
+    <button class="filter" data-filter="restaurant" data-es="Restaurantes" data-en="Restaurants">Restaurantes</button>
+    <button class="filter" data-filter="hotel" data-es="Hoteles" data-en="Hotels">Hoteles</button>
+    <button class="filter" data-filter="wellness" data-es="Wellness" data-en="Wellness">Wellness</button>
+    <button class="filter" data-filter="clinic" data-es="Clínicas" data-en="Clinics">Clínicas</button>
   </div>
 
   <div class="gallery">
@@ -86,50 +81,48 @@ FINE ART
     <article class="artwork" data-category="restaurant hotel">
       <img src="img/anti-ism.jpg" alt="">
       <h3>Anti‑ism</h3>
-      <p data-es="Aporta carácter y personalidad a restaurantes y hoteles."
-         data-en="Adds character and personality to restaurants and hotels."></p>
+      <p data-es="Presencia fuerte para espacios gastronómicos y hoteleros."
+         data-en="Strong presence for hospitality spaces."></p>
     </article>
 
     <article class="artwork" data-category="wellness office">
       <img src="img/silver-eruption.jpg" alt="">
       <h3>Silver Eruption</h3>
-      <p data-es="Elegancia serena para oficinas y espacios de bienestar."
-         data-en="Calm elegance for offices and wellness spaces."></p>
+      <p data-es="Elegancia calmada para bienestar y trabajo."
+         data-en="Calm elegance for wellness and workspaces."></p>
     </article>
 
     <article class="artwork" data-category="hotel healthcare">
       <img src="img/paisaje.jpg" alt="">
       <h3>Paisaje</h3>
-      <p data-es="Crea ambientes cálidos y acogedores para clientes."
-         data-en="Creates warm and welcoming environments for clients."></p>
+      <p data-es="Ambientes acogedores y humanos."
+         data-en="Warm and human environments."></p>
     </article>
 
     <article class="artwork" data-category="clinic healthcare">
       <img src="img/paisaje-abstracto.jpg" alt="">
       <h3>Paisaje abstracto</h3>
-      <p data-es="Equilibra y armoniza espacios clínicos y profesionales."
-         data-en="Balances clinical and professional spaces."></p>
+      <p data-es="Equilibrio visual para espacios clínicos."
+         data-en="Visual balance for clinical spaces."></p>
     </article>
 
     <article class="artwork" data-category="hotel wellness">
       <img src="img/i-journey.jpg" alt="">
       <h3>I Journey</h3>
-      <p data-es="Eleva la percepción del negocio en espacios premium."
-         data-en="Elevates business perception in premium spaces."></p>
+      <p data-es="Arte para experiencias premium."
+         data-en="Art for premium experiences."></p>
     </article>
 
   </div>
 </section>
 
-<!-- =========================
-CONTACTO (MISMO CONTENIDO / DESKTOP REORDENADO)
-========================= -->
+<!-- CONTACTO -->
 <section id="contact" class="section contact">
 
-  <div class="contact-inner">
+  <div class="contact-grid">
 
-    <div class="contact-text">
-      <span class="contact-eyebrow"
+    <div class="contact-copy">
+      <span class="eyebrow"
         data-es="Contacto profesional"
         data-en="Professional contact"></span>
 
@@ -138,43 +131,18 @@ CONTACTO (MISMO CONTENIDO / DESKTOP REORDENADO)
         data-en="Tell us about your space"></h2>
 
       <p
-        data-es="Trabajamos cada proyecto de forma personalizada para recomendar obras que encajen con el carácter del espacio, el tipo de negocio y la experiencia que deseas ofrecer."
-        data-en="We approach every project individually to recommend artworks that fit the character of the space, the type of business and the experience you want to offer."></p>
-
-      <p
-        data-es="Rellena el formulario y nos pondremos en contacto contigo para asesorarte sin compromiso."
-        data-en="Fill in the form and we will contact you to advise you with no obligation."></p>
+        data-es="Estudiamos cada proyecto de forma personalizada para recomendar obras alineadas con tu negocio."
+        data-en="We study each project individually to recommend artworks aligned with your business."></p>
     </div>
 
     <form class="contact-form"
       action="https://formspree.io/f/mnjnvbky"
       method="POST">
 
-      <div class="form-group">
-        <label data-es="Nombre" data-en="Name"></label>
-        <input type="text" name="name" required>
-      </div>
-
-      <div class="form-group">
-        <label data-es="Email" data-en="Email"></label>
-        <input type="email" name="email" required>
-      </div>
-
-      <div class="form-group">
-        <label data-es="Teléfono" data-en="Phone"></label>
-        <input type="tel" name="phone">
-      </div>
-
-      <div class="form-group">
-        <label data-es="Describe tu espacio" data-en="Describe your space"></label>
-        <textarea name="space" rows="4"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label data-es="¿Qué tipo de obras te interesan?" data-en="What type of artworks are you interested in?"></label>
-        <textarea name="art_interest" rows="4"></textarea>
-      </div>
-
+      <input type="text" name="name" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="phone" placeholder="Teléfono">
+      <textarea name="space" rows="4" placeholder="Describe tu espacio"></textarea>
       <button type="submit"
         data-es="Enviar consulta"
         data-en="Send enquiry"></button>
@@ -184,16 +152,19 @@ CONTACTO (MISMO CONTENIDO / DESKTOP REORDENADO)
   </div>
 </section>
 
+</main>
+
 <script>
-/* NAV */
+/* Navegación */
 document.querySelectorAll('.nav-menu a').forEach(link => {
   link.onclick = () => {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
     document.getElementById(link.dataset.section).classList.add('active');
+    window.scrollTo(0,0);
   };
 });
 
-/* LANGUAGE */
+/* Idiomas */
 function setLanguage(lang) {
   document.querySelectorAll('[data-es]').forEach(el => {
     el.textContent = el.dataset[lang];
@@ -208,28 +179,16 @@ document.querySelectorAll('.lang').forEach(btn => {
 });
 setLanguage('es');
 
-/* SLIDER */
-const slides = document.querySelectorAll('.hero-slider img');
-let i = 0;
-setInterval(() => {
-  slides[i].classList.remove('active');
-  i = (i + 1) % slides.length;
-  slides[i].classList.add('active');
-}, 2500);
-
-/* FILTROS */
-const filters = document.querySelectorAll('.filter');
-const artworks = document.querySelectorAll('.artwork');
-filters.forEach(f => {
+/* Filtros */
+document.querySelectorAll('.filter').forEach(f => {
   f.onclick = () => {
-    filters.forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
     f.classList.add('active');
     const filter = f.dataset.filter;
-    artworks.forEach(a => {
+    document.querySelectorAll('.artwork').forEach(a => {
       a.style.display =
-        (filter === 'all' || a.dataset.category.includes(filter))
-        ? 'block'
-        : 'none';
+        filter === 'all' || a.dataset.category.includes(filter)
+        ? 'block' : 'none';
     });
   };
 });
@@ -237,7 +196,6 @@ filters.forEach(f => {
 
 </body>
 </html>
-
 
 
 
