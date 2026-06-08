@@ -67,6 +67,12 @@ HOME
     Todo empieza con una buena selección.
   </div>
 
+  <!-- CAMBIO 5: DISCURSO CURATORIAL AÑADIDO -->
+  <div class="curatorial-block">
+    Cada obra se selecciona por su capacidad de dialogar con el espacio,
+    generar una experiencia coherente y aportar valor más allá de lo decorativo.
+  </div>
+
   <div class="how-we-work">
     <h2>Cómo trabajamos</h2>
 
@@ -108,6 +114,12 @@ ARTE
 <section id="fineart" class="section">
 
   <h2 class="fineart-title">Obras seleccionadas</h2>
+
+  <!-- CAMBIO 5: TEXTO CURATORIAL DE SECCIÓN -->
+  <div class="fineart-curatorial">
+    La selección responde a criterios curatoriales y a la relación entre obra,
+    arquitectura y uso del espacio, más allá de lo puramente decorativo.
+  </div>
 
   <div class="filters-elegant">
     <span class="filter active" data-filter="all">Todos</span>
@@ -249,7 +261,8 @@ document.querySelectorAll('.filter').forEach(f => {
     document.querySelectorAll('.artwork').forEach(a => {
       a.style.display =
         filter === 'all' || a.dataset.category.includes(filter)
-        ? 'block' : 'none';
+        ? 'block'
+        : 'none';
     });
   };
 });
@@ -257,7 +270,6 @@ document.querySelectorAll('.filter').forEach(f => {
 
 </body>
 </html>
-
 
 
 
