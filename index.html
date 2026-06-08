@@ -5,7 +5,7 @@
   <title>Art Patnam | Arte para negocios</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE FONTS -->
+  <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap">
 
   <link rel="stylesheet" href="styles.css">
@@ -36,21 +36,20 @@ HOME
   <div class="hero-inner">
 
     <div class="hero-text">
-      <span class="hero-eyebrow"
-        data-es="Arte contemporáneo para espacios profesionales"
-        data-en="Contemporary art for professional spaces"></span>
+      <span class="hero-eyebrow">
+        Arte contemporáneo para espacios profesionales
+      </span>
 
-      <h1
-        data-es="Arte que define la experiencia de un espacio"
-        data-en="Art that defines the experience of a space"></h1>
+      <h1>Arte que define la experiencia de un espacio</h1>
 
-      <p class="hero-lead"
-        data-es="Seleccionamos y alquilamos obras de arte para negocios que entienden el valor del detalle, la identidad y la experiencia del cliente."
-        data-en="We curate and rent artworks for businesses that value detail, identity and customer experience."></p>
+      <p class="hero-lead">
+        Seleccionamos y alquilamos obras de arte para negocios que entienden
+        el valor del detalle, la identidad y la experiencia del cliente.
+      </p>
 
-      <p class="hero-secondary"
-        data-es="Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada."
-        data-en="Restaurants, hotels, clinics and wellness spaces with a curated vision."></p>
+      <p class="hero-secondary">
+        Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.
+      </p>
     </div>
 
     <div class="hero-slider">
@@ -63,16 +62,52 @@ HOME
 
   </div>
 
+  <div class="principle">
+    Qué es, para quién es, qué aporta y por qué confiar.
+    Todo empieza con una buena selección.
+  </div>
+
+  <div class="how-we-work">
+    <h2>Cómo trabajamos</h2>
+
+    <div class="steps">
+      <div class="step">
+        <span>01</span>
+        <h3>Analizamos tu espacio</h3>
+        <p>Entendemos el negocio, el entorno y la experiencia que deseas ofrecer.</p>
+      </div>
+
+      <div class="step">
+        <span>02</span>
+        <h3>Seleccionamos las obras</h3>
+        <p>Curamos piezas que dialogan con el espacio y refuerzan su identidad.</p>
+      </div>
+
+      <div class="step">
+        <span>03</span>
+        <h3>Instalamos y acompañamos</h3>
+        <p>Nos ocupamos de la instalación y del seguimiento del proyecto.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="value-proposition">
+    <h2>Más que decoración</h2>
+    <ul>
+      <li>Refuerza la identidad del espacio</li>
+      <li>Mejora la experiencia del cliente</li>
+      <li>Aporta valor de marca al negocio</li>
+    </ul>
+  </div>
+
 </section>
 
 <!-- =========================
-ARTE — GALERÍA PREMIUM
+ARTE
 ========================= -->
 <section id="fineart" class="section">
 
-  <h2
-    data-es="Obras seleccionadas"
-    data-en="Curated artworks"></h2>
+  <h2 class="fineart-title">Obras seleccionadas</h2>
 
   <div class="filters-elegant">
     <span class="filter active" data-filter="all">Todos</span>
@@ -82,7 +117,7 @@ ARTE — GALERÍA PREMIUM
     <span class="filter" data-filter="clinic">Clínicas</span>
   </div>
 
-  <div class="gallery gallery-premium">
+  <div class="gallery">
 
     <article class="artwork" data-category="restaurant hotel">
       <img src="img/anti-ism.jpg" alt="">
@@ -106,7 +141,7 @@ ARTE — GALERÍA PREMIUM
       <img src="img/paisaje.jpg" alt="">
       <h3>Paisaje</h3>
       <p class="artwork-desc">
-        Una pieza que aporta calidez y una sensación de acogida natural.
+        Una pieza que aporta calidez y sensación de acogida natural.
       </p>
       <p class="artwork-meta">Hoteles · Salud</p>
     </article>
@@ -142,19 +177,43 @@ CONTACTO
     <div class="contact-text">
       <span class="contact-eyebrow">Contacto profesional</span>
       <h2>Cuéntanos tu espacio</h2>
-      <p>Trabajamos cada proyecto de forma personalizada.</p>
-      <p>Rellena el formulario y te asesoramos sin compromiso.</p>
+      <p>
+        Trabajamos cada proyecto de forma personalizada para recomendar
+        obras alineadas con tu negocio.
+      </p>
+      <p>
+        Rellena el formulario y nos pondremos en contacto contigo.
+      </p>
     </div>
 
     <form class="contact-form"
-      action="https://formspree.io/f/mnjnvbky"
-      method="POST">
+          action="https://formspree.io/f/mnjnvbky"
+          method="POST">
 
-      <input type="text" name="name" placeholder="Nombre" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <input type="tel" name="phone" placeholder="Teléfono">
-      <textarea name="space" rows="4" placeholder="Describe tu espacio"></textarea>
-      <textarea name="art_interest" rows="4" placeholder="Tipo de obras"></textarea>
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label>Teléfono</label>
+        <input type="tel" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label>Describe tu espacio</label>
+        <textarea name="space" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label>¿Qué tipo de obras te interesan?</label>
+        <textarea name="art_interest" rows="4"></textarea>
+      </div>
 
       <button type="submit">Enviar consulta</button>
     </form>
@@ -171,21 +230,6 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
     window.scrollTo(0,0);
   };
 });
-
-/* LANGUAGE */
-function setLanguage(lang) {
-  document.querySelectorAll('[data-es]').forEach(el => {
-    el.textContent = el.dataset[lang];
-  });
-}
-document.querySelectorAll('.lang').forEach(btn => {
-  btn.onclick = () => {
-    document.querySelectorAll('.lang').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    setLanguage(btn.dataset.lang);
-  };
-});
-setLanguage('es');
 
 /* SLIDER */
 const slides = document.querySelectorAll('.hero-slider img');
@@ -205,8 +249,7 @@ document.querySelectorAll('.filter').forEach(f => {
     document.querySelectorAll('.artwork').forEach(a => {
       a.style.display =
         filter === 'all' || a.dataset.category.includes(filter)
-        ? 'block'
-        : 'none';
+        ? 'block' : 'none';
     });
   };
 });
