@@ -1,6 +1,4 @@
-/* =========================
-RESET
-========================= */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,65 +12,7 @@ body {
   line-height: 1.7;
 }
 
-/* =========================
-HEADER
-========================= */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 72px;
-  padding: 0 24px;
-  background: #f0f0ee;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 100;
-}
-
-.logo {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 0.15em;
-  font-size: 14px;
-}
-
-.nav-menu a {
-  margin: 0 16px;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.lang-switch button {
-  background:Perfecto, gracias por avisar.  
-Aquí tienes **EL CSS LIMPIO, COMPLETO Y CORREGIDO**, coherente con **la última versión de HTML** que te pasé (Inicio + Arte + Contacto visibles, galería premium, slider funcional).
-
-👉 **Copia y pega este `styles.css` entero** y sustituye el anterior.
-
----
-
-## ✅ `styles.css` — VERSIÓN ESTABLE Y PROFESIONAL
-
-```css
-/* =========================
-RESET
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  color: #1a1a1a;
-  background: #ffffff;
-  line-height: 1.7;
-}
-
-/* =========================
-HEADER
-========================= */
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -84,35 +24,26 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 10;
 }
 
 .logo {
   font-family: 'Playfair Display', serif;
-  letter-spacing: 0.18em;
-  font-size: 14px;
+  letter-spacing: 0.15em;
 }
 
 .nav-menu a {
   margin: 0 16px;
   cursor: pointer;
-  font-size: 14px;
 }
 
 .lang-switch button {
   background: none;
   border: none;
   cursor: pointer;
-  margin-left: 10px;
 }
 
-.lang-switch .active {
-  text-decoration: underline;
-}
-
-/* =========================
-SECTIONS (CONTROL VISIBILIDAD)
-========================= */
+/* SECTIONS */
 .section {
   display: none;
   padding: 120px 6% 140px;
@@ -122,14 +53,11 @@ SECTIONS (CONTROL VISIBILIDAD)
   display: block;
 }
 
-/* =========================
-HOME / HERO
-========================= */
+/* HERO */
 .hero-inner {
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
   gap: 60px;
 }
 
@@ -148,7 +76,6 @@ HOME / HERO
 
 .hero-lead {
   font-size: 18px;
-  margin-bottom: 12px;
 }
 
 .hero-secondary {
@@ -156,13 +83,10 @@ HOME / HERO
   color: #555;
 }
 
-/* =========================
-HERO SLIDER
-========================= */
+/* SLIDER */
 .hero-slider {
   position: relative;
   height: 380px;
-  max-width: 1100px;
   overflow: hidden;
 }
 
@@ -173,16 +97,14 @@ HERO SLIDER
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transition: opacity 1.2s;
 }
 
 .hero-slider img.active {
   opacity: 1;
 }
 
-/* =========================
-PRINCIPLE
-========================= */
+/* PRINCIPLE */
 .principle {
   margin: 100px auto 0;
   max-width: 760px;
@@ -191,9 +113,7 @@ PRINCIPLE
   color: #555;
 }
 
-/* =========================
-HOW WE WORK
-========================= */
+/* HOW WE WORK */
 .how-we-work {
   margin-top: 160px;
 }
@@ -206,7 +126,6 @@ HOW WE WORK
 
 .steps {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 70px;
 }
 
@@ -228,9 +147,7 @@ HOW WE WORK
   max-width: 320px;
 }
 
-/* =========================
-VALUE PROPOSITION
-========================= */
+/* VALUE */
 .value-proposition {
   margin-top: 160px;
 }
@@ -248,8 +165,8 @@ VALUE PROPOSITION
 .value-proposition li {
   font-size: 17px;
   margin-bottom: 14px;
-  position: relative;
   padding-left: 20px;
+  position: relative;
 }
 
 .value-proposition li::before {
@@ -258,86 +175,63 @@ VALUE PROPOSITION
   left: 0;
 }
 
-/* =========================
-ARTE — GALERÍA PREMIUM
-========================= */
-.fineart-header {
-  max-width: 720px;
-  margin-bottom: 90px;
-}
-
-.fineart-header h2 {
+/* ARTE */
+.fineart-title {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
-  margin-bottom: 18px;
+  margin-bottom: 60px;
 }
 
-.fineart-header p {
-  font-size: 16px;
-  color: #555;
-}
-
-/* FILTROS */
 .filters-elegant {
   display: flex;
   gap: 26px;
-  margin-bottom: 110px;
-  flex-wrap: wrap;
+  margin-bottom: 100px;
 }
 
 .filters-elegant .filter {
   font-family: 'Playfair Display', serif;
-  font-size: 16px;
   cursor: pointer;
   color: #666;
 }
 
 .filters-elegant .filter.active {
-  color: #1a1a1a;
+  color: #000;
   text-decoration: underline;
 }
 
-/* GALERÍA */
 .gallery {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 140px;
+  gap: 120px;
 }
 
 .artwork img {
+  max-width: 360px;
   width: 100%;
-  max-width: 380px;
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 }
 
 .artwork h3 {
   font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin-bottom: 8px;
+  font-size: 20px;
 }
 
 .artwork-desc {
   font-size: 15px;
   color: #444;
-  margin-bottom: 8px;
-  max-width: 380px;
 }
 
 .artwork-meta {
   font-size: 13px;
   color: #888;
-  letter-spacing: 0.02em;
 }
 
-/* =========================
-CONTACTO
-========================= */
+/* CONTACT */
 .contact-inner {
   max-width: 1100px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 70px;
+  gap: 60px;
 }
 
 .contact-eyebrow {
@@ -351,12 +245,6 @@ CONTACTO
   font-family: 'Playfair Display', serif;
   font-size: 36px;
   margin: 20px 0;
-}
-
-.contact-text p {
-  font-size: 15px;
-  color: #444;
-  margin-bottom: 14px;
 }
 
 .contact-form {
@@ -375,7 +263,6 @@ CONTACTO
 .contact-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
-  font-family: inherit;
 }
 
 .contact-form button {
@@ -387,11 +274,8 @@ CONTACTO
   align-self: flex-start;
 }
 
-/* =========================
-DESKTOP
-========================= */
+/* DESKTOP */
 @media (min-width: 900px) {
-
   .hero-inner {
     grid-template-columns: 1.1fr 1fr;
     gap: 100px;
@@ -402,26 +286,20 @@ DESKTOP
     font-size: 56px;
   }
 
-  .hero-slider {
-    height: 420px;
-  }
-
   .steps {
     grid-template-columns: repeat(3, 1fr);
-    gap: 90px;
   }
 
   .gallery {
     grid-template-columns: repeat(3, 1fr);
-    gap: 140px 90px;
+    gap: 120px 90px;
   }
 
   .contact-inner {
     flex-direction: row;
-    gap: 140px;
+    gap: 120px;
   }
 }
-``
 
 
 
