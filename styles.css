@@ -345,62 +345,51 @@ DESKTOP
 }
 
 /* =========================================================
-MEJORAS AÑADIDAS (RESPETANDO BASE)
+AÑADIDOS — CAMBIOS 3, 4, 5 Y 7
 ========================================================= */
 
-/* ✅ 1. COLOR ACENTO EDITORIAL */
-:root {
-  --accent-color: #3b4f47;
-}
-
-.filter.active,
-.contact-eyebrow {
-  color: var(--accent-color);
-}
-
-/* ✅ 2. RITMO VERTICAL Y RESPIRACIÓN */
-.editorial-separator {
-  width: 60px;
-  height: 1px;
-  background: var(--accent-color);
-  margin: 140px auto;
-  opacity: 0.6;
-}
-
-/* ✅ 3. JERARQUÍA TIPOGRÁFICA EDITORIAL */
+/* Cambio 3 — Jerarquía tipográfica */
 .hero-text h1 {
-  line-height: 1.12;
+  line-height: 1.15;
 }
 
-.hero-lead {
-  max-width: 520px;
+.hero-eyebrow {
+  letter-spacing: 0.18em;
 }
 
-/* ✅ 4. MICRO‑INTERACCIONES PREMIUM */
-.artwork {
-  transition: transform 0.6s ease;
+/* Cambio 4 — Header más silencioso */
+header {
+  background: rgba(240,240,238,0.95);
+  backdrop-filter: blur(6px);
 }
 
-.artwork:hover {
-  transform: translateY(-3px);
+.nav-menu a {
+  transition: color 0.4s ease;
 }
 
-.hero-slider img {
-  transition: opacity 1.8s ease;
-}
-
-/* ✅ 5. BLOQUES CURATORIALES */
+/* Cambio 5 — Discurso curatorial */
 .curatorial-block,
 .fineart-curatorial {
   max-width: 720px;
   margin: 120px auto 80px;
   text-align: center;
   font-size: 16px;
-  line-height: 1.8;
   color: #555;
+  line-height: 1.8;
 }
-``
 
+/* Cambio 7 — Micro‑detalles premium */
+.artwork {
+  transition: transform 0.6s ease;
+}
+
+.artwork:hover {
+  transform: translateY(-4px);
+}
+
+.hero-slider img {
+  transition: opacity 1.8s ease;
+}
 
 
 
