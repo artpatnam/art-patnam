@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
-  https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -52,12 +52,13 @@ HOME
       </p>
     </div>
 
+    <!-- ✅ SLIDER CORREGIDO -->
     <div class="hero-slider">
-      img/anti-ism.jpg
-      img/silver-eruption.jpg
-      img/paisaje.jpg
-      img/paisaje-abstracto.jpg
-      img/i-journey.jpg
+      <img src="img/anti-ism.jpg" class="active" alt="Anti‑ism">
+      <img src="img/silver-eruption.jpg" alt="Silver Eruption">
+      <img src="img/paisaje.jpg" alt="Paisaje">
+      <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto">
+      <img src="img/i-journey.jpg" alt="I Journey">
     </div>
 
   </div>
@@ -67,7 +68,6 @@ HOME
     Todo empieza con una buena selección.
   </div>
 
-  <!-- CAMBIO 5: DISCURSO CURATORIAL AÑADIDO -->
   <div class="curatorial-block">
     Cada obra se selecciona por su capacidad de dialogar con el espacio,
     generar una experiencia coherente y aportar valor más allá de lo decorativo.
@@ -115,7 +115,6 @@ ARTE
 
   <h2 class="fineart-title">Obras seleccionadas</h2>
 
-  <!-- CAMBIO 5: TEXTO CURATORIAL DE SECCIÓN -->
   <div class="fineart-curatorial">
     La selección responde a criterios curatoriales y a la relación entre obra,
     arquitectura y uso del espacio, más allá de lo puramente decorativo.
@@ -132,7 +131,7 @@ ARTE
   <div class="gallery">
 
     <article class="artwork" data-category="restaurant hotel">
-      img/anti-ism.jpg
+      <img src="img/anti-ism.jpg" alt="Anti‑ism">
       <h3>Anti‑ism</h3>
       <p class="artwork-desc">
         Una obra con presencia, pensada para espacios donde la identidad es clave.
@@ -141,7 +140,7 @@ ARTE
     </article>
 
     <article class="artwork" data-category="wellness office">
-      img/silver-eruption.jpg
+      <img src="img/silver-eruption.jpg" alt="Silver Eruption">
       <h3>Silver Eruption</h3>
       <p class="artwork-desc">
         Equilibrio visual y serenidad para entornos de bienestar.
@@ -150,7 +149,7 @@ ARTE
     </article>
 
     <article class="artwork" data-category="hotel healthcare">
-      img/paisaje.jpg
+      <img src="img/paisaje.jpg" alt="Paisaje">
       <h3>Paisaje</h3>
       <p class="artwork-desc">
         Una pieza que aporta calidez y sensación de acogida natural.
@@ -159,7 +158,7 @@ ARTE
     </article>
 
     <article class="artwork" data-category="clinic healthcare">
-      img/paisaje-abstracto.jpg
+      <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto">
       <h3>Paisaje abstracto</h3>
       <p class="artwork-desc">
         Lenguaje visual suave para acompañar espacios clínicos.
@@ -168,7 +167,7 @@ ARTE
     </article>
 
     <article class="artwork" data-category="hotel wellness">
-      img/i-journey.jpg
+      <img src="img/i-journey.jpg" alt="I Journey">
       <h3>I Journey</h3>
       <p class="artwork-desc">
         Una obra pensada para elevar la percepción de espacios premium.
@@ -270,5 +269,4 @@ document.querySelectorAll('.filter').forEach(f => {
 
 </body>
 </html>
-
 
