@@ -1,4 +1,6 @@
-/* RESET */
+/* =========================
+RESET
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,9 @@ body {
   line-height: 1.7;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
 header {
   position: fixed;
   top: 0;
@@ -43,17 +47,25 @@ header {
   cursor: pointer;
 }
 
-/* SECTIONS */
+.lang-switch .active {
+  text-decoration: underline;
+}
+
+/* =========================
+SECTIONS
+========================= */
 .section {
   display: none;
-  padding: 120px 6% 140px;
+  padding: % 140px;
 }
 
 .section.active {
   display: block;
 }
 
-/* HERO */
+/* =========================
+HOME / HERO
+========================= */
 .hero-inner {
   max-width: 1400px;
   margin: 0 auto;
@@ -83,10 +95,13 @@ header {
   color: #555;
 }
 
-/* SLIDER */
+/* =========================
+HERO SLIDER
+========================= */
 .hero-slider {
   position: relative;
   height: 380px;
+  max-width: 1100px;
   overflow: hidden;
 }
 
@@ -97,14 +112,16 @@ header {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.2s;
+  transition: opacity 1.2s ease;
 }
 
 .hero-slider img.active {
   opacity: 1;
 }
 
-/* PRINCIPLE */
+/* =========================
+PRINCIPLE
+========================= */
 .principle {
   margin: 100px auto 0;
   max-width: 760px;
@@ -113,7 +130,9 @@ header {
   color: #555;
 }
 
-/* HOW WE WORK */
+/* =========================
+HOW WE WORK
+========================= */
 .how-we-work {
   margin-top: 160px;
 }
@@ -147,7 +166,9 @@ header {
   max-width: 320px;
 }
 
-/* VALUE */
+/* =========================
+VALUE PROPOSITION
+========================= */
 .value-proposition {
   margin-top: 160px;
 }
@@ -175,7 +196,9 @@ header {
   left: 0;
 }
 
-/* ARTE */
+/* =========================
+ARTE
+========================= */
 .fineart-title {
   font-family: 'Playfair Display', serif;
   font-size: 40px;
@@ -186,6 +209,7 @@ header {
   display: flex;
   gap: 26px;
   margin-bottom: 100px;
+  flex-wrap: wrap;
 }
 
 .filters-elegant .filter {
@@ -225,13 +249,19 @@ header {
   color: #888;
 }
 
-/* CONTACT */
+/* =========================
+CONTACTO — FIX ÚNICO
+========================= */
 .contact-inner {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 60px;
+}
+
+.contact-text {
+  max-width: 420px;
 }
 
 .contact-eyebrow {
@@ -247,7 +277,14 @@ header {
   margin: 20px 0;
 }
 
+.contact-text p {
+  font-size: 15px;
+  color: #444;
+  margin-bottom: 14px;
+}
+
 .contact-form {
+  max-width: 520px;
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -263,6 +300,7 @@ header {
 .contact-form textarea {
   padding: 12px;
   border: 1px solid #ccc;
+  font-family: inherit;
 }
 
 .contact-form button {
@@ -274,8 +312,11 @@ header {
   align-self: flex-start;
 }
 
-/* DESKTOP */
+/* =========================
+DESKTOP
+========================= */
 @media (min-width: 900px) {
+
   .hero-inner {
     grid-template-columns: 1.1fr 1fr;
     gap: 100px;
@@ -295,12 +336,14 @@ header {
     gap: 120px 90px;
   }
 
+  /* ✅ FIX DEFINITIVO CONTACTO */
   .contact-inner {
-    flex-direction: row;
-    gap: 120px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 140px;
+    align-items: start;
   }
 }
-
 
 
 
