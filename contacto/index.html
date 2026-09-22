@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Art Patnam</title>
+  <meta name="description" content="Cuéntanos cómo es tu espacio y te propondremos obras de arte contemporáneo alineadas con tu negocio.">
+  <link rel="canonical" href="https://artpatnam.com/contacto/">
+  <link rel="alternate" hreflang="es" href="https://artpatnam.com/contacto/">
+  <link rel="alternate" hreflang="en" href="https://artpatnam.com/en/contact/">
+  <link rel="alternate" hreflang="x-default" href="https://artpatnam.com/contacto/">
+
+  <!-- Open Graph / redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Art Patnam">
+  <meta property="og:title" content="Contacto | Art Patnam">
+  <meta property="og:description" content="Cuéntanos cómo es tu espacio y te propondremos obras de arte contemporáneo alineadas con tu negocio.">
+  <meta property="og:url" content="https://artpatnam.com/contacto/">
+  <meta property="og:image" content="https://artpatnam.com/img/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+
+  <!-- Tipografías alojadas en la propia web (sin conexión a Google Fonts) -->
+  <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/main.js" defer></script>
+</head>
+
+<body>
+
+<header>
+  <a class="logo" href="/">
+    <img src="/img/logo-mark.webp" alt="" class="logo-mark" width="69" height="68">
+    <span class="logo-text">Art Patnam</span>
+  </a>
+
+  <nav class="nav-menu" id="navMenu" aria-label="Principal">
+    <a href="/">Inicio</a>
+    <a href="/obras/">Arte</a>
+    <a href="/contacto/" aria-current="page">Contacto</a>
+  </nav>
+
+  <div class="header-controls">
+    <nav class="lang-switch" aria-label="Idioma">
+      <a href="/contacto/" class="active" hreflang="es" lang="es" aria-current="true">ES</a>
+      <a href="/en/contact/" hreflang="en" lang="en">EN</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<main id="contact" class="section contact">
+
+  <div class="contact-inner">
+
+    <div class="contact-text" data-reveal>
+      <span class="contact-eyebrow">Contacto profesional</span>
+      <h1>Cuéntanos tu espacio</h1>
+      <p>Trabajamos cada proyecto de forma personalizada para recomendar obras alineadas con tu negocio.</p>
+      <p>Rellena el formulario y nos pondremos en contacto contigo.</p>
+    </div>
+
+    <form class="contact-form"
+          action="https://formspree.io/f/mnjnvbky"
+          method="POST"
+          data-reveal data-reveal-delay="1">
+
+      <div class="form-group">
+        <label for="f-name">Nombre</label>
+        <input type="text" id="f-name" name="name" autocomplete="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="f-email">Email</label>
+        <input type="email" id="f-email" name="email" autocomplete="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="f-phone">Teléfono</label>
+        <input type="tel" id="f-phone" name="phone" autocomplete="tel">
+      </div>
+
+      <div class="form-group">
+        <label for="f-space">Describe tu espacio</label>
+        <textarea id="f-space" name="space" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="f-interest">¿Qué tipo de obras te interesan?</label>
+        <textarea id="f-interest" name="art_interest" rows="4"></textarea>
+      </div>
+
+      <div class="form-consent">
+        <input type="checkbox" id="privacy" name="privacy_consent" value="accepted" required>
+        <label for="privacy">He leído y acepto la <a href="/privacidad.html" target="_blank" rel="noopener" hreflang="es">política de privacidad</a>.</label>
+      </div>
+
+      <button type="submit">Enviar consulta</button>
+    </form>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="/img/logo-full.webp" alt="Art Patnam" class="footer-logo" width="219" height="128" loading="lazy">
+      <p>Arte contemporáneo para espacios profesionales.</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Principal">
+      <a href="/">Inicio</a>
+      <a href="/obras/">Arte</a>
+      <a href="/contacto/">Contacto</a>
+    </nav>
+
+    <div class="footer-contact">
+      <a href="mailto:artpatnam@gmail.com">artpatnam@gmail.com</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; <span id="year">2026</span> Art Patnam. Todos los derechos reservados.</span>
+    <nav class="footer-legal">
+      <a href="/aviso-legal.html" hreflang="es">Aviso legal</a>
+      <a href="/privacidad.html" hreflang="es">Política de privacidad</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,4 +1,23 @@
 /* =========================
+TIPOGRAFÍAS (alojadas en /fonts, licencia OFL)
+========================= */
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(/fonts/fraunces-latin.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400 500;
+  font-display: swap;
+  src: url(/fonts/inter-latin.woff2) format('woff2');
+}
+
+/* =========================
 RESET + VARIABLES DE MARCA
 ========================= */
 * {
@@ -94,7 +113,8 @@ header {
   color: var(--navy);
 }
 
-.nav-menu a:hover::after {
+.nav-menu a:hover::after,
+.nav-menu a[aria-current="page"]::after {
   width: 100%;
 }
 
@@ -104,17 +124,19 @@ header {
   gap: 20px;
 }
 
-.lang-switch button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
+.lang-switch {
+  display: flex;
+}
+
+.lang-switch a {
+  padding: 12px 5px;
   font-size: 14px;
   color: #9a9182;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.lang-switch button:hover {
+.lang-switch a:hover {
   color: var(--navy);
 }
 
@@ -131,12 +153,13 @@ MENÚ MÓVIL (hamburguesa)
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 18px;
+  width: 44px;
+  height: 44px;
+  margin-right: -10px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0;
+  padding: 13px 10px;
 }
 
 .menu-toggle span {
@@ -163,22 +186,12 @@ MENÚ MÓVIL (hamburguesa)
 SECTIONS + TRANSICIÓN
 ========================= */
 .section {
-  display: none;
+  display: block;
   padding: 110px 6% 90px;
-  opacity: 1;
-  transition: opacity 0.25s ease;
 }
 
 .section.hero {
   padding: 0 0 120px;
-}
-
-.section.active {
-  display: block;
-}
-
-.section.fade-out {
-  opacity: 0;
 }
 
 /* =========================
@@ -467,6 +480,9 @@ ARTE — CABECERA
 
 .filters-elegant .filter {
   position: relative;
+  background: none;
+  border: none;
+  padding-top: 8px;
   font-family: 'Inter', sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -585,10 +601,11 @@ ARTE — GALERÍA NARRATIVA (obra completa sobre paspartú, estilo catálogo de 
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--navy);
+  font-family: inherit;
+  cursor: pointer;
   opacity: 0;
   transform: translateY(6px);
   transition: opacity 0.35s ease, transform 0.35s ease;
-  pointer-events: none;
 }
 
 .art-flip-hint::before {
@@ -601,9 +618,18 @@ ARTE — GALERÍA NARRATIVA (obra completa sobre paspartú, estilo catálogo de 
   border-right-color: transparent;
 }
 
-.artwork-row:hover .art-flip-hint {
+.artwork-row:hover .art-flip-hint,
+.art-flip-hint:focus-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* En pantallas táctiles no hay hover: la pista se ve siempre */
+@media (hover: none) {
+  .art-flip-hint {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .art-face-back {
@@ -658,15 +684,15 @@ ARTE — GALERÍA NARRATIVA (obra completa sobre paspartú, estilo catálogo de 
 
 .art-back-close {
   position: absolute;
-  top: 14px;
-  right: 14px;
-  width: 30px;
-  height: 30px;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 1px solid rgba(14,35,80,0.15);
   background: transparent;
   color: var(--navy);
-  font-size: 17px;
+  font-size: 20px;
   line-height: 1;
   cursor: pointer;
   display: flex;
@@ -693,7 +719,7 @@ ARTE — GALERÍA NARRATIVA (obra completa sobre paspartú, estilo catálogo de 
   opacity: 1;
 }
 
-.artwork-row h3 {
+.artwork-row h2 {
   font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: clamp(28px, 4vw, 44px);
@@ -735,9 +761,10 @@ CONTACTO
   color: var(--gray-mid);
 }
 
-.contact-text h2 {
+.contact-text h1 {
   font-family: 'Fraunces', serif;
   font-weight: 500;
+  line-height: 1.15;
   font-size: clamp(32px, 4.5vw, 54px);
   margin: 20px 0;
 }
@@ -777,7 +804,7 @@ CONTACTO
   background: transparent;
   border-radius: 0;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 16px;
   color: var(--ink);
   transition: border-color 0.3s ease;
 }
@@ -806,6 +833,11 @@ CONTACTO
   margin-top: 2px;
   flex-shrink: 0;
   accent-color: var(--navy);
+}
+
+.contact-form .form-consent input:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
 }
 
 .form-consent a {
@@ -990,6 +1022,54 @@ MOBILE (menú hamburguesa por defecto)
 
 .menu-toggle {
   display: flex;
+}
+
+/* Ficha técnica en móvil: panel desplegable bajo la obra (sin giro 3D) */
+@media (max-width: 899px) {
+  .artwork-media {
+    aspect-ratio: auto;
+    perspective: none;
+  }
+
+  .artwork-flip {
+    height: auto;
+    transform: none !important;
+    transform-style: flat;
+  }
+
+  .art-face {
+    position: relative;
+    inset: auto;
+  }
+
+  .art-face-front {
+    aspect-ratio: 5 / 6;
+  }
+
+  .art-face-back {
+    display: none;
+    transform: none;
+    margin-top: 12px;
+    padding: 60px 7% 28px;
+    overflow: visible;
+  }
+
+  .artwork-media.flipped .art-face-back {
+    display: flex;
+  }
+
+  .artwork-media.flipped .art-flip-hint {
+    display: none;
+  }
+}
+
+/* Foco visible para quien navega con teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
 }
 
 /* =========================
