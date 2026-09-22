@@ -305,16 +305,6 @@ HOME / HERO A SANGRE
   padding-bottom: 40px;
 }
 
-/* Logo en blanco sobre el fondo oscuro */
-.hero-logo {
-  display: block;
-  height: 64px;
-  width: auto;
-  margin-bottom: 18px;
-  filter: brightness(0) invert(1);
-  opacity: 0.92;
-}
-
 .hero-eyebrow {
   display: inline-block;
   font-size: 13px;
@@ -1174,11 +1164,6 @@ DESKTOP
     margin: 0;
     padding: 0;
     transform: translateY(-50%);
-  }
-
-  .hero-logo {
-    height: 88px;
-    margin-bottom: 26px;
   }
 
   .hero-actions {
