@@ -12,11 +12,11 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="img/anti-ism.jpg">
 
-  <!-- Favicon (sustituye por tu propio icono cuando lo tengas) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a1a1a'/%3E%3Ctext x='50' y='68' font-size='60' fill='%23fff' text-anchor='middle' font-family='Georgia,serif'%3EA%3C/text%3E%3C/svg%3E">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-mark.png">
 
-  <!-- Google Fonts -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap">
+  <!-- Google Fonts: Inter para texto, Fraunces (variable, con más carácter que una serif genérica) para titulares -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap">
 
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -24,7 +24,10 @@
 <body>
 
 <header>
-  <div class="logo">ART PATNAM</div>
+  <a class="logo" data-section="home" href="#">
+    <img src="img/logo-mark.png" alt="" class="logo-mark">
+    <span class="logo-text">Art Patnam</span>
+  </a>
 
   <nav class="nav-menu" id="navMenu">
     <a data-section="home" data-i18n="nav_home">Inicio</a>
@@ -51,33 +54,31 @@ HOME
 ========================= -->
 <section id="home" class="section active hero">
 
-  <div class="hero-inner">
-
-    <div class="hero-text" data-reveal>
-      <span class="hero-eyebrow" data-i18n="hero_eyebrow">
-        Arte contemporáneo para espacios profesionales
-      </span>
-
-      <h1 data-i18n="hero_h1">Arte que define la experiencia de un espacio</h1>
-
-      <p class="hero-lead" data-i18n="hero_lead">
-        Seleccionamos y alquilamos obras de arte para negocios que entienden
-        el valor del detalle, la identidad y la experiencia del cliente.
-      </p>
-
-      <p class="hero-secondary" data-i18n="hero_secondary">
-        Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.
-      </p>
-    </div>
-
-    <div class="hero-slider" data-reveal data-reveal-delay="1">
+  <div class="hero-full" data-reveal>
+    <div class="hero-slider">
       <img src="img/anti-ism.jpg" class="active" alt="Anti-ism" loading="eager">
       <img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy">
       <img src="img/paisaje.jpg" alt="Paisaje" loading="lazy">
       <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy">
       <img src="img/i-journey.jpg" alt="I Journey" loading="lazy">
     </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-overlay">
+      <span class="hero-eyebrow" data-i18n="hero_eyebrow">
+        Arte contemporáneo para espacios profesionales
+      </span>
+      <h1 data-i18n="hero_h1">Arte que define la experiencia de un espacio</h1>
+    </div>
+  </div>
 
+  <div class="hero-lead-row">
+    <p class="hero-lead" data-i18n="hero_lead" data-reveal>
+      Seleccionamos y alquilamos obras de arte para negocios que entienden
+      el valor del detalle, la identidad y la experiencia del cliente.
+    </p>
+    <p class="hero-secondary" data-i18n="hero_secondary" data-reveal data-reveal-delay="1">
+      Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.
+    </p>
   </div>
 
   <div class="principle" data-i18n="principle" data-reveal>
@@ -130,11 +131,12 @@ ARTE
 ========================= -->
 <section id="fineart" class="section">
 
-  <h2 class="fineart-title" data-i18n="fineart_title" data-reveal>Obras seleccionadas</h2>
-
-  <div class="fineart-curatorial" data-i18n="fineart_curatorial" data-reveal>
-    La selección responde a criterios curatoriales y a la relación entre obra,
-    arquitectura y uso del espacio, más allá de lo puramente decorativo.
+  <div class="fineart-head" data-reveal>
+    <h2 class="fineart-title" data-i18n="fineart_title">Obras seleccionadas</h2>
+    <div class="fineart-curatorial" data-i18n="fineart_curatorial">
+      La selección responde a criterios curatoriales y a la relación entre obra,
+      arquitectura y uso del espacio, más allá de lo puramente decorativo.
+    </div>
   </div>
 
   <div class="filters-elegant" data-reveal>
@@ -147,49 +149,74 @@ ARTE
 
   <div class="gallery">
 
-    <article class="artwork" data-category="restaurant hotel" data-reveal>
-      <div class="artwork-img"><img src="img/anti-ism.jpg" alt="Anti-ism" loading="lazy"></div>
-      <h3>Anti-ism</h3>
-      <p class="artwork-desc" data-i18n="art1_desc">
-        Una obra con presencia, pensada para espacios donde la identidad es clave.
-      </p>
-      <p class="artwork-meta" data-i18n="art1_meta">Restaurantes · Hoteles</p>
+    <article class="artwork-row" data-category="restaurant hotel" data-reveal>
+      <div class="artwork-media">
+        <img src="img/anti-ism.jpg" alt="Anti-ism" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">01</span>
+        <h3>Anti-ism</h3>
+        <p class="artwork-desc" data-i18n="art1_desc">
+          Una obra con presencia, pensada para espacios donde la identidad es clave.
+        </p>
+        <p class="artwork-meta" data-i18n="art1_meta">Restaurantes · Hoteles</p>
+      </div>
     </article>
 
-    <article class="artwork" data-category="wellness office" data-reveal data-reveal-delay="1">
-      <div class="artwork-img"><img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy"></div>
-      <h3>Silver Eruption</h3>
-      <p class="artwork-desc" data-i18n="art2_desc">
-        Equilibrio visual y serenidad para entornos de bienestar.
-      </p>
-      <p class="artwork-meta" data-i18n="art2_meta">Wellness · Oficinas</p>
+    <article class="artwork-row" data-category="wellness office" data-reveal>
+      <div class="artwork-media">
+        <img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">02</span>
+        <h3>Silver Eruption</h3>
+        <p class="artwork-desc" data-i18n="art2_desc">
+          Equilibrio visual y serenidad para entornos de bienestar.
+        </p>
+        <p class="artwork-meta" data-i18n="art2_meta">Wellness · Oficinas</p>
+      </div>
     </article>
 
-    <article class="artwork" data-category="hotel healthcare" data-reveal data-reveal-delay="2">
-      <div class="artwork-img"><img src="img/paisaje.jpg" alt="Paisaje" loading="lazy"></div>
-      <h3>Paisaje</h3>
-      <p class="artwork-desc" data-i18n="art3_desc">
-        Una pieza que aporta calidez y sensación de acogida natural.
-      </p>
-      <p class="artwork-meta" data-i18n="art3_meta">Hoteles · Salud</p>
+    <article class="artwork-row" data-category="hotel healthcare" data-reveal>
+      <div class="artwork-media">
+        <img src="img/paisaje.jpg" alt="Paisaje" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">03</span>
+        <h3>Paisaje</h3>
+        <p class="artwork-desc" data-i18n="art3_desc">
+          Una pieza que aporta calidez y sensación de acogida natural.
+        </p>
+        <p class="artwork-meta" data-i18n="art3_meta">Hoteles · Salud</p>
+      </div>
     </article>
 
-    <article class="artwork" data-category="clinic healthcare" data-reveal>
-      <div class="artwork-img"><img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy"></div>
-      <h3>Paisaje abstracto</h3>
-      <p class="artwork-desc" data-i18n="art4_desc">
-        Lenguaje visual suave para acompañar espacios clínicos.
-      </p>
-      <p class="artwork-meta" data-i18n="art4_meta">Clínicas · Salud</p>
+    <article class="artwork-row" data-category="clinic healthcare" data-reveal>
+      <div class="artwork-media">
+        <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">04</span>
+        <h3>Paisaje abstracto</h3>
+        <p class="artwork-desc" data-i18n="art4_desc">
+          Lenguaje visual suave para acompañar espacios clínicos.
+        </p>
+        <p class="artwork-meta" data-i18n="art4_meta">Clínicas · Salud</p>
+      </div>
     </article>
 
-    <article class="artwork" data-category="hotel wellness" data-reveal data-reveal-delay="1">
-      <div class="artwork-img"><img src="img/i-journey.jpg" alt="I Journey" loading="lazy"></div>
-      <h3>I Journey</h3>
-      <p class="artwork-desc" data-i18n="art5_desc">
-        Una obra pensada para elevar la percepción de espacios premium.
-      </p>
-      <p class="artwork-meta" data-i18n="art5_meta">Hoteles · Wellness</p>
+    <article class="artwork-row" data-category="hotel wellness" data-reveal>
+      <div class="artwork-media">
+        <img src="img/i-journey.jpg" alt="I Journey" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">05</span>
+        <h3>I Journey</h3>
+        <p class="artwork-desc" data-i18n="art5_desc">
+          Una obra pensada para elevar la percepción de espacios premium.
+        </p>
+        <p class="artwork-meta" data-i18n="art5_meta">Hoteles · Wellness</p>
+      </div>
     </article>
 
   </div>
@@ -256,7 +283,7 @@ FOOTER
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-brand">
-      <div class="logo">ART PATNAM</div>
+      <img src="img/logo-full.png" alt="Art Patnam" class="footer-logo">
       <p data-i18n="footer_tagline">Arte contemporáneo para espacios profesionales.</p>
     </div>
 
@@ -516,11 +543,9 @@ document.querySelectorAll('.filter').forEach(f => {
     document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
     f.classList.add('active');
     const filter = f.dataset.filter;
-    document.querySelectorAll('.artwork').forEach(a => {
-      a.style.display =
-        filter === 'all' || a.dataset.category.includes(filter)
-        ? 'block'
-        : 'none';
+    document.querySelectorAll('.artwork-row').forEach(a => {
+      const show = filter === 'all' || a.dataset.category.includes(filter);
+      a.style.display = show ? '' : 'none';
     });
   });
 });
