@@ -36,6 +36,19 @@ function loadSlide(slide) {
   });
 }
 
+// Cartela con el título y la técnica de la obra que se muestra
+const caption = document.querySelector('.hero-caption');
+
+function updateCaption(slide) {
+  if (!caption) return;
+  caption.classList.add('changing');
+  setTimeout(() => {
+    caption.querySelector('em').textContent = slide.dataset.title;
+    caption.querySelector('span').textContent = slide.dataset.meta;
+    caption.classList.remove('changing');
+  }, 600);
+}
+
 if (slides.length > 1 && !reducedMotion) {
   let i = 0;
   loadSlide(slides[1]);
@@ -52,6 +65,7 @@ if (slides.length > 1 && !reducedMotion) {
     setKenBurns(slides[i]);
     slides[i].classList.add('active');
     loadSlide(slides[(i + 1) % slides.length]);
+    updateCaption(slides[i]);
   }, 4500);
 }
 
