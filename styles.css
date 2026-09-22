@@ -23,12 +23,13 @@ header {
   width: 100%;
   height: 72px;
   padding: 0 32px;
-  background: #f0f0ee;
+  background: rgba(240,240,238,0.95);
+  backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(0,0,0,0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 100;
 }
 
 .logo {
@@ -37,30 +38,141 @@ header {
 }
 
 .nav-menu a {
+  position: relative;
   margin: 0 16px;
   cursor: pointer;
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 1px;
+  background: #1a1a1a;
+  transition: width 0.35s ease;
+}
+
+.nav-menu a:hover {
+  color: #000;
+}
+
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .lang-switch button {
   background: none;
   border: none;
   cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.lang-switch button:hover {
+  color: #1a1a1a;
 }
 
 .lang-switch .active {
+  color: #1a1a1a;
   text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* =========================
-SECTIONS
+MENÚ MÓVIL (hamburguesa)
+========================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #1a1a1a;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* =========================
+SECTIONS + TRANSICIÓN
 ========================= */
 .section {
   display: none;
-  padding: 120px 6% 140px;
+  padding: 120px 6% 100px;
+  opacity: 1;
+  transition: opacity 0.25s ease;
 }
 
 .section.active {
   display: block;
+}
+
+.section.fade-out {
+  opacity: 0;
+}
+
+/* =========================
+SCROLL REVEAL
+========================= */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+[data-reveal].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-reveal-delay="1"] {
+  transition-delay: 0.12s;
+}
+
+[data-reveal-delay="2"] {
+  transition-delay: 0.24s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* =========================
@@ -75,14 +187,15 @@ HOME / HERO
 
 .hero-eyebrow {
   font-size: 13px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #666;
+  color: #555;
 }
 
 .hero-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 44px;
+  line-height: 1.15;
   margin: 20px 0;
 }
 
@@ -92,7 +205,7 @@ HOME / HERO
 
 .hero-secondary {
   font-size: 15px;
-  color: #555;
+  color: #4a4a4a;
 }
 
 /* =========================
@@ -112,7 +225,8 @@ HERO SLIDER
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.2s ease;
+  transform: scale(1);
+  transition: opacity 1.8s ease, transform 6s ease-out;
 }
 
 .hero-slider img.active {
@@ -127,7 +241,20 @@ PRINCIPLE
   max-width: 760px;
   text-align: center;
   font-size: 15px;
-  color: #555;
+  color: #4a4a4a;
+}
+
+/* =========================
+CURATORIAL BLOCKS
+========================= */
+.curatorial-block,
+.fineart-curatorial {
+  max-width: 720px;
+  margin: 120px auto 80px;
+  text-align: center;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 1.8;
 }
 
 /* =========================
@@ -151,7 +278,7 @@ HOW WE WORK
 .step span {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  color: #aaa;
+  color: #999;
 }
 
 .step h3 {
@@ -162,7 +289,7 @@ HOW WE WORK
 
 .step p {
   font-size: 15px;
-  color: #555;
+  color: #4a4a4a;
   max-width: 320px;
 }
 
@@ -213,14 +340,35 @@ ARTE
 }
 
 .filters-elegant .filter {
+  position: relative;
   font-family: 'Playfair Display', serif;
   cursor: pointer;
   color: #666;
+  padding-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.filters-elegant .filter::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.35s ease;
+}
+
+.filters-elegant .filter:hover {
+  color: #000;
 }
 
 .filters-elegant .filter.active {
   color: #000;
-  text-decoration: underline;
+}
+
+.filters-elegant .filter.active::after {
+  width: 100%;
 }
 
 .gallery {
@@ -228,10 +376,29 @@ ARTE
   gap: 120px;
 }
 
-.artwork img {
+.artwork {
+  transition: transform 0.6s ease;
+}
+
+.artwork:hover {
+  transform: translateY(-4px);
+}
+
+.artwork-img {
   max-width: 360px;
   width: 100%;
+  overflow: hidden;
   margin-bottom: 22px;
+}
+
+.artwork-img img {
+  display: block;
+  width: 100%;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.artwork:hover .artwork-img img {
+  transform: scale(1.06);
 }
 
 .artwork h3 {
@@ -241,12 +408,12 @@ ARTE
 
 .artwork-desc {
   font-size: 15px;
-  color: #444;
+  color: #3d3d3d;
 }
 
 .artwork-meta {
   font-size: 13px;
-  color: #888;
+  color: #666;
 }
 
 /* =========================
@@ -268,7 +435,7 @@ CONTACTO
   font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #555;
+  color: #4a4a4a;
 }
 
 .contact-text h2 {
@@ -279,7 +446,7 @@ CONTACTO
 
 .contact-text p {
   font-size: 15px;
-  color: #444;
+  color: #3d3d3d;
   margin-bottom: 14px;
 }
 
@@ -310,12 +477,125 @@ CONTACTO
   border: none;
   cursor: pointer;
   align-self: flex-start;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #3a3a3a;
+}
+
+/* =========================
+FOOTER
+========================= */
+.site-footer {
+  background: #f0f0ee;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 80px 6% 40px;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  gap: 50px;
+}
+
+.footer-brand p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #4a4a4a;
+  max-width: 300px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #666;
+}
+
+.footer-contact a {
+  color: #1a1a1a;
+  text-decoration: none;
+  font-size: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.footer-bottom {
+  max-width: 1400px;
+  margin: 60px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  font-size: 13px;
+  color: #666;
+}
+
+/* =========================
+MOBILE (menú hamburguesa por defecto)
+========================= */
+.nav-menu {
+  position: fixed;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: #f0f0ee;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.nav-menu.open {
+  max-height: 260px;
+}
+
+.nav-menu a {
+  padding: 16px 0;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.menu-toggle {
+  display: flex;
 }
 
 /* =========================
 DESKTOP
 ========================= */
 @media (min-width: 900px) {
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    position: static;
+    max-height: none;
+    overflow: visible;
+    flex-direction: row;
+    background: none;
+    border-bottom: none;
+  }
+
+  .nav-menu a {
+    width: auto;
+    padding: 0;
+  }
 
   .hero-inner {
     grid-template-columns: 1.1fr 1fr;
@@ -342,56 +622,8 @@ DESKTOP
     gap: 140px;
     align-items: start;
   }
+
+  .footer-inner {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
 }
-
-/* =========================================================
-AÑADIDOS — CAMBIOS 3, 4, 5 Y 7
-========================================================= */
-
-/* Cambio 3 — Jerarquía tipográfica */
-.hero-text h1 {
-  line-height: 1.15;
-}
-
-.hero-eyebrow {
-  letter-spacing: 0.18em;
-}
-
-/* Cambio 4 — Header más silencioso */
-header {
-  background: rgba(240,240,238,0.95);
-  backdrop-filter: blur(6px);
-}
-
-.nav-menu a {
-  transition: color 0.4s ease;
-}
-
-/* Cambio 5 — Discurso curatorial */
-.curatorial-block,
-.fineart-curatorial {
-  max-width: 720px;
-  margin: 120px auto 80px;
-  text-align: center;
-  font-size: 16px;
-  color: #555;
-  line-height: 1.8;
-}
-
-/* Cambio 7 — Micro‑detalles premium */
-.artwork {
-  transition: transform 0.6s ease;
-}
-
-.artwork:hover {
-  transform: translateY(-4px);
-}
-
-.hero-slider img {
-  transition: opacity 1.8s ease;
-}
-
-
-
-
-
