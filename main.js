@@ -25,8 +25,33 @@ SLIDER DE LA PORTADA
 // fondo desenfocado de la misma imagen. El ken-burns solo mueve el fondo.
 const slides = document.querySelectorAll('.hero-slide');
 
+// Solo la primera diapositiva se descarga al entrar; cada una de las
+// siguientes se pide una vuelta antes de mostrarse.
+function loadSlide(slide) {
+  slide.querySelectorAll('img[data-src]').forEach(img => {
+    if (img.dataset.srcset) img.srcset = img.dataset.srcset;
+    img.src = img.dataset.src;
+    img.removeAttribute('data-src');
+    img.removeAttribute('data-srcset');
+  });
+}
+
+// Cartela con el título y la técnica de la obra que se muestra
+const caption = document.querySelector('.hero-caption');
+
+function updateCaption(slide) {
+  if (!caption) return;
+  caption.classList.add('changing');
+  setTimeout(() => {
+    caption.querySelector('em').textContent = slide.dataset.title;
+    caption.querySelector('span').textContent = slide.dataset.meta;
+    caption.classList.remove('changing');
+  }, 600);
+}
+
 if (slides.length > 1 && !reducedMotion) {
   let i = 0;
+  loadSlide(slides[1]);
 
   const setKenBurns = (slide) => {
     slide.querySelector('.hero-backdrop').style.transform =
@@ -39,6 +64,8 @@ if (slides.length > 1 && !reducedMotion) {
     i = (i + 1) % slides.length;
     setKenBurns(slides[i]);
     slides[i].classList.add('active');
+    loadSlide(slides[(i + 1) % slides.length]);
+    updateCaption(slides[i]);
   }, 4500);
 }
 
