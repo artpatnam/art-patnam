@@ -218,9 +218,9 @@ HOME / HERO A SANGRE
 .hero-full {
   position: relative;
   width: 100%;
-  height: 62vh;
-  min-height: 420px;
-  max-height: 620px;
+  height: 78vh;
+  min-height: 560px;
+  max-height: 720px;
   margin-top: 72px;
   overflow: hidden;
 }
@@ -233,19 +233,48 @@ HOME / HERO A SANGRE
   overflow: hidden;
 }
 
-.hero-slider img {
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.8s ease;
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* Fondo: la misma obra, ampliada y desenfocada (disimula la baja resolución) */
+.hero-backdrop {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transform: scale(1);
-  transition: opacity 1.8s ease, transform 6s ease-out;
+  filter: blur(40px) saturate(1.1) brightness(0.55);
+  transform: scale(1.2);
+  transition: transform 6s ease-out;
 }
 
-.hero-slider img.active {
-  opacity: 1;
+/* Obra: siempre completa y nunca por encima de su tamaño real */
+.hero-art {
+  position: absolute;
+  top: 28px;
+  left: 6%;
+  right: 6%;
+  bottom: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-art img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 24px 50px -20px rgba(0,0,0,0.55);
 }
 
 .hero-scrim {
@@ -276,7 +305,7 @@ HOME / HERO A SANGRE
 .hero-overlay h1 {
   font-family: 'Fraunces', serif;
   font-weight: 560;
-  font-size: clamp(40px, 8vw, 104px);
+  font-size: clamp(34px, 8vw, 104px);
   line-height: 0.98;
   color: #fff;
   text-shadow: 0 4px 30px rgba(0,0,0,0.25);
@@ -310,25 +339,12 @@ HERO LEAD (editorial, asimétrico)
 }
 
 /* =========================
-PRINCIPLE
-========================= */
-.principle {
-  margin: 90px auto 0;
-  max-width: 620px;
-  text-align: center;
-  font-size: 14px;
-  letter-spacing: 0.02em;
-  color: var(--gray-soft);
-  padding: 0 6%;
-}
-
-/* =========================
 CURATORIAL BLOCKS
 ========================= */
 .curatorial-block,
 .fineart-curatorial {
   max-width: 680px;
-  margin: 22px auto 0;
+  margin: 90px auto 0;
   text-align: center;
   font-family: 'Fraunces', serif;
   font-weight: 400;
@@ -776,6 +792,26 @@ CONTACTO
   resize: vertical;
 }
 
+.form-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  color: var(--gray-mid);
+}
+
+.form-consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--navy);
+}
+
+.form-consent a {
+  color: var(--navy);
+}
+
 .contact-form button {
   padding: 15px 34px;
   background: var(--navy);
@@ -848,6 +884,85 @@ FOOTER
   border-top: 1px solid rgba(14,35,80,0.1);
   font-size: 13px;
   color: var(--gray-soft);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.footer-legal a {
+  color: var(--gray-mid);
+  text-decoration: none;
+}
+
+.footer-legal a:hover {
+  color: var(--navy);
+}
+
+/* =========================
+PÁGINAS LEGALES
+========================= */
+.legal-page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 130px 6% 90px;
+}
+
+.legal-page h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(34px, 5vw, 52px);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+
+.legal-updated {
+  font-size: 13px;
+  color: var(--gray-mid);
+  margin-bottom: 48px;
+}
+
+.legal-page h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: 23px;
+  margin: 40px 0 12px;
+}
+
+.legal-page p,
+.legal-page li {
+  font-size: 15px;
+  color: var(--gray-mid);
+  margin-bottom: 12px;
+}
+
+.legal-page ul {
+  padding-left: 20px;
+}
+
+.legal-page a {
+  color: var(--navy);
+}
+
+.legal-back {
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Datos que el titular debe completar */
+.legal-page mark {
+  background: #fde9a8;
+  color: var(--ink);
+  padding: 0 4px;
 }
 
 /* =========================
@@ -911,7 +1026,23 @@ DESKTOP
 
   .hero-full {
     height: 68vh;
+    min-height: 480px;
     max-height: 680px;
+  }
+
+  /* En escritorio: texto a la izquierda, obra a la derecha */
+  .hero-art {
+    top: 48px;
+    bottom: 48px;
+    left: 54%;
+  }
+
+  .hero-overlay {
+    right: 50%;
+  }
+
+  .hero-overlay h1 {
+    font-size: clamp(44px, 5vw, 76px);
   }
 
   .hero-lead-row {
