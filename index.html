@@ -56,11 +56,26 @@ HOME
 
   <div class="hero-full" data-reveal>
     <div class="hero-slider">
-      <img src="img/anti-ism.jpg" class="active" alt="Anti-ism" loading="eager">
-      <img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy">
-      <img src="img/paisaje.jpg" alt="Paisaje" loading="lazy">
-      <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy">
-      <img src="img/i-journey.jpg" alt="I Journey" loading="lazy">
+      <div class="hero-slide active">
+        <img src="img/anti-ism.jpg" class="hero-backdrop" alt="" aria-hidden="true" loading="eager">
+        <div class="hero-art"><img src="img/anti-ism.jpg" alt="Anti-ism" loading="eager"></div>
+      </div>
+      <div class="hero-slide">
+        <img src="img/silver-eruption.jpg" class="hero-backdrop" alt="" aria-hidden="true" loading="lazy">
+        <div class="hero-art"><img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy"></div>
+      </div>
+      <div class="hero-slide">
+        <img src="img/paisaje.jpg" class="hero-backdrop" alt="" aria-hidden="true" loading="lazy">
+        <div class="hero-art"><img src="img/paisaje.jpg" alt="Paisaje" loading="lazy"></div>
+      </div>
+      <div class="hero-slide">
+        <img src="img/paisaje-abstracto.jpg" class="hero-backdrop" alt="" aria-hidden="true" loading="lazy">
+        <div class="hero-art"><img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy"></div>
+      </div>
+      <div class="hero-slide">
+        <img src="img/i-journey.jpg" class="hero-backdrop" alt="" aria-hidden="true" loading="lazy">
+        <div class="hero-art"><img src="img/i-journey.jpg" alt="I Journey" loading="lazy"></div>
+      </div>
     </div>
     <div class="hero-scrim"></div>
     <div class="hero-overlay">
@@ -79,11 +94,6 @@ HOME
     <p class="hero-secondary" data-i18n="hero_secondary" data-reveal data-reveal-delay="1">
       Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.
     </p>
-  </div>
-
-  <div class="principle" data-i18n="principle" data-reveal>
-    Qué es, para quién es, qué aporta y por qué confiar.
-    Todo empieza con una buena selección.
   </div>
 
   <div class="curatorial-block" data-i18n="curatorial_block" data-reveal>
@@ -144,7 +154,8 @@ ARTE
     <span class="filter" data-filter="restaurant" data-i18n="filter_restaurant">Restaurantes</span>
     <span class="filter" data-filter="hotel" data-i18n="filter_hotel">Hoteles</span>
     <span class="filter" data-filter="wellness" data-i18n="filter_wellness">Wellness</span>
-    <span class="filter" data-filter="clinic" data-i18n="filter_clinic">Clínicas</span>
+    <span class="filter" data-filter="clinic" data-i18n="filter_clinic">Clínicas y salud</span>
+    <span class="filter" data-filter="office" data-i18n="filter_office">Oficinas</span>
   </div>
 
   <div class="gallery">
@@ -299,7 +310,7 @@ ARTE
       </div>
     </article>
 
-    <article class="artwork-row" data-category="hotel healthcare" data-reveal>
+    <article class="artwork-row" data-category="hotel clinic" data-reveal>
       <div class="artwork-media">
         <div class="artwork-flip">
           <div class="art-face art-face-front">
@@ -329,7 +340,7 @@ ARTE
       </div>
     </article>
 
-    <article class="artwork-row" data-category="clinic healthcare" data-reveal>
+    <article class="artwork-row" data-category="clinic" data-reveal>
       <div class="artwork-media">
         <div class="artwork-flip">
           <div class="art-face art-face-front">
@@ -441,6 +452,11 @@ CONTACTO
         <textarea name="art_interest" rows="4"></textarea>
       </div>
 
+      <div class="form-consent">
+        <input type="checkbox" id="privacy" name="privacy_consent" value="accepted" required>
+        <label for="privacy"><span data-i18n="form_privacy">He leído y acepto la</span> <a href="privacidad.html" target="_blank" rel="noopener" data-i18n="form_privacy_link">política de privacidad</a>.</label>
+      </div>
+
       <button type="submit" data-i18n="form_submit">Enviar consulta</button>
     </form>
 
@@ -470,6 +486,10 @@ FOOTER
 
   <div class="footer-bottom">
     <span>&copy; <span id="year"></span> Art Patnam. <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
+    <nav class="footer-legal">
+      <a href="aviso-legal.html" data-i18n="footer_legal">Aviso legal</a>
+      <a href="privacidad.html" data-i18n="footer_privacy">Política de privacidad</a>
+    </nav>
   </div>
 </footer>
 
@@ -486,7 +506,6 @@ const translations = {
     hero_h1: "Arte que define la experiencia de un espacio",
     hero_lead: "Seleccionamos y alquilamos obras de arte para negocios que entienden el valor del detalle, la identidad y la experiencia del cliente.",
     hero_secondary: "Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.",
-    principle: "Qué es, para quién es, qué aporta y por qué confiar. Todo empieza con una buena selección.",
     curatorial_block: "Cada obra se selecciona por su capacidad de dialogar con el espacio, generar una experiencia coherente y aportar valor más allá de lo decorativo.",
     how_we_work_title: "Cómo trabajamos",
     step1_title: "Analizamos tu espacio",
@@ -505,7 +524,8 @@ const translations = {
     filter_restaurant: "Restaurantes",
     filter_hotel: "Hoteles",
     filter_wellness: "Wellness",
-    filter_clinic: "Clínicas",
+    filter_clinic: "Clínicas y salud",
+    filter_office: "Oficinas",
     art1_desc: "Una obra con presencia, pensada para espacios donde la identidad es clave.",
     art1_meta: "Restaurantes · Hoteles",
     art2_desc: "Equilibrio visual y serenidad para entornos de bienestar.",
@@ -532,6 +552,10 @@ const translations = {
     form_space: "Describe tu espacio",
     form_interest: "¿Qué tipo de obras te interesan?",
     form_submit: "Enviar consulta",
+    form_privacy: "He leído y acepto la",
+    form_privacy_link: "política de privacidad",
+    footer_legal: "Aviso legal",
+    footer_privacy: "Política de privacidad",
     footer_tagline: "Arte contemporáneo para espacios profesionales.",
     footer_rights: "Todos los derechos reservados.",
     sheet_artist: "Artista",
@@ -589,7 +613,6 @@ const translations = {
     hero_h1: "Art that defines the experience of a space",
     hero_lead: "We select and rent artworks for businesses that understand the value of detail, identity and customer experience.",
     hero_secondary: "Restaurants, hotels, clinics and wellness spaces with a curated eye.",
-    principle: "What it is, who it's for, what it brings and why to trust it. It all starts with a good selection.",
     curatorial_block: "Each piece is selected for its ability to engage with the space, create a coherent experience and add value beyond the decorative.",
     how_we_work_title: "How we work",
     step1_title: "We study your space",
@@ -608,7 +631,8 @@ const translations = {
     filter_restaurant: "Restaurants",
     filter_hotel: "Hotels",
     filter_wellness: "Wellness",
-    filter_clinic: "Clinics",
+    filter_clinic: "Clinics & healthcare",
+    filter_office: "Offices",
     art1_desc: "A piece with presence, designed for spaces where identity is key.",
     art1_meta: "Restaurants · Hotels",
     art2_desc: "Visual balance and serenity for wellness environments.",
@@ -635,6 +659,10 @@ const translations = {
     form_space: "Describe your space",
     form_interest: "What kind of artworks are you interested in?",
     form_submit: "Send inquiry",
+    form_privacy: "I have read and accept the",
+    form_privacy_link: "privacy policy",
+    footer_legal: "Legal notice",
+    footer_privacy: "Privacy policy",
     footer_tagline: "Contemporary art for professional spaces.",
     footer_rights: "All rights reserved.",
     sheet_artist: "Artist",
@@ -757,11 +785,14 @@ menuToggle.addEventListener('click', () => {
 /* =========================
 SLIDER (con efecto ken-burns)
 ========================= */
-const slides = document.querySelectorAll('.hero-slider img');
+// Cada diapositiva: la obra completa (sin recortar ni ampliar) sobre un
+// fondo desenfocado de la misma imagen. El ken-burns solo mueve el fondo.
+const slides = document.querySelectorAll('.hero-slide');
 let i = 0;
 
-function setKenBurns(img) {
-  img.style.transform = Math.random() > 0.5 ? 'scale(1.08)' : 'scale(1)';
+function setKenBurns(slide) {
+  slide.querySelector('.hero-backdrop').style.transform =
+    Math.random() > 0.5 ? 'scale(1.3)' : 'scale(1.2)';
 }
 slides.forEach(setKenBurns);
 
@@ -821,7 +852,7 @@ document.querySelectorAll('.filter').forEach(f => {
     f.classList.add('active');
     const filter = f.dataset.filter;
     document.querySelectorAll('.artwork-row').forEach(a => {
-      const show = filter === 'all' || a.dataset.category.includes(filter);
+      const show = filter === 'all' || a.dataset.category.split(' ').includes(filter);
       a.style.display = show ? '' : 'none';
     });
   });
