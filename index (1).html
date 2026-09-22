@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Art Patnam | Arte para negocios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alquiler y curaduría de arte contemporáneo para restaurantes, hoteles, clínicas y espacios de bienestar. Seleccionamos obras que definen la experiencia de tu espacio.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Art Patnam | Arte para negocios">
+  <meta property="og:description" content="Seleccionamos y alquilamos obras de arte contemporáneo para espacios profesionales que cuidan cada detalle.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="img/anti-ism.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-mark.png">
+
+  <!-- Google Fonts: Inter para texto, Fraunces (variable, con más carácter que una serif genérica) para titulares -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+  <a class="logo" data-section="home" href="#">
+    <img src="img/logo-mark.png" alt="" class="logo-mark">
+    <span class="logo-text">Art Patnam</span>
+  </a>
+
+  <nav class="nav-menu" id="navMenu">
+    <a data-section="home" data-i18n="nav_home">Inicio</a>
+    <a data-section="fineart" data-i18n="nav_art">Arte</a>
+    <a data-section="contact" data-i18n="nav_contact">Contacto</a>
+  </nav>
+
+  <div class="header-controls">
+    <div class="lang-switch">
+      <button class="lang active" data-lang="es">ES</button>
+      <button class="lang" data-lang="en">EN</button>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- =========================
+HOME
+========================= -->
+<section id="home" class="section active hero">
+
+  <div class="hero-full" data-reveal>
+    <div class="hero-slider">
+      <img src="img/anti-ism.jpg" class="active" alt="Anti-ism" loading="eager">
+      <img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy">
+      <img src="img/paisaje.jpg" alt="Paisaje" loading="lazy">
+      <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy">
+      <img src="img/i-journey.jpg" alt="I Journey" loading="lazy">
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-overlay">
+      <span class="hero-eyebrow" data-i18n="hero_eyebrow">
+        Arte contemporáneo para espacios profesionales
+      </span>
+      <h1 data-i18n="hero_h1">Arte que define la experiencia de un espacio</h1>
+    </div>
+  </div>
+
+  <div class="hero-lead-row">
+    <p class="hero-lead" data-i18n="hero_lead" data-reveal>
+      Seleccionamos y alquilamos obras de arte para negocios que entienden
+      el valor del detalle, la identidad y la experiencia del cliente.
+    </p>
+    <p class="hero-secondary" data-i18n="hero_secondary" data-reveal data-reveal-delay="1">
+      Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.
+    </p>
+  </div>
+
+  <div class="principle" data-i18n="principle" data-reveal>
+    Qué es, para quién es, qué aporta y por qué confiar.
+    Todo empieza con una buena selección.
+  </div>
+
+  <div class="curatorial-block" data-i18n="curatorial_block" data-reveal>
+    Cada obra se selecciona por su capacidad de dialogar con el espacio,
+    generar una experiencia coherente y aportar valor más allá de lo decorativo.
+  </div>
+
+  <div class="how-we-work">
+    <h2 data-i18n="how_we_work_title" data-reveal>Cómo trabajamos</h2>
+
+    <div class="steps">
+      <div class="step" data-reveal>
+        <span>01</span>
+        <h3 data-i18n="step1_title">Analizamos tu espacio</h3>
+        <p data-i18n="step1_desc">Entendemos el negocio, el entorno y la experiencia que deseas ofrecer.</p>
+      </div>
+
+      <div class="step" data-reveal data-reveal-delay="1">
+        <span>02</span>
+        <h3 data-i18n="step2_title">Seleccionamos las obras</h3>
+        <p data-i18n="step2_desc">Curamos piezas que dialogan con el espacio y refuerzan su identidad.</p>
+      </div>
+
+      <div class="step" data-reveal data-reveal-delay="2">
+        <span>03</span>
+        <h3 data-i18n="step3_title">Instalamos y acompañamos</h3>
+        <p data-i18n="step3_desc">Nos ocupamos de la instalación y del seguimiento del proyecto.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="value-proposition" data-reveal>
+    <h2 data-i18n="value_title">Más que decoración</h2>
+    <ul>
+      <li data-i18n="value1">Refuerza la identidad del espacio</li>
+      <li data-i18n="value2">Mejora la experiencia del cliente</li>
+      <li data-i18n="value3">Aporta valor de marca al negocio</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- =========================
+ARTE
+========================= -->
+<section id="fineart" class="section">
+
+  <div class="fineart-head" data-reveal>
+    <h2 class="fineart-title" data-i18n="fineart_title">Obras seleccionadas</h2>
+    <div class="fineart-curatorial" data-i18n="fineart_curatorial">
+      La selección responde a criterios curatoriales y a la relación entre obra,
+      arquitectura y uso del espacio, más allá de lo puramente decorativo.
+    </div>
+  </div>
+
+  <div class="filters-elegant" data-reveal>
+    <span class="filter active" data-filter="all" data-i18n="filter_all">Todos</span>
+    <span class="filter" data-filter="restaurant" data-i18n="filter_restaurant">Restaurantes</span>
+    <span class="filter" data-filter="hotel" data-i18n="filter_hotel">Hoteles</span>
+    <span class="filter" data-filter="wellness" data-i18n="filter_wellness">Wellness</span>
+    <span class="filter" data-filter="clinic" data-i18n="filter_clinic">Clínicas</span>
+  </div>
+
+  <div class="gallery">
+
+    <article class="artwork-row" data-category="restaurant hotel" data-reveal>
+      <div class="artwork-media">
+        <img src="img/anti-ism.jpg" alt="Anti-ism" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">01</span>
+        <h3>Anti-ism</h3>
+        <p class="artwork-desc" data-i18n="art1_desc">
+          Una obra con presencia, pensada para espacios donde la identidad es clave.
+        </p>
+        <p class="artwork-meta" data-i18n="art1_meta">Restaurantes · Hoteles</p>
+      </div>
+    </article>
+
+    <article class="artwork-row" data-category="wellness office" data-reveal>
+      <div class="artwork-media">
+        <img src="img/silver-eruption.jpg" alt="Silver Eruption" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">02</span>
+        <h3>Silver Eruption</h3>
+        <p class="artwork-desc" data-i18n="art2_desc">
+          Equilibrio visual y serenidad para entornos de bienestar.
+        </p>
+        <p class="artwork-meta" data-i18n="art2_meta">Wellness · Oficinas</p>
+      </div>
+    </article>
+
+    <article class="artwork-row" data-category="hotel healthcare" data-reveal>
+      <div class="artwork-media">
+        <img src="img/paisaje.jpg" alt="Paisaje" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">03</span>
+        <h3>Paisaje</h3>
+        <p class="artwork-desc" data-i18n="art3_desc">
+          Una pieza que aporta calidez y sensación de acogida natural.
+        </p>
+        <p class="artwork-meta" data-i18n="art3_meta">Hoteles · Salud</p>
+      </div>
+    </article>
+
+    <article class="artwork-row" data-category="clinic healthcare" data-reveal>
+      <div class="artwork-media">
+        <img src="img/paisaje-abstracto.jpg" alt="Paisaje abstracto" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">04</span>
+        <h3>Paisaje abstracto</h3>
+        <p class="artwork-desc" data-i18n="art4_desc">
+          Lenguaje visual suave para acompañar espacios clínicos.
+        </p>
+        <p class="artwork-meta" data-i18n="art4_meta">Clínicas · Salud</p>
+      </div>
+    </article>
+
+    <article class="artwork-row" data-category="hotel wellness" data-reveal>
+      <div class="artwork-media">
+        <img src="img/i-journey.jpg" alt="I Journey" loading="lazy">
+      </div>
+      <div class="artwork-copy">
+        <span class="artwork-index">05</span>
+        <h3>I Journey</h3>
+        <p class="artwork-desc" data-i18n="art5_desc">
+          Una obra pensada para elevar la percepción de espacios premium.
+        </p>
+        <p class="artwork-meta" data-i18n="art5_meta">Hoteles · Wellness</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- =========================
+CONTACTO
+========================= -->
+<section id="contact" class="section contact">
+
+  <div class="contact-inner">
+
+    <div class="contact-text" data-reveal>
+      <span class="contact-eyebrow" data-i18n="contact_eyebrow">Contacto profesional</span>
+      <h2 data-i18n="contact_title">Cuéntanos tu espacio</h2>
+      <p data-i18n="contact_p1">
+        Trabajamos cada proyecto de forma personalizada para recomendar
+        obras alineadas con tu negocio.
+      </p>
+      <p data-i18n="contact_p2">
+        Rellena el formulario y nos pondremos en contacto contigo.
+      </p>
+    </div>
+
+    <form class="contact-form"
+          action="https://formspree.io/f/mnjnvbky"
+          method="POST"
+          data-reveal data-reveal-delay="1">
+
+      <div class="form-group">
+        <label data-i18n="form_name">Nombre</label>
+        <input type="text" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="form_email">Email</label>
+        <input type="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="form_phone">Teléfono</label>
+        <input type="tel" name="phone">
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="form_space">Describe tu espacio</label>
+        <textarea name="space" rows="4"></textarea>
+      </div>
+
+      <div class="form-group">
+        <label data-i18n="form_interest">¿Qué tipo de obras te interesan?</label>
+        <textarea name="art_interest" rows="4"></textarea>
+      </div>
+
+      <button type="submit" data-i18n="form_submit">Enviar consulta</button>
+    </form>
+
+  </div>
+</section>
+
+<!-- =========================
+FOOTER
+========================= -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="img/logo-full.png" alt="Art Patnam" class="footer-logo">
+      <p data-i18n="footer_tagline">Arte contemporáneo para espacios profesionales.</p>
+    </div>
+
+    <div class="footer-links">
+      <a data-section="home" data-i18n="nav_home">Inicio</a>
+      <a data-section="fineart" data-i18n="nav_art">Arte</a>
+      <a data-section="contact" data-i18n="nav_contact">Contacto</a>
+    </div>
+
+    <div class="footer-contact">
+      <a href="mailto:hola@artpatnam.com">hola@artpatnam.com</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>&copy; <span id="year"></span> Art Patnam. <span data-i18n="footer_rights">Todos los derechos reservados.</span></span>
+  </div>
+</footer>
+
+<script>
+/* =========================
+TRADUCCIONES
+========================= */
+const translations = {
+  es: {
+    nav_home: "Inicio",
+    nav_art: "Arte",
+    nav_contact: "Contacto",
+    hero_eyebrow: "Arte contemporáneo para espacios profesionales",
+    hero_h1: "Arte que define la experiencia de un espacio",
+    hero_lead: "Seleccionamos y alquilamos obras de arte para negocios que entienden el valor del detalle, la identidad y la experiencia del cliente.",
+    hero_secondary: "Restaurantes, hoteles, clínicas y espacios de bienestar con una mirada cuidada.",
+    principle: "Qué es, para quién es, qué aporta y por qué confiar. Todo empieza con una buena selección.",
+    curatorial_block: "Cada obra se selecciona por su capacidad de dialogar con el espacio, generar una experiencia coherente y aportar valor más allá de lo decorativo.",
+    how_we_work_title: "Cómo trabajamos",
+    step1_title: "Analizamos tu espacio",
+    step1_desc: "Entendemos el negocio, el entorno y la experiencia que deseas ofrecer.",
+    step2_title: "Seleccionamos las obras",
+    step2_desc: "Curamos piezas que dialogan con el espacio y refuerzan su identidad.",
+    step3_title: "Instalamos y acompañamos",
+    step3_desc: "Nos ocupamos de la instalación y del seguimiento del proyecto.",
+    value_title: "Más que decoración",
+    value1: "Refuerza la identidad del espacio",
+    value2: "Mejora la experiencia del cliente",
+    value3: "Aporta valor de marca al negocio",
+    fineart_title: "Obras seleccionadas",
+    fineart_curatorial: "La selección responde a criterios curatoriales y a la relación entre obra, arquitectura y uso del espacio, más allá de lo puramente decorativo.",
+    filter_all: "Todos",
+    filter_restaurant: "Restaurantes",
+    filter_hotel: "Hoteles",
+    filter_wellness: "Wellness",
+    filter_clinic: "Clínicas",
+    art1_desc: "Una obra con presencia, pensada para espacios donde la identidad es clave.",
+    art1_meta: "Restaurantes · Hoteles",
+    art2_desc: "Equilibrio visual y serenidad para entornos de bienestar.",
+    art2_meta: "Wellness · Oficinas",
+    art3_desc: "Una pieza que aporta calidez y sensación de acogida natural.",
+    art3_meta: "Hoteles · Salud",
+    art4_desc: "Lenguaje visual suave para acompañar espacios clínicos.",
+    art4_meta: "Clínicas · Salud",
+    art5_desc: "Una obra pensada para elevar la percepción de espacios premium.",
+    art5_meta: "Hoteles · Wellness",
+    contact_eyebrow: "Contacto profesional",
+    contact_title: "Cuéntanos tu espacio",
+    contact_p1: "Trabajamos cada proyecto de forma personalizada para recomendar obras alineadas con tu negocio.",
+    contact_p2: "Rellena el formulario y nos pondremos en contacto contigo.",
+    form_name: "Nombre",
+    form_email: "Email",
+    form_phone: "Teléfono",
+    form_space: "Describe tu espacio",
+    form_interest: "¿Qué tipo de obras te interesan?",
+    form_submit: "Enviar consulta",
+    footer_tagline: "Arte contemporáneo para espacios profesionales.",
+    footer_rights: "Todos los derechos reservados."
+  },
+  en: {
+    nav_home: "Home",
+    nav_art: "Art",
+    nav_contact: "Contact",
+    hero_eyebrow: "Contemporary art for professional spaces",
+    hero_h1: "Art that defines the experience of a space",
+    hero_lead: "We select and rent artworks for businesses that understand the value of detail, identity and customer experience.",
+    hero_secondary: "Restaurants, hotels, clinics and wellness spaces with a curated eye.",
+    principle: "What it is, who it's for, what it brings and why to trust it. It all starts with a good selection.",
+    curatorial_block: "Each piece is selected for its ability to engage with the space, create a coherent experience and add value beyond the decorative.",
+    how_we_work_title: "How we work",
+    step1_title: "We study your space",
+    step1_desc: "We understand the business, the setting and the experience you want to offer.",
+    step2_title: "We select the artworks",
+    step2_desc: "We curate pieces that dialogue with the space and reinforce its identity.",
+    step3_title: "We install and support",
+    step3_desc: "We take care of installation and ongoing project follow-up.",
+    value_title: "More than decoration",
+    value1: "Reinforces the identity of the space",
+    value2: "Improves the customer experience",
+    value3: "Adds brand value to the business",
+    fineart_title: "Selected works",
+    fineart_curatorial: "The selection follows curatorial criteria and the relationship between the piece, the architecture and the use of the space, beyond the purely decorative.",
+    filter_all: "All",
+    filter_restaurant: "Restaurants",
+    filter_hotel: "Hotels",
+    filter_wellness: "Wellness",
+    filter_clinic: "Clinics",
+    art1_desc: "A piece with presence, designed for spaces where identity is key.",
+    art1_meta: "Restaurants · Hotels",
+    art2_desc: "Visual balance and serenity for wellness environments.",
+    art2_meta: "Wellness · Offices",
+    art3_desc: "A piece that brings warmth and a natural sense of welcome.",
+    art3_meta: "Hotels · Healthcare",
+    art4_desc: "Soft visual language for clinical spaces.",
+    art4_meta: "Clinics · Healthcare",
+    art5_desc: "A piece designed to elevate the perception of premium spaces.",
+    art5_meta: "Hotels · Wellness",
+    contact_eyebrow: "Professional contact",
+    contact_title: "Tell us about your space",
+    contact_p1: "We work on each project individually to recommend artworks aligned with your business.",
+    contact_p2: "Fill in the form and we'll get in touch with you.",
+    form_name: "Name",
+    form_email: "Email",
+    form_phone: "Phone",
+    form_space: "Describe your space",
+    form_interest: "What kind of artworks are you interested in?",
+    form_submit: "Send inquiry",
+    footer_tagline: "Contemporary art for professional spaces.",
+    footer_rights: "All rights reserved."
+  }
+};
+
+function applyLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+  document.querySelectorAll('.lang').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  localStorage.setItem('artpatnam_lang', lang);
+}
+
+document.querySelectorAll('.lang').forEach(btn => {
+  btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+});
+
+/* =========================
+NAV + FOOTER LINKS (con transición)
+========================= */
+function goToSection(id) {
+  const current = document.querySelector('.section.active');
+  const next = document.getElementById(id);
+  if (!next || next === current) return;
+
+  if (current) {
+    current.classList.add('fade-out');
+    setTimeout(() => {
+      current.classList.remove('active', 'fade-out');
+      next.classList.add('active');
+      window.scrollTo(0, 0);
+      closeMenu();
+      refreshReveal(next);
+    }, 250);
+  } else {
+    next.classList.add('active');
+  }
+}
+
+document.querySelectorAll('a[data-section]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    goToSection(link.dataset.section);
+  });
+});
+
+/* =========================
+MENÚ MÓVIL
+========================= */
+const menuToggle = document.getElementById('menuToggle');
+const navMenu = document.getElementById('navMenu');
+
+function closeMenu() {
+  navMenu.classList.remove('open');
+  menuToggle.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+}
+
+menuToggle.addEventListener('click', () => {
+  const isOpen = navMenu.classList.toggle('open');
+  menuToggle.classList.toggle('open', isOpen);
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+/* =========================
+SLIDER (con efecto ken-burns)
+========================= */
+const slides = document.querySelectorAll('.hero-slider img');
+let i = 0;
+
+function setKenBurns(img) {
+  img.style.transform = Math.random() > 0.5 ? 'scale(1.08)' : 'scale(1)';
+}
+slides.forEach(setKenBurns);
+
+setInterval(() => {
+  slides[i].classList.remove('active');
+  i = (i + 1) % slides.length;
+  setKenBurns(slides[i]);
+  slides[i].classList.add('active');
+}, 4500);
+
+/* =========================
+SCROLL REVEAL
+========================= */
+const revealEls = document.querySelectorAll('[data-reveal]');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+// Al cambiar de sección los elementos ya están en pantalla:
+// forzamos su comprobación inmediatamente después del fundido.
+function refreshReveal(sectionEl) {
+  sectionEl.querySelectorAll('[data-reveal]:not(.in-view)').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add('in-view');
+      revealObserver.unobserve(el);
+    }
+  });
+}
+
+/* =========================
+PARALLAX SUTIL EN EL HERO
+========================= */
+const heroSlider = document.querySelector('.hero-slider');
+if (heroSlider) {
+  window.addEventListener('scroll', () => {
+    if (!document.getElementById('home').classList.contains('active')) return;
+    const offset = window.scrollY * 0.08;
+    heroSlider.style.transform = `translateY(${offset}px)`;
+  }, { passive: true });
+}
+
+/* =========================
+FILTROS
+========================= */
+document.querySelectorAll('.filter').forEach(f => {
+  f.addEventListener('click', () => {
+    document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
+    f.classList.add('active');
+    const filter = f.dataset.filter;
+    document.querySelectorAll('.artwork-row').forEach(a => {
+      const show = filter === 'all' || a.dataset.category.includes(filter);
+      a.style.display = show ? '' : 'none';
+    });
+  });
+});
+
+/* =========================
+AÑO EN FOOTER
+========================= */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* =========================
+IDIOMA GUARDADO
+========================= */
+const savedLang = localStorage.getItem('artpatnam_lang');
+if (savedLang) applyLanguage(savedLang);
+</script>
+
+</body>
+</html>
