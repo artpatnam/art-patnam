@@ -958,13 +958,6 @@ PÁGINAS LEGALES
   text-transform: uppercase;
 }
 
-/* Datos que el titular debe completar */
-.legal-page mark {
-  background: #fde9a8;
-  color: var(--ink);
-  padding: 0 4px;
-}
-
 /* =========================
 MOBILE (menú hamburguesa por defecto)
 ========================= */
