@@ -164,13 +164,13 @@ SECTIONS + TRANSICIÓN
 ========================= */
 .section {
   display: none;
-  padding: 120px 6% 100px;
+  padding: 110px 6% 90px;
   opacity: 1;
   transition: opacity 0.25s ease;
 }
 
 .section.hero {
-  padding: 0 0 140px;
+  padding: 0 0 120px;
 }
 
 .section.active {
@@ -287,7 +287,7 @@ HERO LEAD (editorial, asimétrico)
 ========================= */
 .hero-lead-row {
   max-width: 1400px;
-  margin: 70px auto 0;
+  margin: 56px auto 0;
   padding: 0 6%;
   display: grid;
   gap: 32px;
@@ -313,11 +313,12 @@ HERO LEAD (editorial, asimétrico)
 PRINCIPLE
 ========================= */
 .principle {
-  margin: 120px auto 0;
-  max-width: 760px;
+  margin: 90px auto 0;
+  max-width: 620px;
   text-align: center;
-  font-size: 15px;
-  color: var(--gray-mid);
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: var(--gray-soft);
   padding: 0 6%;
 }
 
@@ -326,25 +327,26 @@ CURATORIAL BLOCKS
 ========================= */
 .curatorial-block,
 .fineart-curatorial {
-  max-width: 720px;
-  margin: 120px auto 0;
+  max-width: 680px;
+  margin: 22px auto 0;
   text-align: center;
   font-family: 'Fraunces', serif;
   font-weight: 400;
   font-size: clamp(18px, 2vw, 22px);
   color: var(--ink);
-  line-height: 1.7;
+  line-height: 1.6;
+  padding: 0 6%;
 }
 
 .fineart-curatorial {
-  margin: 28px auto 0;
+  margin: 18px auto 0;
 }
 
 /* =========================
 HOW WE WORK
 ========================= */
 .how-we-work {
-  margin-top: 180px;
+  margin-top: 130px;
   padding: 0 6%;
 }
 
@@ -352,7 +354,7 @@ HOW WE WORK
   font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: clamp(34px, 5.5vw, 60px);
-  margin-bottom: 90px;
+  margin-bottom: 60px;
 }
 
 .steps {
@@ -384,7 +386,7 @@ HOW WE WORK
 VALUE PROPOSITION
 ========================= */
 .value-proposition {
-  margin-top: 180px;
+  margin-top: 130px;
   padding: 0 6%;
 }
 
@@ -392,25 +394,35 @@ VALUE PROPOSITION
   font-family: 'Fraunces', serif;
   font-weight: 500;
   font-size: clamp(34px, 5.5vw, 60px);
-  margin-bottom: 44px;
+  margin-bottom: 36px;
 }
 
 .value-proposition ul {
   list-style: none;
+  counter-reset: value-counter;
 }
 
 .value-proposition li {
-  font-size: 18px;
-  margin-bottom: 16px;
-  padding-left: 24px;
+  counter-increment: value-counter;
+  font-family: 'Fraunces', serif;
+  font-size: clamp(19px, 2.2vw, 23px);
+  color: var(--ink);
+  margin-bottom: 22px;
+  padding-left: 46px;
   position: relative;
 }
 
 .value-proposition li::before {
-  content: "—";
+  content: "0" counter(value-counter);
   position: absolute;
   left: 0;
+  top: 3px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
   color: var(--navy);
+  opacity: 0.55;
 }
 
 /* =========================
@@ -433,16 +445,20 @@ ARTE — CABECERA
   display: flex;
   justify-content: center;
   gap: 26px;
-  margin: 60px 0 110px;
+  margin: 44px 0 90px;
   flex-wrap: wrap;
 }
 
 .filters-elegant .filter {
   position: relative;
-  font-family: 'Fraunces', serif;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
   cursor: pointer;
   color: var(--gray-soft);
-  padding-bottom: 4px;
+  padding-bottom: 6px;
   transition: color 0.3s ease;
 }
 
@@ -475,7 +491,7 @@ ARTE — GALERÍA NARRATIVA (asimétrica, a sangre)
 .gallery {
   display: flex;
   flex-direction: column;
-  gap: 130px;
+  gap: 100px;
 }
 
 .artwork-row {
@@ -592,17 +608,22 @@ CONTACTO
 }
 
 .form-group label {
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  color: var(--gray-mid);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-soft);
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 12px;
-  border: 1px solid rgba(14,35,80,0.2);
-  background: #fff;
+  padding: 10px 2px 12px;
+  border: none;
+  border-bottom: 1px solid rgba(14,35,80,0.25);
+  background: transparent;
+  border-radius: 0;
   font-family: inherit;
+  font-size: 15px;
   color: var(--ink);
   transition: border-color 0.3s ease;
 }
@@ -610,17 +631,24 @@ CONTACTO
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+.contact-form textarea {
+  resize: vertical;
 }
 
 .contact-form button {
-  padding: 13px 30px;
+  padding: 15px 34px;
   background: var(--navy);
   color: #fff;
   border: none;
   cursor: pointer;
   align-self: flex-start;
-  letter-spacing: 0.03em;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   transition: background 0.3s ease;
 }
 
