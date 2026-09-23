@@ -684,6 +684,149 @@ ol.steps {
   color: var(--navy);
 }
 
+/* =========================
+PREGUNTAS FRECUENTES (acordeón)
+========================= */
+.faq {
+  max-width: 900px;
+  margin: 110px auto 0;
+  padding: 0 6%;
+}
+
+.faq h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(30px, 4.6vw, 54px);
+  line-height: 1.12;
+}
+
+.faq-list {
+  margin-top: 36px;
+}
+
+.faq-item {
+  border-top: 1px solid rgba(14,35,80,0.15);
+}
+
+.faq-item:last-child {
+  border-bottom: 1px solid rgba(14,35,80,0.15);
+}
+
+.faq-item summary {
+  position: relative;
+  padding: 20px 44px 20px 0;
+  font-family: 'Fraunces', serif;
+  font-size: 19px;
+  line-height: 1.35;
+  color: var(--ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Signo + que gira a × al abrir */
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--navy);
+  transition: transform 0.3s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
+}
+
+.faq-item p {
+  padding: 0 44px 22px 0;
+  font-size: 15px;
+  color: var(--gray-mid);
+  line-height: 1.7;
+}
+
+.faq-all {
+  display: inline-block;
+  margin-top: 26px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+}
+
+/* Página completa */
+.faq-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-head h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  font-size: clamp(34px, 5vw, 56px);
+  line-height: 1.12;
+  margin: 18px 0 14px;
+}
+
+.faq-head p {
+  font-size: 16px;
+  color: var(--gray-mid);
+}
+
+.faq-group {
+  margin-top: 60px;
+}
+
+.faq-group h2 {
+  margin-bottom: 14px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gray-mid);
+}
+
+.faq-more {
+  margin-top: 80px;
+  padding: 44px 32px;
+  background: #fbf9f4;
+  border: 1px solid rgba(14,35,80,0.12);
+  text-align: center;
+}
+
+.faq-more h2 {
+  font-family: 'Fraunces', serif;
+  font-weight: 500;
+  line-height: 1.2;
+  font-size: clamp(24px, 3vw, 32px);
+}
+
+.faq-more p {
+  margin-top: 8px;
+  color: var(--gray-mid);
+}
+
+.faq-more-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
 /* Cierre */
 .closing {
   position: relative;
