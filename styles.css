@@ -370,39 +370,11 @@ HOME / HERO A SANGRE
 }
 
 /* =========================
-HERO LEAD (editorial, asimétrico)
+TEXTO CURATORIAL (página de obras)
 ========================= */
-.hero-lead-row {
-  max-width: 1400px;
-  margin: 56px auto 0;
-  padding: 0 6%;
-  display: grid;
-  gap: 32px;
-}
-
-.hero-lead {
-  font-family: 'Fraunces', serif;
-  font-weight: 400;
-  font-size: clamp(20px, 2.4vw, 27px);
-  line-height: 1.5;
-  color: var(--ink);
-}
-
-.hero-secondary {
-  font-size: 15px;
-  color: var(--gray-mid);
-  padding-top: 10px;
-  border-top: 1px solid rgba(14,35,80,0.15);
-  align-self: start;
-}
-
-/* =========================
-CURATORIAL BLOCKS
-========================= */
-.curatorial-block,
 .fineart-curatorial {
   max-width: 680px;
-  margin: 90px auto 0;
+  margin: 18px auto 0;
   text-align: center;
   font-family: 'Fraunces', serif;
   font-weight: 400;
@@ -410,10 +382,6 @@ CURATORIAL BLOCKS
   color: var(--ink);
   line-height: 1.6;
   padding: 0 6%;
-}
-
-.fineart-curatorial {
-  margin: 18px auto 0;
 }
 
 /* =========================
@@ -455,49 +423,6 @@ HOW WE WORK
   font-size: 15px;
   color: var(--gray-mid);
   max-width: 320px;
-}
-
-/* =========================
-VALUE PROPOSITION
-========================= */
-.value-proposition {
-  margin-top: 130px;
-  padding: 0 6%;
-}
-
-.value-proposition h2 {
-  font-family: 'Fraunces', serif;
-  font-weight: 500;
-  font-size: clamp(34px, 5.5vw, 60px);
-  margin-bottom: 36px;
-}
-
-.value-proposition ul {
-  list-style: none;
-  counter-reset: value-counter;
-}
-
-.value-proposition li {
-  counter-increment: value-counter;
-  font-family: 'Fraunces', serif;
-  font-size: clamp(19px, 2.2vw, 23px);
-  color: var(--ink);
-  margin-bottom: 22px;
-  padding-left: 46px;
-  position: relative;
-}
-
-.value-proposition li::before {
-  content: "0" counter(value-counter);
-  position: absolute;
-  left: 0;
-  top: 3px;
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  color: var(--navy);
-  opacity: 0.55;
 }
 
 /* =========================
@@ -721,40 +646,25 @@ ol.steps {
   color: #fff;
 }
 
-/* Plan destacado */
+/* Plan destacado: claro, con borde y detalles en azul */
 .plan-featured {
+  border: 2px solid var(--navy);
+  box-shadow: 0 24px 50px -30px rgba(14,20,40,0.35);
+}
+
+.plan-featured .plan-badge {
   background: var(--navy);
-  border-color: var(--navy);
   color: #fff;
-}
-
-.plan-featured .plan-price strong,
-.plan-featured .plan-works {
-  color: #fff;
-}
-
-.plan-featured .plan-price span,
-.plan-featured .plan-claim,
-.plan-featured .plan-ideal-title {
-  color: rgba(255,255,255,0.78);
-}
-
-.plan-featured .plan-claim {
-  border-top-color: rgba(255,255,255,0.2);
 }
 
 .plan-featured .plan-cta {
-  background: var(--bone);
-  border-color: var(--bone);
-  color: var(--navy);
+  background: var(--navy);
+  color: #fff;
 }
 
 .plan-featured .plan-cta:hover {
-  background: #fff;
-}
-
-.plan-featured .plan-cta:focus-visible {
-  outline-color: #fff;
+  background: var(--navy-soft);
+  border-color: var(--navy-soft);
 }
 
 .plans-note,
@@ -776,11 +686,26 @@ ol.steps {
 
 /* Cierre */
 .closing {
+  position: relative;
+  overflow: hidden;
   margin-top: 120px;
   padding: 90px 6%;
-  background: var(--navy);
+  background: #1a1d24;
   color: #fff;
   text-align: center;
+}
+
+/* Fondo: Pátina Dorada desenfocada, como el carrusel */
+.closing::before {
+  content: "";
+  position: absolute;
+  inset: -60px;
+  background: url(/img/patina-dorada-480.webp) center / cover;
+  filter: blur(40px) brightness(0.5) saturate(1.1);
+}
+
+.closing > * {
+  position: relative;
 }
 
 .closing h2 {
@@ -1310,6 +1235,13 @@ FOOTER
   color: var(--gray-mid);
 }
 
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
 .footer-contact a {
   color: var(--navy);
   text-decoration: none;
@@ -1575,10 +1507,6 @@ DESKTOP
     font-size: clamp(44px, 5vw, 76px);
   }
 
-  .hero-lead-row {
-    grid-template-columns: 1.3fr 1fr;
-    align-items: start;
-  }
 
   .steps {
     grid-template-columns: repeat(4, 1fr);
