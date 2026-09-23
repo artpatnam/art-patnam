@@ -157,6 +157,17 @@ document.addEventListener('keydown', (e) => {
 });
 
 /* =========================
+PLAN PRESELECCIONADO (/contacto/?plan=profesional)
+========================= */
+const planSelect = document.getElementById('f-plan');
+if (planSelect) {
+  const plan = new URLSearchParams(location.search).get('plan');
+  if (plan && planSelect.querySelector(`option[value="${CSS.escape(plan)}"]`)) {
+    planSelect.value = plan;
+  }
+}
+
+/* =========================
 AÑO EN FOOTER
 ========================= */
 document.getElementById('year').textContent = new Date().getFullYear();
